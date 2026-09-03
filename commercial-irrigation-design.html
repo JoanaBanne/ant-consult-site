@@ -13,7 +13,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 <style>
-  body { margin:0; background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  html, body { margin:0; padding:0; max-width:100vw; overflow-x:hidden; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
@@ -28,7 +30,7 @@
 
   <!-- NAV -->
   <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
-    <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;"></a>
+    <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
     <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
@@ -202,7 +204,7 @@
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">The irrigation system you choose today will influence your operation for decades.</h2>
         <p style="font-size:17px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Before you commit to a system type, know what it will cost to run for the next twenty years and whether your team can maintain it.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <span style="background:#05515B; color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">Book a discovery call</span>
+          <a href="contact.html" style="background:#05515B; color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;text-decoration:none;">Book a discovery call</a>
         </div>
       </div>
       <div role="img" aria-label="Commercial irrigation pump station design" style="min-height:420px; background:url('assets/commercial-irrigation-pump-station-design.jpg') center 55%/cover no-repeat;"></div>
@@ -213,7 +215,7 @@
   <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
     <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
-        <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;"></a>
+        <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
         <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
         <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
