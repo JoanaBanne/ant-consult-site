@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+</style>
+</helmet>
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:24px; padding:64px 0 120px; background:#E2E7E6;">
+
+<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466;">Case Studies — Desktop 1440</div>
+
+<div style="width:1440px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- NAV -->
+  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;">
+    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+      <span style="cursor:pointer;">About</span>
+      <span style="cursor:pointer;">AIM</span>
+      <span style="cursor:pointer;">Solutions</span>
+      <span style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258;">Projects</span>
+      <span style="cursor:pointer;">Insights</span>
+      <span style="cursor:pointer;">Contact</span>
+      <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative; height:520px; background:linear-gradient(180deg,rgba(5,81,91,0.52) 0%,rgba(5,81,91,0.40) 40%,rgba(5,81,91,0.78) 100%),url('assets/citrus-irrigation-case-study.jpg') center 54%/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 72px; color:#fff;" role="img" aria-label="Citrus orchard irrigation project case study">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Projects</span>
+    </div>
+    <h1 style="font-family:'Ubuntu',sans-serif; font-size:76px; line-height:1.02; font-weight:500; letter-spacing:-0.026em; margin:0 0 24px; text-wrap:balance; text-shadow:0 2px 24px rgba(4,40,46,0.35);">Case studies</h1>
+    <p style="font-family:'Ubuntu',sans-serif; font-size:25px; line-height:1.45; font-weight:400; color:rgba(255,255,255,0.94); margin:0; max-width:760px; text-wrap:pretty;">Every scheme starts with a constraint: the water, the ground, the budget or the season. These are projects we have worked on, and what changed once the water was running.</p>
+  </div>
+
+  <!-- GRID -->
+  <div style="background:#fff; padding:80px 72px 96px;">
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:48px 24px;">
+      <sc-for list="{{ studies }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex; flex-direction:column; cursor:pointer; transition:transform 180ms ease;" style-hover="transform:translateY(-4px);">
+          <div style="position:relative; height:320px; border-radius:18px; background:#E3EFEC; border:1px solid #CBD9D5; overflow:hidden; margin-bottom:24px;">
+            <div role="img" aria-label="{{ s.headline }}" style="width:100%; height:100%; background-image:{{ s.bgImage }}; background-size:{{ s.fit }}; background-position:center; background-repeat:no-repeat;"></div>
+            <div style="position:absolute; top:16px; left:16px; background:rgba(5,81,91,0.92); color:#fff; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:600; padding:7px 14px; border-radius:999px;">{{ s.tag }}</div>
+          </div>
+          <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.24; font-weight:500; color:#12312F; letter-spacing:-0.016em; margin-bottom:12px; text-wrap:pretty;">{{ s.headline }}</div>
+          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 18px; text-wrap:pretty;">{{ s.summary }}</p>
+          <div style="margin-top:auto; display:flex; align-items:center; gap:9px; font-size:15px; font-weight:500; color:#05515B;">
+            <span>Read the case study</span>
+            <span style="color:#B96A22;">→</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:#F4F7F6; padding:88px 72px 96px;">
+    <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
+      <div style="padding:72px 56px 74px; display:flex; flex-direction:column; justify-content:center;">
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Your project would be the next one on this page.</h2>
+        <p style="font-size:17px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Tell us what you are working with and what you are trying to achieve, and we will tell you what is possible.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <span style="background:#05515B; color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">Book a discovery call</span>
+        </div>
+      </div>
+      <div role="img" aria-label="Fertigation system shed on an Ant Consult project site" style="min-height:420px; background:url('assets/fertigation-system-shed-case-study.jpg') center 58%/cover no-repeat;"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;">
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">About</span><span style="cursor:pointer;">AIM</span><span style="cursor:pointer;">Solutions</span><span style="cursor:pointer;">Projects</span><span style="cursor:pointer;">Insights</span><span style="cursor:pointer;">Contact</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">Feasibility Studies</span><span style="cursor:pointer;">Masterplans</span><span style="cursor:pointer;">Commercial Irrigation Design</span><span style="cursor:pointer;">Irrigation Upgrades</span><span style="cursor:pointer;">Bulk Water Supply</span><span style="cursor:pointer;">System Assessments</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">Services Cost Estimator</span><span style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer;">Irrigation ROI Calculator</span><span style="cursor:pointer;">Blog</span><span style="cursor:pointer;">Case studies</span>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <span style="font-size:13px; color:rgba(255,255,255,0.66); flex:1;">Enter email to subscribe</span>
+          <span style="width:26px; height:26px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">→</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
+        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      studies: [
+        {
+          tag: 'Masterplans',
+          bgImage: "url('assets/mt-verde-masterplan-case-study.jpg')",
+          fit: 'contain',
+          headline: 'Mount Verde Estate Hydraulic Masterplan',
+          summary: 'Ant Consult carried out a detailed hydraulic masterplan study for the Mount Verde Estate to inform phased future development.',
+        },
+        {
+          tag: 'Commercial irrigation design',
+          bgImage: "url('assets/citrus-irrigation-case-study.jpg')",
+          fit: 'cover',
+          headline: 'Citrus Industry Development: 135 ha Irrigation Design',
+          summary: 'Ant Consult carried out all-inclusive design of a conservative, high-efficiency drip irrigation system for a 135 ha citrus irrigation development. The design maximises operational flexibility, energy efficiency and automation readiness while safely managing diverse operating scenarios.',
+        },
+        {
+          tag: 'Masterplans',
+          bgImage: "url('assets/nadec-commercial-irrigation-case-study.jpg')",
+          fit: 'cover',
+          headline: 'NADEC: Controlled Environment Agriculture Masterplan',
+          summary: 'Ant Consult developed an integrated services masterplan for NADEC\u2019s Hail agro-industrial hub, covering roads, bulk water, sanitation, electrical supply and greenbelts, with a phased infrastructure and cost plan.',
+        },
+        {
+          tag: 'System assessments',
+          bgImage: "url('assets/water-system-assessment-case-study.jpg')",
+          fit: 'cover',
+          headline: 'Capital City Housing NPC: Water System Analysis',
+          summary: 'A detailed hydraulic investigation of Aloe Ridge Villages 1 & 2 combined ground-truthing, flow/pressure logging and hydraulic modelling to separate real leakage from normal consumption. The work provided Capital City Housing with costed, data-driven upgrade and pressure-management recommendations.',
+        },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+</style>
+</helmet>
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:24px; padding:64px 0 120px; background:#E2E7E6;">
+
+<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466;">Contact — Desktop 1440</div>
+
+<div style="width:1440px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- NAV -->
+  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;">
+    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">About</span>
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">AIM</span>
+      <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openSolutions }}" onMouseLeave="{{ closeMenu }}">
+        <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Solutions</span>
+        <sc-if value="{{ solutionsOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+            <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Feasibility Studies</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Masterplans</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Commercial Irrigation Design</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Irrigation Upgrades</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Bulk Water Supply</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">System Assessments</div>
+            <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+              <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease; padding-left:0;" style-hover="color:#B96A22;">All solutions →</div>
+            </div>
+          </div></div>
+        </sc-if>
+      </div>
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Projects</span>
+      <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openInsights }}" onMouseLeave="{{ closeMenu }}">
+        <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Insights</span>
+        <sc-if value="{{ insightsOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+            <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Services Cost Estimator</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Pipe Lifecycle Cost Analysis</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Irrigation ROI Calculator</div>
+            <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+              <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease; padding-left:0;" style-hover="color:#B96A22;">Blog →</div>
+            </div>
+          </div></div>
+        </sc-if>
+      </div>
+      <span style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258;">Contact</span>
+      <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258;">Calculate your ROI</span>
+    </div>
+  </div>
+
+  <!-- HERO — IMAGE PLACEHOLDER BEHIND -->
+  <div style="position:relative; height:520px; background:linear-gradient(180deg,rgba(5,81,91,0.52) 0%,rgba(5,81,91,0.40) 40%,rgba(5,81,91,0.78) 100%),url('assets/agricultural-land-water-feasibility-site.jpg') center 58%/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 72px; color:#fff;" role="img" aria-label="Agricultural land ready for irrigation development">
+    <div style="position:relative;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:24px;">
+        <span style="width:44px; height:1px; background:#F4A258;"></span>
+        <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Contact</span>
+      </div>
+      <h1 style="font-family:'Ubuntu',sans-serif; font-size:72px; line-height:1.05; font-weight:500; letter-spacing:-0.02em; margin:0 0 20px; text-wrap:balance; text-shadow:0 2px 24px rgba(4,40,46,0.35);">Let's get water onto your land</h1>
+      <p style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.92); margin:0 auto; max-width:600px; text-wrap:pretty;">Call us, or send us the details of your project. If you can't reach us immediately, we get back to you within one working day.</p>
+    </div>
+  </div>
+
+  <!-- BOOK -->
+  <div style="background:#FFFFFF; padding:88px 72px 0;">
+    <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:48px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:end; margin-bottom:36px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+            <span style="width:44px; height:1px; background:#F4A258;"></span>
+            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Talk to an engineer</span>
+          </div>
+          <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0; text-wrap:balance;">Pick a time that suits you</h2>
+        </div>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; max-width:460px; text-wrap:pretty;">Thirty minutes, no charge. Bring your questions and whatever you know about the site. You will speak to someone who designs these systems, not a salesperson.</p>
+      </div>
+      <div style="background:#f9f9f9; border:1px solid #DCE7E4; border-radius:18px; overflow:hidden;">
+        <iframe src="https://calendly.com/antconsult/30min?embed_domain=www.antconsult.co.za&amp;embed_type=Inline&amp;background_color=f9f9f9&amp;text_color=05515b&amp;primary_color=f4a258&amp;month=2026-09&amp;hide_gdpr_banner=1" title="Book a 30 minute call with Ant Consult" loading="lazy" style="width:100%; height:720px; border:0; display:block;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- TWO ROUTES -->
+  <div style="background:#FFFFFF; padding:88px 72px 92px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;">
+
+      <div style="background:#05515B; border-radius:18px; padding:48px; color:#fff;">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600; margin-bottom:18px;">Send us a message</div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; margin:0 0 28px; text-wrap:balance;">Tell us about the project</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Name</div>
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Farm or company</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Email</div>
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Phone</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:14px;">Where is the project, and what are you growing?</div>
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px 46px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:24px;">What are you trying to achieve? Anything you already know about water, power or hectares helps.</div>
+        <div style="display:inline-flex; align-items:center; gap:11px; background:#F4A258; color:#08343C; padding:16px 32px; border-radius:999px; font-size:16px; font-weight:600; cursor:pointer; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258;">
+          <span>Send message</span>
+          <span>→</span>
+        </div>
+      </div>
+
+
+      <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:48px; display:flex; flex-direction:column;">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; margin-bottom:18px;">Reach us directly</div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 16px; text-wrap:balance;">Or just phone the office</h2>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 32px; text-wrap:pretty;">If you would rather not wait for a slot, call us. If you can't reach us immediately, we get back to you within one working day.</p>
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <div style="display:flex; align-items:baseline; gap:14px; padding:14px 0; border-top:1px solid #DCE7E4;">
+            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#7A8A86; width:78px; flex:none;">Phone</span>
+            <span style="font-size:17px; color:#05515B; font-weight:500;">+27 76 375 5043</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:14px; padding:14px 0; border-top:1px solid #DCE7E4;">
+            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#7A8A86; width:78px; flex:none;">Email</span>
+            <span style="font-size:17px; color:#05515B; font-weight:500;">info@antconsult.co.za</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:14px; padding:14px 0; border-top:1px solid #DCE7E4; border-bottom:1px solid #DCE7E4;">
+            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#7A8A86; width:78px; flex:none;">Hours</span>
+            <span style="font-size:17px; color:#2A3A38;">Monday to Friday, 08:00 – 16:00</span>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAP + ADDRESS -->
+  <div style="background:#F4F7F6; padding:0 72px 92px;">
+    <div style="display:grid; grid-template-columns:1fr 460px; gap:0; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden; background:#fff;">
+      <div style="min-height:340px; background:#E8EFEC; overflow:hidden;">
+        <iframe src="https://www.google.com/maps?q=10+Hilton+Avenue,+Hilton,+Pietermaritzburg,+3201&amp;output=embed" title="Ant Consult office, 10 Hilton Avenue, Hilton" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%; height:100%; min-height:340px; border:0; display:block; filter:grayscale(0.8) contrast(0.94);"></iframe>
+      </div>
+      <div style="padding:48px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; margin-bottom:18px;">Find us</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.35; font-weight:500; color:#12312F; letter-spacing:-0.01em; margin-bottom:14px;">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 22px; text-wrap:pretty;">Our office is in KwaZulu-Natal, and our work runs across southern Africa, North Africa and the Middle East. Site visits are part of every project.</p>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=10+Hilton+Avenue,+Hilton,+Pietermaritzburg,+3201" target="_blank" rel="noopener" style="display:inline-flex; align-self:flex-start; align-items:center; gap:9px; font-size:15px; font-weight:500; color:#05515B; text-decoration:none; cursor:pointer; transition:color 140ms ease;" style-hover="color:#B96A22;">
+          <span>Get directions</span>
+          <span style="color:#B96A22;">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div style="background:#FFFFFF; padding:0 72px 96px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:32px;">
+      <span style="width:44px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Why this conversation is worth having</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:58px; font-weight:500; letter-spacing:-0.024em; color:#05515B; line-height:1; margin-bottom:16px;">70–90%</div>
+        <div style="font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#F4A258; margin-bottom:12px; font-weight:600;">OPEX, not CAPEX</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0;">Of the total irrigation and water system lifecycle cost lies in OPEX. We design for lowest possible OPEX, not CAPEX.</p>
+      </div>
+      <div style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:58px; font-weight:500; letter-spacing:-0.024em; color:#FFFFFF; line-height:1; margin-bottom:16px;">50%</div>
+        <div style="font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#F4A258; margin-bottom:12px; font-weight:600;">Saving</div>
+        <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.82); margin:0;">Electricity cost reduction over system lifetime by sizing systems for the lowest lifecycle cost, not lowest possible CAPEX.</p>
+      </div>
+      <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:58px; font-weight:500; letter-spacing:-0.024em; color:#05515B; line-height:1; margin-bottom:16px;">2–5 Yrs</div>
+        <div style="font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#F4A258; margin-bottom:12px; font-weight:600;">Payback</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0;">Payback period on CAPEX to install a lifecycle cost optimised system. Beyond this is profit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="background:#FFFFFF; padding:88px 72px 100px;">
+    <div style="display:grid; grid-template-columns:0.8fr 1.4fr; gap:56px; align-items:start;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+          <span style="width:44px; height:1px; background:#F4A258;"></span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Before you write</span>
+        </div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Questions we get asked first</h2>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">If yours is not here, ask it in the form. We would rather answer a question early than quote in the dark.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+          <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
+            <div onClick="{{ f.toggle }}" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+              <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">{{ f.q }}</div>
+              <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;">{{ f.sign }}</span>
+            </div>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; flex-direction:column; gap:13px; padding:0 68px 26px 28px;">
+                <sc-for list="{{ f.paras }}" as="p" hint-placeholder-count="1">
+                  <p style="font-size:15px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">{{ p }}</p>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;">
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">About</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">AIM</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Solutions</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Projects</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Insights</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Contact</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Feasibility Studies</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Masterplans</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Commercial Irrigation Design</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation Upgrades</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Bulk Water Supply</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">System Assessments</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Services Cost Estimator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation ROI Calculator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Blog</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Case studies</span>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <span style="font-size:13px; color:rgba(255,255,255,0.66); flex:1;">Enter email to subscribe</span>
+          <span style="width:26px; height:26px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">→</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
+        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: 0, menu: null };
+  renderVals() {
+    const items = [
+        { q: 'What will the system itself cost?', a: ['It depends on far more than hectares: the crop and its peak demand, how far and how high the water has to be moved, what your power situation is, and whether you are building new or working around existing infrastructure. Our online cost estimator will give you a ballpark in a few minutes, and it is the fastest way to find out whether a project is worth taking further. The firm number comes out of the design, where the capital cost is traded off against what the system will cost you to run for the next twenty years.'] },
+        { q: 'What do you charge?', a: [
+          'As a rule of thumb, engineering services on an infrastructure project fall between 5 and 15% of total project capital cost. Where you land depends on the number of design variables and the level of reporting and drawing output you need, so we only price finally once we understand what you are trying to build. We charge in one of three ways.',
+          'Well-defined projects with few unknowns are a fixed-price fee based on complexity and the time required for the scope of work. Pipelines, pump stations and irrigation systems fall here, and ballpark costs for these project types are in our cost estimator.',
+          'Open-ended or not well-defined projects are charged on a time-and-cost framework, with hourly rates derived with reference to Engineering Council of South Africa (ECSA) norms. Large scale feasibility studies and flood protection works fall here, as does any project where it is not clear yet what the end result will look like.',
+          'Where ongoing services are required we will consider a retainer: a set monthly fee for up to a certain amount of non-transferable time, which makes cash flow predictable for both of us.',
+        ] },
+        { q: 'Do you sell irrigation equipment?', a: ['No, and this is deliberate. We earn nothing on hardware, so every component we specify is chosen on technical merit and fit for your site. It also means we can compare supplier quotes for you without having a stake in the answer. An irrigation system is a utility, and it is expensive to change once it is in the ground.'] },
+        { q: 'How do I know the design will actually work?', a: ['Our irrigation work is led by a registered professional engineer, and the engineer you speak to is the engineer on your project. Designs are informed by the South African Irrigation Institute Norms and Standards and the Irrigation Design Manual, with FAO56 from the Food and Agriculture Organization of the United Nations as a further resource. We carry full professional indemnity insurance, currently underwritten by Hollard, and we contract on the Consulting Engineers South Africa (CESA) short form of agreement. If a system we designed is not operating as intended, we will troubleshoot it and train your team on it at no charge.'] },
+        { q: 'How quickly can you start?', a: ['Generally within two weeks, depending on current workload. You get a programme with the proposal, so the timeline is agreed before you commit to anything.'] },
+        { q: 'What do you need from me to get started?', a: ['Where the site is, what you want to grow, roughly how many hectares, and whatever you know about your water and power. If some of that is unknown, establishing it is often the first thing we help you do.'] },
+    ];
+    return {
+      solutionsOpen: this.state.menu === 'solutions',
+      insightsOpen: this.state.menu === 'insights',
+      openSolutions: () => this.setState({ menu: 'solutions' }),
+      openInsights: () => this.setState({ menu: 'insights' }),
+      closeMenu: () => this.setState({ menu: null }),
+      faqs: items.map((f, i) => ({
+        q: f.q,
+        paras: f.a,
+        open: this.state.open === i,
+        sign: this.state.open === i ? '\u2212' : '+',
+        toggle: () => this.setState({ open: this.state.open === i ? -1 : i }),
+      })),
+
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+</style>
+</helmet>
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:24px; padding:64px 0 120px; background:#E2E7E6;">
+
+<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466;">Insights — Desktop 1440</div>
+
+<div style="width:1440px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- NAV -->
+  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;">
+    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">About</span>
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">AIM</span>
+      <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openSolutions }}" onMouseLeave="{{ closeMenu }}">
+        <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Solutions</span>
+        <sc-if value="{{ solutionsOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+            <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Feasibility Studies</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Masterplans</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Commercial Irrigation Design</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Irrigation Upgrades</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Bulk Water Supply</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">System Assessments</div>
+            <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+              <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease; padding-left:0;" style-hover="color:#B96A22;">All solutions →</div>
+            </div>
+          </div></div>
+        </sc-if>
+      </div>
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Projects</span>
+      <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openInsights }}" onMouseLeave="{{ closeMenu }}">
+        <span style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258;">Insights</span>
+        <sc-if value="{{ insightsOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+            <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Services Cost Estimator</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Pipe Lifecycle Cost Analysis</div>
+            <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease;" style-hover="background:#F1F6F4;">Irrigation ROI Calculator</div>
+            <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+              <div style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; transition:background 140ms ease; padding-left:0;" style-hover="color:#B96A22;">Blog →</div>
+            </div>
+          </div></div>
+        </sc-if>
+      </div>
+      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Contact</span>
+      <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258;">Calculate your ROI</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative; height:520px; background:linear-gradient(180deg,rgba(5,81,91,0.52) 0%,rgba(5,81,91,0.40) 40%,rgba(5,81,91,0.78) 100%),url('assets/irrigation-insights-resources-hero.jpg') center 62%/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 72px; color:#fff;" role="img" aria-label="Irrigation engineering tools and resources">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:44px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Insights</span>
+    </div>
+    <h1 style="font-family:'Ubuntu',sans-serif; font-size:72px; line-height:1.05; font-weight:500; letter-spacing:-0.02em; margin:0 0 20px; text-wrap:balance; text-shadow:0 2px 24px rgba(4,40,46,0.35);">Tools and thinking</h1>
+    <p style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.92); margin:0; max-width:680px; text-wrap:pretty;">Run the numbers on your own project before you speak to anyone, then read what we have learned designing systems that have to last twenty years.</p>
+  </div>
+
+  <!-- TOOLS -->
+  <div style="background:#FFFFFF; padding:96px 72px 100px;">
+    <div style="display:grid; grid-template-columns:0.85fr 1.35fr; gap:56px; align-items:start;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:28px;">
+          <span style="width:44px; height:1px; background:#F4A258;"></span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Tools</span>
+        </div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0 0 24px; text-wrap:balance;">Three calculators, free to use</h2>
+        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; text-wrap:pretty;">Most irrigation decisions come down to a number someone has not worked out yet: what the design will cost, what the pipe will cost to run, what the whole thing returns.</p>
+        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">These are the tools we use in our own work. No account, no sales call attached.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:24px;">
+
+        <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; transition:transform 180ms ease, box-shadow 180ms ease; cursor:pointer;" style-hover="transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10);">
+          <div>
+            <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Services Cost Estimator</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Establish the ballpark design cost of a new irrigation development or an upgrade. Available in ZAR for Southern Africa and in USD elsewhere.</p>
+            <div style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer; transition:background 160ms ease, color 160ms ease, border-color 160ms ease;" style-hover="background:#05515B; color:#fff; border-color:#05515B;">
+              <span>Open the estimator</span>
+              <span style="width:28px; height:28px; border-radius:999px; background:#05515B; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
+            </div>
+          </div>
+          <div role="img" aria-label="Services Cost Estimator tool" style="height:150px; border-radius:14px; background:url('assets/drone-survey-irrigation-planning-tool.jpg') center 56%/cover no-repeat; border:1px solid #CBD9D5;"></div>
+        </div>
+
+        <div style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; transition:transform 180ms ease, box-shadow 180ms ease; cursor:pointer;" style-hover="transform:translateY(-4px); box-shadow:0 16px 44px rgba(5,81,91,0.28);">
+          <div>
+            <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:10px;">Pipe Lifecycle Cost Analysis</div>
+            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0 0 24px; text-wrap:pretty;">Compare pipe diameters and classes on what they cost to own, not what they cost to buy. The cheapest pipe on the quote is rarely the cheapest pipe to pump through.</p>
+            <div style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.8);">
+              <span>Open the analysis tool</span>
+              <span style="width:28px; height:28px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
+            </div>
+          </div>
+          <div role="img" aria-label="Pipe Lifecycle Cost Analysis tool" style="height:150px; border-radius:14px; background:url('assets/irrigation-filtration-system-tool.jpg') center 50%/cover no-repeat; border:1px solid rgba(255,255,255,0.2);"></div>
+        </div>
+
+        <div style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; transition:transform 180ms ease, box-shadow 180ms ease; cursor:pointer;" style-hover="transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10);">
+          <div>
+            <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Irrigation ROI Calculator</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Model capital cost, operating cost and return side by side, so you can see which system option actually pays and over what period.</p>
+            <div style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer; transition:background 160ms ease, color 160ms ease, border-color 160ms ease;" style-hover="background:#05515B; color:#fff; border-color:#05515B;">
+              <span>Open the calculator</span>
+              <span style="width:28px; height:28px; border-radius:999px; background:#05515B; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
+            </div>
+          </div>
+          <div role="img" aria-label="Irrigation ROI Calculator tool" style="height:150px; border-radius:14px; background:url('assets/citrus-irrigation-scheduling-tool.jpg') center 62%/cover no-repeat; border:1px solid #CBD9D5;"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED POST -->
+  <div style="background:#F4F7F6; padding:92px 72px 40px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:34px;">
+      <span style="width:44px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Latest</span>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden; display:grid; grid-template-columns:1.25fr 1fr; cursor:pointer; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 48px rgba(16,49,47,0.12);">
+      <div role="img" aria-label="Irrigation ROI Calculator: Why Most Irrigation Upgrades Are Judged on the Wrong Number" style="min-height:420px; background:url('assets/irrigation-roi-calculator-featured.png') center 52%/cover no-repeat;"></div>
+      <div style="padding:48px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+          <span style="background:#E3EFEC; color:#05515B; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; padding:6px 13px; border-radius:999px;">The big picture</span>
+          <span style="font-size:13px; color:#5E6E6A;">27 June 2026</span>
+        </div>
+        <h3 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.18; font-weight:500; color:#12312F; letter-spacing:-0.015em; margin:0 0 18px; text-wrap:pretty;">Irrigation ROI Calculator: Why Most Irrigation Upgrades Are Judged on the Wrong Number</h3>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 32px; text-wrap:pretty;">An irrigation system is one of the longest-term investments a farm can make. This guide explains the financial model behind our Irrigation ROI Calculator, so you can understand what drives return on investment before comparing different system options.</p>
+        <div style="display:inline-flex; align-items:center; gap:9px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer;">
+          <span>Read the article</span>
+          <span style="color:#B96A22;">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST GRID -->
+  <div style="background:#F4F7F6; padding:56px 72px 104px;">
+    <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0 0 40px;">More from the blog</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="9">
+        <div style="background:#FFFFFF; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10);">
+          <sc-if value="{{ p.imgCss }}" hint-placeholder-val="{{ false }}">
+            <div style="width:100%; height:190px; background-image:{{ p.imgCss }}; background-size:cover; background-position:center; border-bottom:1px solid #E7EEEC;"></div>
+          </sc-if>
+          <sc-if value="{{ p.needsImg }}" hint-placeholder-val="{{ false }}">
+            <div style="height:190px; background:#E3EFEC; border-bottom:1px solid #E7EEEC; display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#7A8A86; font-weight:600;">Image to come</span>
+            </div>
+          </sc-if>
+          <div style="padding:32px; display:flex; flex-direction:column; flex:1;">
+          <div style="font-size:13px; color:#7A8A86; margin-bottom:16px;">{{ p.date }}</div>
+          <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.24; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:12px; text-wrap:pretty; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">{{ p.title }}</div>
+          <p style="font-size:15px; line-height:1.7; color:#3C514E; margin:0 0 24px; text-wrap:pretty; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">{{ p.excerpt }}</p>
+          <div style="margin-top:auto; display:flex; align-items:center; gap:8px; font-size:15px; font-weight:500; color:#05515B;">
+            <span>Read more</span>
+            <span style="color:#B96A22;">→</span>
+          </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="background:#FFFFFF; padding:0 72px 96px;">
+    <div style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+          <span style="width:44px; height:1px; background:#F4A258;"></span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Monthly</span>
+        </div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#FFFFFF; margin:0 0 20px; text-wrap:balance;">One long read a month on irrigation engineering</h2>
+        <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.82); margin:0; max-width:540px; text-wrap:pretty;">New agritech, growing trends and the engineering behind them. Written for commercial growers, agricultural corporates, project developers and farm operators alike.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
+          <span style="font-size:15px; color:rgba(255,255,255,0.66); flex:1;">Enter your email address</span>
+          <span style="background:#F4A258; color:#08343C; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258;">Get the monthly read</span>
+        </div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;">
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">About</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">AIM</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Solutions</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Projects</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Insights</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Contact</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Feasibility Studies</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Masterplans</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Commercial Irrigation Design</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation Upgrades</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Bulk Water Supply</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">System Assessments</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Services Cost Estimator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation ROI Calculator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Blog</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Case studies</span>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <span style="font-size:13px; color:rgba(255,255,255,0.66); flex:1;">Enter email to subscribe</span>
+          <span style="width:26px; height:26px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">→</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
+        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menu: null };
+  renderVals() {
+    const posts = [
+        { date: '26 May 2026', title: 'Why There Is No Universal Best Irrigation System: A Guide to Fit-for-Purpose Irrigation Design', img: 'assets/fit-for-purpose-irrigation-design-blog.jpg', excerpt: 'Learn how fit-for-purpose irrigation engineering design reduces cost, improves reliability, and prevents expensive mistakes before construction.' },
+        { date: '21 May 2026', title: 'Farm and irrigation assessment before you buy: due diligence like a venture capital investor', img: 'assets/farm-irrigation-due-diligence-blog.jpg', excerpt: 'Buying a farm without a pre-purchase status quo assessment, feasibility study, and irrigation masterplan is guessing. Use venture capital-style due diligence to quantify water risk, capex, and ROI before you sign.' },
+        { date: '19 May 2026', title: 'Irrigation Design: Why Use a Registered Professional Engineer?', img: 'assets/registered-professional-engineer-irrigation-blog.jpg', excerpt: 'Irrigation design has real cost and risk. Learn how a registered professional engineer improves optimisation, professionalism, and risk mitigation for farm irrigation projects.' },
+        { date: '19 May 2026', title: 'Irrigation Design: the 4 Dimensions that Decide Yield and Lifetime cost', img: 'assets/irrigation-design-four-dimensions-blog.jpg', excerpt: 'A good irrigation or water supply system has 4 dimensions: uniformity, scheduling, depth, and lifetime cost. Learn why designing for minimum OPEX beats minimum CAPEX, and how pipe and pump choices drive lifecycle cost.' },
+        { date: '28 April 2026', title: 'Efficient Irrigation?', img: 'assets/irrigation-water-use-efficiency-blog.jpg', excerpt: 'Irrigation Efficiency. Water Use Efficiency. Energy Efficiency. What does it all mean?' },
+        { date: '19 March 2026', title: 'Irrigation Design: Why Separating Design and Supply Reduces Risk', img: 'assets/irrigation-design-supply-separation-blog.png', excerpt: 'Turnkey irrigation projects hide risk: biased design, unclear scope, expensive variations. Learn when to separate irrigation design and supply for clearer specs, comparable quotes, and better ROI.' },
+        { date: '5 February 2026', title: 'Irrigation Upgrade: When to Fix Management Before Replacing Hardware', img: 'assets/irrigation-upgrade-management-audit-blog.jpg', excerpt: 'Before you rip out working irrigation, audit performance. Learn the management checks: targets, scheduling, pressure/flow and maintenance that prevent expensive upgrade mistakes.' },
+        { date: '20 October 2025', title: 'Typical Irrigation Systems', img: 'assets/typical-irrigation-systems-overview-blog.jpg', excerpt: 'Intensive. Extensive. Pumpstations. Drip. Pivots. Micros. What on earth is going on?' },
+        { date: '20 October 2025', title: 'The Ant Service Packages', img: 'assets/irrigation-service-packages-blog.jpg', excerpt: 'We offer three level of service packages for irrigation design: Essential, Professional and Enterprise.' },
+        { date: '20 October 2025', title: 'The Ant Implementation Method (AIM)', img: 'assets/ant-implementation-method-blog.jpg', excerpt: "The Ant Implementation Method (AIM - who doesn't love a sexy acronym) delivers world class, professionally designed irrigation systems that are easy to manage and minimize lifecycle cost. Here is how we make things happen." },
+        { date: '9 May 2025', title: 'Data: More is NOT Better', img: 'assets/irrigation-data-point-cloud-blog.jpg', excerpt: 'What am I supposed to do with a 10 cm grid point cloud of 10 000 ha?' },
+        { date: '29 January 2025', title: 'What is Lifecycle Cost Analysis?', img: 'assets/irrigation-lifecycle-cost-analysis-blog.jpg', excerpt: 'As the capital cost of the system increases, the operating cost decreases. However, eventually the benefit of the reduced operating cost is outweighed by the increased capital cost. Lifecycle cost analysis is finding the sweet spot for each unique system.' },
+        { date: '29 December 2024', title: "Why I Started Ant Consult (and What I Kept Seeing That I Couldn't Unsee)", img: 'assets/why-i-started-ant-consult-blog.jpg', excerpt: 'My long-term vision for Ant Consult is a future where we work alongside you as a valued partner, providing technical assistance in building your operation into a legacy that you will be proud of.' },
+    ];
+    return {
+      solutionsOpen: this.state.menu === 'solutions',
+      insightsOpen: this.state.menu === 'insights',
+      openSolutions: () => this.setState({ menu: 'solutions' }),
+      openInsights: () => this.setState({ menu: 'insights' }),
+      closeMenu: () => this.setState({ menu: null }),
+      posts: posts.map(p => ({ ...p, imgCss: p.img ? `url('${p.img}')` : null })),
+    };
+  }
+}
+</script>
+</body>
+</html>

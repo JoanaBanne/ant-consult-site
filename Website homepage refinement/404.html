@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Ant Consult</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #E2E7E6;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2A3A38;
+  }
+  a { color: #F4A258; text-decoration: none; }
+  a:hover { color: #05515B; }
+  ::selection { background: #F4A258; color: #fff; }
+
+  .site-header {
+    background: #05515B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 72px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  .site-header img { height: 48px; width: auto; display: block; }
+
+  .not-found {
+    min-height: calc(100vh - 101px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px 24px 96px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #D3E5E1 100%);
+  }
+  .not-found .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .not-found .eyebrow span.rule { width: 22px; height: 1px; background: #F4A258; }
+  .not-found .eyebrow span.label {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #05515B;
+    font-weight: 600;
+  }
+  .not-found .code {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 140px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #05515B;
+    margin: 0;
+  }
+  .not-found .code span { color: #F4A258; }
+  .not-found h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: #12312F;
+    margin: 16px 0 18px;
+    text-wrap: balance;
+  }
+  .not-found p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #2A3A38;
+    max-width: 480px;
+    margin: 0 0 40px;
+    text-wrap: pretty;
+  }
+  .not-found .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #F4A258;
+    color: #08343C;
+    font-weight: 600;
+    padding: 16px 34px;
+    border-radius: 999px;
+    font-size: 16px;
+  }
+  .not-found .btn:hover { background: #f2934a; color: #08343C; }
+
+  .site-footer {
+    background: #05515B;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 24px 22px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .site-header { padding: 18px 22px; }
+    .site-header img { height: 34px; }
+    .not-found .code { font-size: 84px; }
+    .not-found h1 { font-size: 26px; }
+    .not-found p { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" aria-label="Ant Consult home"><img src="assets/logo.png" alt="Ant Consult"></a>
+</header>
+
+<main class="not-found">
+  <div class="eyebrow">
+    <span class="rule"></span>
+    <span class="label">Page not found</span>
+  </div>
+  <p class="code">4<span>0</span>4</p>
+  <h1>This page has run dry.</h1>
+  <p>The page you're looking for doesn't exist, or has moved. Let's get you back to solid ground.</p>
+  <a class="btn" href="/">Back to homepage</a>
+</main>
+
+<footer class="site-footer">
+  © 2026 Ant Consult. All rights reserved.
+</footer>
+
+</body>
+</html>

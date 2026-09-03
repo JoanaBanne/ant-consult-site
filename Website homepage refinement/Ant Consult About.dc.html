@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+</style>
+<meta name="ext-resource-dependency" content="assets/client-vcs-white.png" data-resource-id="assets/client-vcs-white.png" />
+<meta name="ext-resource-dependency" content="assets/water-engineering-consultancy-about-hero.jpg" data-resource-id="assets/water-engineering-consultancy-about-hero.jpg" />
+<meta name="ext-resource-dependency" content="assets/team-steve.jpg" data-resource-id="assets/team-steve.jpg" />
+<meta name="ext-resource-dependency" content="assets/team-stefan.png" data-resource-id="assets/team-stefan.png" />
+<meta name="ext-resource-dependency" content="assets/team-noel.jpg" data-resource-id="assets/team-noel.jpg" />
+</helmet>
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:24px; padding:64px 0 120px; background:#E2E7E6;">
+
+<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466;">About — Desktop 1440</div>
+
+<div style="width:1440px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- HERO -->
+  <div style="position:relative; background:#05515B; color:#fff;">
+    <div role="img" aria-label="Ant Consult water engineering consultancy team on site" style="position:absolute; left:0; right:0; top:78px; bottom:0; background:linear-gradient(90deg,#05515B 0%,#05515B 24%,rgba(5,81,91,0.88) 40%,rgba(5,81,91,0.42) 60%,rgba(5,81,91,0.1) 82%),url('assets/water-engineering-consultancy-about-hero.jpg') center 62%/cover no-repeat;"></div>
+
+    <div style="position:relative; z-index:2; background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+      <img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;">
+      <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+        <span style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258;">About</span>
+        <span style="cursor:pointer;">AIM</span>
+        <span style="cursor:pointer;">Solutions</span>
+        <span style="cursor:pointer;">Projects</span>
+        <span style="cursor:pointer;">Insights</span>
+        <span style="cursor:pointer;">Contact</span>
+        <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+      </div>
+    </div>
+
+    <div style="position:relative; z-index:2; padding:100px 72px 92px; max-width:720px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:26px;">
+        <span style="width:22px; height:1px; background:#F4A258;"></span>
+        <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">About us</span>
+      </div>
+      <h1 style="font-family:'Ubuntu',sans-serif; font-size:68px; line-height:1.04; font-weight:500; letter-spacing:-0.02em; margin:0 0 28px; text-wrap:balance;">Advice You Can Trust,<br><span style="color:#F4A258;">Systems That Last</span></h1>
+      <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.86); margin:0 0 40px; max-width:520px; text-wrap:pretty;">We don't sell equipment and we have no supplier relationships to protect. Every design decision is driven by your land, crop, water source and climate conditions.</p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <sc-if value="{{ statsBand }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#04424B; color:#fff; padding:52px 72px 56px;">
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
+      <div style="padding:0 44px 0 0; display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
+          <span style="font-size:54px;">25</span><span style="font-size:28px; color:#F4A258;">+</span>
+        </div>
+        <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72); margin-top:16px; max-width:260px; text-wrap:pretty;">Projects delivered across Africa and the Middle East</div>
+      </div>
+      <div style="padding:0 44px; border-left:1px solid rgba(255,255,255,0.18); display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
+          <span style="font-size:54px;">3800</span><span style="font-size:28px; color:#F4A258;">+</span>
+        </div>
+        <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72); margin-top:16px; max-width:260px; text-wrap:pretty;">Hectares across projects assessed</div>
+      </div>
+      <div style="padding:0 44px; border-left:1px solid rgba(255,255,255,0.18); display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
+          <span style="font-size:54px;">30</span><span style="font-size:28px; color:#F4A258;">+</span>
+        </div>
+        <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72); margin-top:16px; max-width:260px; text-wrap:pretty;">Years of system longevity</div>
+      </div>
+      <div style="padding:0 0 0 44px; border-left:1px solid rgba(255,255,255,0.18); display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
+          <span style="font-size:54px;">100</span><span style="font-size:28px; color:#F4A258;">%</span>
+        </div>
+        <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72); margin-top:16px; max-width:260px; text-wrap:pretty;">Independent advice</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- OUR STORY -->
+  <div style="background:#FFFFFF; padding:96px 72px 104px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our story</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:80px; align-items:start;">
+      <div style="display:flex; flex-direction:column;">
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; color:#05515B; margin:0 0 28px; text-wrap:balance;">Built to do one thing well</h2>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 20px; text-wrap:pretty;">Water scarcity is one of the defining challenges facing agriculture in Africa and the Middle East. The farms and projects that will feed the next generation need water infrastructure that works, not just on paper, but in the ground, for decades.</p>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 32px; text-wrap:pretty;">We built Ant Consult around one core belief: that getting the engineering right from the start is the most valuable thing you can do for a farm's long-term productivity.</p>
+        <div style="margin-top:auto; padding-top:40px; border-top:1px solid #DFE9E6; display:flex; align-items:center; gap:30px;">
+          <img src="assets/ant-head-orange.svg" alt="" style="height:104px; width:auto; display:block; flex:none;">
+          <div style="font-family:'Ubuntu',sans-serif; font-size:31px; line-height:1.24; font-weight:500; letter-spacing:-0.014em; color:#05515B; text-wrap:balance;">The right design, engineered for long-term performance</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:4/3; overflow:hidden; border-radius:18px; background:#C6DAD5; margin-bottom:36px;">
+          <img src="assets/center-pivot-irrigation-field.jpg" alt="Centre pivot over a field" style="width:100%; height:100%; object-fit:cover; object-position:center 62%; display:block;">
+        </div>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 18px; text-wrap:pretty;">We founded Ant Consult to bring a leaner, more structured model to agricultural water engineering. Every project is delivered through a defined engineering process, with senior engineer involvement from start to finish and recommendations shaped entirely by the needs of your operation.</p>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 28px; text-wrap:pretty;">The name comes from the ant. Small, industrious, and capable of building something far larger than itself through discipline and persistence.</p>
+        <span style="display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#B96A22; font-weight:700; cursor:pointer; padding-bottom:6px; border-bottom:2px solid #F4A258;" style-hover="color:#05515B; border-bottom-color:#05515B">Read Our Story <span style="font-size:14px;">→</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <div style="background:#D3E5E1; padding:88px 72px 88px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">What we do</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:start;">
+      <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#05515B; margin:0; text-wrap:balance;">Engineering water from source to field</h2>
+      <div>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 20px; text-wrap:pretty;">Ant Consult designs agricultural water infrastructure for large-scale farming operations across Africa and the Middle East. From feasibility studies and development masterplans to irrigation, pumping and bulk water supply, we help clients plan, build and optimise systems that perform reliably for decades.</p>
+        <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Every project follows the same structured engineering process, ensuring consistent quality from feasibility through to final design.</p>
+      </div>
+    </div>
+    <div style="margin-top:56px; display:grid; grid-template-columns:1.5fr 1fr; gap:24px;">
+      <div style="height:340px; overflow:hidden; border-radius:18px; background:#C6DAD5;">
+        <img src="assets/citrus-orchard-irrigation-scheme.jpg" alt="Citrus orchard under irrigation" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div style="height:340px; overflow:hidden; border-radius:18px; background:#C6DAD5;">
+        <img src="assets/irrigation-pump-station-filter-bank.jpg" alt="Filter bank at a pump station" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- AIM -->
+  <div style="background:#FFFFFF; padding:96px 72px 104px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our approach</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:64px;">
+      <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; color:#12312F; margin:0; text-wrap:balance;">The Ant Implementation Method</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">Scope drift is one of the most common reasons irrigation projects go over budget. AIM gets the right people around the table early and stress-tests the first draft design before it becomes the final one, so the system your team signs off on is the one that gets built.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #CBDCD8;">
+      <sc-for list="{{ aim }}" as="s" hint-placeholder-count="4">
+        <div style="padding:34px 36px 40px 36px; position:relative; border-left:1px solid #CBDCD8;" style-first-child="padding-left:0; border-left:none;">
+          <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
+          <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">{{ s.num }}</div>
+          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">{{ s.label }}</div>
+          <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">{{ s.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:56px;">
+      <span style="display:inline-block; border:1px solid #05515B; color:#05515B; padding:16px 38px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">See how AIM works</span>
+    </div>
+  </div>
+
+  <!-- WHY CLIENTS WORK WITH US -->
+  <div style="background:#05515B; color:#fff; padding:96px 72px 104px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Why clients work with us</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+      <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; margin:0; text-wrap:balance;">Precision in design. Confidence in delivery.</h2>
+      <p style="font-size:17px; line-height:1.75; color:rgba(255,255,255,0.86); margin:0; padding-top:6px; text-wrap:pretty;">Our work is measured at the point where the design meets the ground. That means construction-ready drawings your contractors can build from without guesswork, detailed bills of quantities with no expensive surprises, and systems your team can operate without ongoing intervention.</p>
+    </div>
+    <div style="margin-top:64px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.18); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+      <div style="height:320px; overflow:hidden; border-radius:18px; background:#0A4550;">
+        <img src="assets/irrigation-design-review-meeting.jpg" alt="Design review over a drawing set" style="width:100%; height:100%; object-fit:cover; object-position:58% 55%; display:block;">
+      </div>
+      <div style="background:#0A4550; border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:38px 36px 34px;">
+        <p style="font-family:'Ubuntu',sans-serif; font-size:24px; line-height:1.5; font-weight:400; letter-spacing:-0.006em; color:#fff; margin:0 0 26px; text-wrap:pretty;">“ANT Consult has been a trusted business and technical partner in our sugar-sector work. Their expertise extends well beyond sugar, and we look forward to expanding our collaboration into new opportunities and industries.”</p>
+        <div style="display:flex; align-items:center; gap:18px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.14);">
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72);">
+            <div style="font-weight:600; color:rgba(255,255,255,0.92);">Michael Day</div>
+            <div>Director</div>
+          </div>
+          <span style="width:1px; height:44px; background:rgba(255,255,255,0.22); flex:none;"></span>
+          <span style="background:#fff; border-radius:10px; padding:12px 20px; display:flex; align-items:center; flex:none;">
+            <img src="assets/client-vcs.png" alt="Value Chain Solutions" style="height:46px; width:auto; display:block;">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUARANTEE -->
+  <sc-if value="{{ guarantee }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#D3E5E1; padding:80px 72px 84px;">
+    <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:center;">
+      <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#05515B; margin:0; text-wrap:balance;">We stand behind our work</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">If your irrigation system is not performing as intended, we will provide a complimentary technical review to identify the cause, optimise system performance, and train your team on effective operation.</p>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- TEAM -->
+  <div style="background:#FFFFFF; padding:96px 72px 104px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our team</span>
+    </div>
+    <div style="max-width:900px; margin-bottom:64px;">
+      <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 18px; text-wrap:pretty;">Our team brings together more than 50 years of combined experience across agricultural, civil, surveying and quantity surveying disciplines. We operate with a small permanent team, supported by a network of specialists who are brought in based on project requirements. This allows us to scale for large, complex projects without carrying the overhead of a large practice.</p>
+      <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You get the right expertise for your project, not an ad hoc effort from the guy in the next office who has time on his hands.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1.62fr 1fr; gap:32px; margin-bottom:80px; align-items:stretch;">
+      <div style="display:flex; flex-direction:column; gap:24px;">
+      <div style="flex:1; background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:grid; grid-template-columns:300px 1fr;">
+        <div style="min-height:360px; overflow:hidden; background:#C6DAD5;">
+          <img src="assets/team-jon.jpg" alt="Jon Kirkman" style="width:100%; height:100%; object-fit:cover; object-position:64% 20%; display:block;">
+        </div>
+        <div style="padding:34px 32px 32px;">
+          <div style="font-family:'Ubuntu',sans-serif; font-size:24px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Jon Kirkman</div>
+          <div style="font-size:13px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:20px;">PrEng BSc Eng Agric — Founder</div>
+          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Jon founded Ant Consult to bring structured, independent engineering to large-scale agricultural water infrastructure. He is a degree-qualified Agricultural Engineer (UKZN) and a Registered Professional Engineer with the Engineering Council of South Africa. His work spans irrigation design, bulk water supply, feasibility studies and masterplanning across Africa and the Middle East. Jon is personally involved in every project Ant Consult undertakes, providing clients with direct access to senior engineering expertise from concept through to delivery.</p>
+        </div>
+      </div><div style="display:flex; align-items:center; gap:26px; padding:18px 32px; background:#fff; border:1px solid #DFE9E6; border-radius:18px;">
+        <img src="assets/sabi.png" alt="South African Irrigation Institute" style="height:38px; width:auto; display:block; flex:none;">
+        <span style="height:38px; width:1px; background:#DFE9E6; flex:none;"></span>
+        <div style="font-size:15px; line-height:1.6; color:#2A3A38; text-wrap:pretty;">Our engineers are SABI-qualified and registered with the Engineering Council of South Africa.</div>
+      </div>
+      
+      </div>
+      <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden;">
+        <div style="height:300px; overflow:hidden; background:#DCD9D4; display:flex; align-items:center; justify-content:center;">
+          <img src="assets/team-joana.png" alt="Joana Banne" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block;">
+        </div>
+        <div style="padding:34px 32px 32px;">
+          <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Joana Banne</div>
+          <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:18px;">Marketing Coordinator</div>
+          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Joana manages Ant Consult's marketing and communications, including the website, content strategy and client-facing materials. With a background in Agricultural Biotechnology and B2B marketing, she translates complex engineering concepts into clear, practical information that helps clients make informed decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ experts }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
+        <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; flex:none;">Associated experts</span>
+        <span style="height:1px; background:#CBDCD8; flex:1;"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+        <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+        <sc-for list="{{ team }}" as="t" hint-placeholder-count="0">
+          <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+            <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+              <sc-if value="{{ t.img }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ t.img }}" alt="{{ t.name }}" style="width:100%; height:100%; object-fit:cover; object-position:{{ t.pos }}; display:block;">
+              </sc-if>
+              <sc-if value="{{ t.small }}" hint-placeholder-val="{{ false }}">
+                <div style="width:100%; height:100%; background:#DCD9D4; display:flex; align-items:flex-end; justify-content:center;">
+                  <img src="{{ t.small }}" alt="{{ t.name }}" style="width:auto; height:100%; display:block;">
+                </div>
+              </sc-if>
+              <sc-if value="{{ t.noImg }}" hint-placeholder-val="{{ true }}">
+                <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">{{ t.slot }}</span>
+              </sc-if>
+            </div>
+            <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+              <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">{{ t.name }}</div>
+              <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">{{ t.role }}</div>
+              <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ t.body }}</p>
+              <sc-if value="{{ t.pending }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#8A4E14; background:#FBEEE1; padding:6px 9px; align-self:flex-start;">bio pending</div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+        </sc-if>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+
+  <!-- VALUES -->
+  <div style="background:#D3E5E1; padding:96px 72px 104px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:48px;">
+      <span style="width:22px; height:1px; background:#F4A258;"></span>
+      <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our values</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#BCD2CD; border:1px solid #BCD2CD;">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="5">
+        <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+          <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">{{ v.num }}</div>
+          <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">{{ v.title }}</div>
+          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ v.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:#fff; padding:104px 72px 112px; text-align:center;">
+    <h2 style="font-family:'Ubuntu',sans-serif; font-size:54px; line-height:1.1; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Let's bring your project to life</h2>
+    <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 auto 36px; max-width:520px; text-wrap:pretty;">Bring us your project. Thirty minutes with the engineer who would do the work, and an honest read on whether it is worth pursuing.</p>
+    <div style="display:flex; gap:14px; justify-content:center;">
+      <span style="background:#05515B; color:#fff; padding:17px 40px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">Let's Talk</span>
+      <span style="border:1px solid #05515B; color:#05515B; padding:17px 40px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">Get instant cost estimate</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;">
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">About</span><span style="cursor:pointer;">AIM</span><span style="cursor:pointer;">Solutions</span><span style="cursor:pointer;">Projects</span><span style="cursor:pointer;">Insights</span><span style="cursor:pointer;">Contact</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">Feasibility Studies</span><span style="cursor:pointer;">Masterplans</span><span style="cursor:pointer;">Commercial Irrigation Design</span><span style="cursor:pointer;">Irrigation Upgrades</span><span style="cursor:pointer;">Bulk Water Supply</span><span style="cursor:pointer;">System Assessments</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span style="cursor:pointer;">Services Cost Estimator</span><span style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer;">Irrigation ROI Calculator</span><span style="cursor:pointer;">Blog</span><span style="cursor:pointer;">Case studies</span>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <span style="font-size:13px; color:rgba(255,255,255,0.66); flex:1;">Enter email to subscribe</span>
+          <span style="width:26px; height:26px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">→</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
+        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStatsBand&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showGuarantee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showAssociatedExperts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Team&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      ready: true,
+      statsBand: this.props.showStatsBand ?? true,
+      guarantee: this.props.showGuarantee ?? true,
+      experts: this.props.showAssociatedExperts ?? true,
+      aim: [
+        { num: '01', label: 'Align', body: 'Get the right people around the table' },
+        { num: '02', label: 'Challenge', body: 'Stress-test the initial design' },
+        { num: '03', label: 'Agree', body: 'Build alignment before detailed design' },
+        { num: '04', label: 'Implement', body: 'Deliver against an agreed scope' }
+      ],
+      values: [
+        { num: '01', title: 'Work to the Glory of God', body: 'We strive to work excellently and honourably in every project, recognising that the quality of our work reflects the character behind it.' },
+        { num: '02', title: 'Value Our Partners and Clients', body: 'Clients are integral members of the project team. The best outcomes come from strong, honest working relationships built over time.' },
+        { num: '03', title: 'Continual Improvement', body: 'We continuously learn, adapt and improve, so our knowledge and methods stay relevant in an industry that never stops changing.' },
+        { num: '04', title: 'Walk Lightly on the Earth', body: 'Sustainability is not a marketing position. It is an engineering responsibility, reflected in every design decision we make.' },
+        { num: '05', title: 'Humble and Accessible', body: 'Expertise is built through listening. The farmers and operators who run our systems every day give us insight that makes the next design better.' }
+      ],
+      team: [
+        { small: 'assets/team-steve.jpg', name: 'Steve Mann', role: 'Civil Engineering', body: 'With over 30 years of experience in civil engineering, Steve specialises in water, stormwater, sewer and road infrastructure design. He supports Ant Consult on projects requiring specialist civil engineering expertise, bringing practical design experience and technical precision to complex infrastructure developments.' },
+        { img: 'assets/team-stefan.png', pos: 'center 22%', name: 'Stefan van Veenendaal', role: 'Surveyor and Town Planner', body: 'Stefan is a registered Professional Land Surveyor and Professional Planner with expertise in land surveying, master planning and spatial development. His work brings surveying and planning expertise that supports practical, well-informed agricultural and land development projects.' },
+        { img: 'assets/team-noel.jpg', pos: 'center 14%', name: 'Noel Stevens', role: 'Quantity Surveyor', body: 'Noel is an experienced Quantity Surveyor supporting greenfield and brownfield infrastructure projects. He provides cost planning, project evaluation and technical advisory services, and acts as a technical expert on complex engineering matters.' },
+        { slot: 'portrait — Andrew', noImg: true, name: 'Andrew Butler', role: 'Agricultural Engineer', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
+        { slot: 'portrait — Jed', noImg: true, name: 'Jed Sherwood', role: 'Civil Engineer', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
+        { slot: 'portrait — Hans', noImg: true, name: 'Hans Veenstra', role: 'Sugar Cane Management Expert', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
