@@ -16,10 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const newsletterForm = document.querySelector('.newsletter-form');
-  if (newsletterForm) {
+  document.querySelectorAll('.newsletter-form').forEach((newsletterForm) => {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
     });
-  }
+  });
 });
