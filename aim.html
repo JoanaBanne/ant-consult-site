@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>The AIM Method — Ant Consult</title>
+<meta name="description" content="The ANT Implementation Method (AIM): a structured, collaborative process for designing irrigation systems right the first time, from project kickoff through final design package.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -19,8 +16,14 @@
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .outcome-card { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .outcome-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.12); }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -57,15 +60,27 @@
     </div>
 
     <div style="margin-top:64px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-      <sc-for list="{{ outcomes }}" as="o" hint-placeholder-count="3">
-        <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.12)">
-          <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
-            <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
-          </div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">{{ o.title }}</div>
-          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ o.body }}</p>
+      <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+          <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
         </div>
-      </sc-for>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Better alignment</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">The right people, aligned early on what matters.</p>
+      </div>
+      <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+          <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
+        </div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Fewer surprises</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Gaps are identified before they become expensive.</p>
+      </div>
+      <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+          <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
+        </div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Designed to perform</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Solutions engineered around the realities of your operation.</p>
+      </div>
     </div>
   </div>
 
@@ -96,13 +111,21 @@
     </div>
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 56px; max-width:820px; text-wrap:balance;">Three questions drive every AIM review</h2>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-      <sc-for list="{{ questions }}" as="q" hint-placeholder-count="3">
-        <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-          <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">{{ q.num }}</div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">{{ q.title }}</div>
-          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ q.body }}</p>
-        </div>
-      </sc-for>
+      <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">01</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What works?</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Identify what is aligned with your operation and objectives.</p>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">02</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What does not work?</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pinpoint gaps, risks, and assumptions that could cause problems.</p>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
+        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">03</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What would make this better for your operation?</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Capture ideas and priorities that improve performance, efficiency and resilience.</p>
+      </div>
     </div>
   </div>
 
@@ -118,23 +141,85 @@
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start;">
-      <sc-for list="{{ phases }}" as="ph" hint-placeholder-count="3">
-        <div style="background:#0A4550; border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column;">
-          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
-            <span style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1;">{{ ph.num }}</span>
-            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#fff;">{{ ph.title }}</span>
+      <div style="background:#0A4550; border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1;">01</span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#fff;">Project kickoff</span>
+        </div>
+        <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.72); margin:0 0 6px; text-wrap:pretty;">We align on objectives, constraints and outcomes before design begins.</p>
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Discovery Meeting</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">We get to know your operation, goals and project requirements.</div>
           </div>
-          <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.72); margin:0 0 6px; text-wrap:pretty;">{{ ph.intent }}</p>
-          <div style="display:flex; flex-direction:column;">
-            <sc-for list="{{ ph.steps }}" as="st" hint-placeholder-count="4">
-              <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
-                <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">{{ st.name }}</div>
-                <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">{{ st.body }}</div>
-              </div>
-            </sc-for>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Proposal &amp; Scope</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">We provide a detailed proposal based on your needs and project requirements.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Project Approval</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Once approved, we align on next steps and project timelines.</div>
           </div>
         </div>
-      </sc-for>
+      </div>
+      <div style="background:#0A4550; border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1;">02</span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#fff;">Gather project info</span>
+        </div>
+        <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.72); margin:0 0 6px; text-wrap:pretty;">Design only starts once all required information has been received and approved.</p>
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Soil Data</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Soil survey and characteristics.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Water Data</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Water quality, availability and reliability.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Topographic Survey</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Site survey and elevation data.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Team Alignment</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Key stakeholders and communication plan.</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#0A4550; border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column;">
+        <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+          <span style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1;">03</span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#fff;">Collaborative design</span>
+        </div>
+        <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.72); margin:0 0 6px; text-wrap:pretty;">Iterative collaboration ensures the design is practical, buildable and aligned with your operation.</p>
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Onboarding</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Confirm background and align the team.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Concept Design</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Develop design concepts and requirements.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Site Visit 1</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Review site conditions, gather input, align operations team.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Detailed Design</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Develop and optimise detailed design.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Site Visit 2</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Validate design, refine and confirm final approach.</div>
+          </div>
+          <div style="padding:18px 0 0; margin-top:18px; border-top:1px solid rgba(255,255,255,0.11);">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; letter-spacing:-0.006em; color:#fff; margin-bottom:5px;">Final Design Package</div>
+            <div style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.7); text-wrap:pretty;">Deliver final drawings, BoQ and design report.</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div style="margin-top:32px; display:grid; grid-template-columns:auto 1fr; align-items:center; gap:40px; background:#0A4550; border:1px solid rgba(244,162,88,0.35); border-radius:18px; padding:34px 40px;">
@@ -153,12 +238,26 @@
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Project deliverables</span>
     </div>
     <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:20px; align-items:stretch;">
-      <sc-for list="{{ deliverables }}" as="d" hint-placeholder-count="5">
-        <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
-          <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">{{ d.title }}</div>
-          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ d.body }}</p>
-        </div>
-      </sc-for>
+      <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">Design Drawings</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Complete irrigation design drawings.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">Bill of Quantities</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Accurate BoQ for costing and procurement.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">Design Report</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Technical report and design justification.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">Site Visits</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">2 site visits included in the design process.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:28px 26px;">
+        <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:12px; text-wrap:balance;">Design Iterations</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Three iterations: conceptual design, detailed design 1 and detailed design 2. Further iterations are billed at agreed hourly rates.</p>
+      </div>
     </div>
     <p style="font-size:15px; line-height:1.7; color:#5E6E6A; margin:24px 0 0; max-width:620px; text-wrap:pretty;">All deliverables are designed to support construction, operations and long term performance.</p>
 
@@ -228,60 +327,14 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      outcomes: [
-        { title: 'Better alignment', body: 'The right people, aligned early on what matters.' },
-        { title: 'Fewer surprises', body: 'Gaps are identified before they become expensive.' },
-        { title: 'Designed to perform', body: 'Solutions engineered around the realities of your operation.' }
-      ],
-      phases: [
-        { num: '01', title: 'Project kickoff', intent: 'We align on objectives, constraints and outcomes before design begins.', steps: [
-          { name: 'Discovery Meeting', body: 'We get to know your operation, goals and project requirements.' },
-          { name: 'Proposal & Scope', body: 'We provide a detailed proposal based on your needs and project requirements.' },
-          { name: 'Project Approval', body: 'Once approved, we align on next steps and project timelines.' }
-        ] },
-        { num: '02', title: 'Gather project info', intent: 'Design only starts once all required information has been received and approved.', steps: [
-          { name: 'Soil Data', body: 'Soil survey and characteristics.' },
-          { name: 'Water Data', body: 'Water quality, availability and reliability.' },
-          { name: 'Topographic Survey', body: 'Site survey and elevation data.' },
-          { name: 'Team Alignment', body: 'Key stakeholders and communication plan.' }
-        ] },
-        { num: '03', title: 'Collaborative design', intent: 'Iterative collaboration ensures the design is practical, buildable and aligned with your operation.', steps: [
-          { name: 'Onboarding', body: 'Confirm background and align the team.' },
-          { name: 'Concept Design', body: 'Develop design concepts and requirements.' },
-          { name: 'Site Visit 1', body: 'Review site conditions, gather input, align operations team.' },
-          { name: 'Detailed Design', body: 'Develop and optimise detailed design.' },
-          { name: 'Site Visit 2', body: 'Validate design, refine and confirm final approach.' },
-          { name: 'Final Design Package', body: 'Deliver final drawings, BoQ and design report.' }
-        ] }
-      ],
-      deliverables: [
-        { title: 'Design Drawings', body: 'Complete irrigation design drawings.' },
-        { title: 'Bill of Quantities', body: 'Accurate BoQ for costing and procurement.' },
-        { title: 'Design Report', body: 'Technical report and design justification.' },
-        { title: 'Site Visits', body: '2 site visits included in the design process.' },
-        { title: 'Design Iterations', body: 'Three iterations: conceptual design, detailed design 1 and detailed design 2. Further iterations are billed at agreed hourly rates.' }
-      ],
-      questions: [
-        { num: '01', title: 'What works?', body: 'Identify what is aligned with your operation and objectives.' },
-        { num: '02', title: 'What does not work?', body: 'Pinpoint gaps, risks, and assumptions that could cause problems.' },
-        { num: '03', title: 'What would make this better for your operation?', body: 'Capture ideas and priorities that improve performance, efficiency and resilience.' }
-      ]
-    };
-  }
-}
-</script>
+
 </body>
 </html>

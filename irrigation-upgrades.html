@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>Irrigation Upgrades — Ant Consult</title>
+<meta name="description" content="Ant Consult evaluates ageing irrigation infrastructure and designs targeted upgrades that restore performance without the cost of a full system replacement.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; max-width:100vw; overflow-x:hidden; }
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
   *, *::before, *::after { box-sizing: border-box; }
   body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .lift-card { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10); }
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -94,22 +97,22 @@
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">System evaluation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We review the system to establish where it is underperforming and why. Pump output, pipe condition, pressure distribution and flow rates are measured against what you are asking the system to do today, which shows us exactly which components and layouts are holding it back.</p>
       </div>
-      <div style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Upgrade recommendations</div>
         <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">From what we find, we set out the upgrades that will do the most for hydraulic performance, water application and operating cost. Each one is ranked by impact and cost, so you can see where to start and what can wait.</p>
       </div>
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump assessment and optimisation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pump performance changes over time as equipment wears and demand on the system grows. We measure output against what the system now needs and recommend the least costly fix that works, whether that is refurbishment, a different pump, or rebalancing the system around the capacity you already have.</p>
       </div>
-      <div style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipe, pressure and coverage improvements</div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
@@ -117,7 +120,7 @@
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Where expansion or a change of crop has outgrown the existing capacity, we design extensions and modifications that increase coverage without replacing the whole system.</p>
         </div>
       </div>
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Construction-ready deliverables</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You receive construction-ready drawings, bills of quantities and specifications. Your contractors have everything they need to do the work without guessing, and you know the cost before a single pipe is replaced.</p>
@@ -182,14 +185,14 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
+
 </body>
 </html>

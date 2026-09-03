@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>About Ant Consult — Independent Water Engineering</title>
+<meta name="description" content="Ant Consult is an independent water engineering consultancy for large-scale agriculture across Africa and the Middle East, built on structured process and senior engineer involvement in every project.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -19,13 +16,14 @@
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .story-link { transition:color 140ms ease, border-color 140ms ease; }
+  .story-link:hover { color:#05515B; border-bottom-color:#05515B; }
 </style>
-<meta name="ext-resource-dependency" content="assets/client-vcs-white.png" data-resource-id="assets/client-vcs-white.png" />
-<meta name="ext-resource-dependency" content="assets/water-engineering-consultancy-about-hero.jpg" data-resource-id="assets/water-engineering-consultancy-about-hero.jpg" />
-<meta name="ext-resource-dependency" content="assets/team-steve.jpg" data-resource-id="assets/team-steve.jpg" />
-<meta name="ext-resource-dependency" content="assets/team-stefan.png" data-resource-id="assets/team-stefan.png" />
-<meta name="ext-resource-dependency" content="assets/team-noel.jpg" data-resource-id="assets/team-noel.jpg" />
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -58,7 +56,6 @@
   </div>
 
   <!-- STATS -->
-  <sc-if value="{{ statsBand }}" hint-placeholder-val="{{ true }}">
   <div style="background:#04424B; color:#fff; padding:52px 72px 56px;">
     <div style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
       <div style="padding:0 44px 0 0; display:flex; flex-direction:column;">
@@ -87,7 +84,6 @@
       </div>
     </div>
   </div>
-  </sc-if>
 
   <!-- OUR STORY -->
   <div style="background:#FFFFFF; padding:96px 72px 104px;">
@@ -113,7 +109,7 @@
         </div>
         <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 18px; text-wrap:pretty;">We founded Ant Consult to bring a leaner, more structured model to agricultural water engineering. Every project is delivered through a defined engineering process, with senior engineer involvement from start to finish and recommendations shaped entirely by the needs of your operation.</p>
         <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0 0 28px; text-wrap:pretty;">The name comes from the ant. Small, industrious, and capable of building something far larger than itself through discipline and persistence.</p>
-        <span style="display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#B96A22; font-weight:700; cursor:pointer; padding-bottom:6px; border-bottom:2px solid #F4A258;" style-hover="color:#05515B; border-bottom-color:#05515B">Read Our Story <span style="font-size:14px;">→</span></span>
+        <span class="story-link" style="display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#B96A22; font-weight:700; cursor:pointer; padding-bottom:6px; border-bottom:2px solid #F4A258;">Read Our Story <span style="font-size:14px;">→</span></span>
       </div>
     </div>
   </div>
@@ -153,14 +149,30 @@
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #CBDCD8;">
-      <sc-for list="{{ aim }}" as="s" hint-placeholder-count="4">
-        <div style="padding:34px 36px 40px 36px; position:relative; border-left:1px solid #CBDCD8;" style-first-child="padding-left:0; border-left:none;">
-          <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">{{ s.num }}</div>
-          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">{{ s.label }}</div>
-          <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">{{ s.body }}</p>
-        </div>
-      </sc-for>
+      <div style="padding:34px 0 40px 0; position:relative;">
+        <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">01</div>
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">Align</div>
+        <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">Get the right people around the table</p>
+      </div>
+      <div style="padding:34px 36px 40px 36px; position:relative; border-left:1px solid #CBDCD8;">
+        <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">02</div>
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">Challenge</div>
+        <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">Stress-test the initial design</p>
+      </div>
+      <div style="padding:34px 36px 40px 36px; position:relative; border-left:1px solid #CBDCD8;">
+        <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">03</div>
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">Agree</div>
+        <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">Build alignment before detailed design</p>
+      </div>
+      <div style="padding:34px 36px 40px 36px; position:relative; border-left:1px solid #CBDCD8;">
+        <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">04</div>
+        <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; margin-bottom:14px;">Implement</div>
+        <p style="font-size:15px; line-height:1.65; color:#2A3A38; margin:0; max-width:220px; text-wrap:pretty;">Deliver against an agreed scope</p>
+      </div>
     </div>
 
     <div style="margin-top:56px;">
@@ -199,14 +211,12 @@
   </div>
 
   <!-- GUARANTEE -->
-  <sc-if value="{{ guarantee }}" hint-placeholder-val="{{ true }}">
   <div style="background:#D3E5E1; padding:80px 72px 84px;">
     <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:center;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#05515B; margin:0; text-wrap:balance;">We stand behind our work</h2>
       <p style="font-size:17px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">If your irrigation system is not performing as intended, we will provide a complimentary technical review to identify the cause, optimise system performance, and train your team on effective operation.</p>
     </div>
   </div>
-  </sc-if>
 
   <!-- TEAM -->
   <div style="background:#FFFFFF; padding:96px 72px 104px;">
@@ -235,7 +245,7 @@
         <span style="height:38px; width:1px; background:#DFE9E6; flex:none;"></span>
         <div style="font-size:15px; line-height:1.6; color:#2A3A38; text-wrap:pretty;">Our engineers are SABI-qualified and registered with the Engineering Council of South Africa.</div>
       </div>
-      
+
       </div>
       <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden;">
         <div style="height:300px; overflow:hidden; background:#DCD9D4; display:flex; align-items:center; justify-content:center;">
@@ -249,43 +259,79 @@
       </div>
     </div>
 
-    <sc-if value="{{ experts }}" hint-placeholder-val="{{ true }}">
     <div>
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; flex:none;">Associated experts</span>
         <span style="height:1px; background:#CBDCD8; flex:1;"></span>
       </div>
       <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-        <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
-        <sc-for list="{{ team }}" as="t" hint-placeholder-count="0">
-          <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-            <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
-              <sc-if value="{{ t.img }}" hint-placeholder-val="{{ false }}">
-                <img src="{{ t.img }}" alt="{{ t.name }}" style="width:100%; height:100%; object-fit:cover; object-position:{{ t.pos }}; display:block;" loading="lazy" decoding="async">
-              </sc-if>
-              <sc-if value="{{ t.small }}" hint-placeholder-val="{{ false }}">
-                <div style="width:100%; height:100%; background:#DCD9D4; display:flex; align-items:flex-end; justify-content:center;">
-                  <img src="{{ t.small }}" alt="{{ t.name }}" style="width:auto; height:100%; display:block;" loading="lazy" decoding="async">
-                </div>
-              </sc-if>
-              <sc-if value="{{ t.noImg }}" hint-placeholder-val="{{ true }}">
-                <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">{{ t.slot }}</span>
-              </sc-if>
-            </div>
-            <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
-              <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">{{ t.name }}</div>
-              <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">{{ t.role }}</div>
-              <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ t.body }}</p>
-              <sc-if value="{{ t.pending }}" hint-placeholder-val="{{ false }}">
-                <div style="margin-top:16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#8A4E14; background:#FBEEE1; padding:6px 9px; align-self:flex-start;">bio pending</div>
-              </sc-if>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <div style="width:100%; height:100%; background:#DCD9D4; display:flex; align-items:flex-end; justify-content:center;">
+              <img src="assets/team-steve.jpg" alt="Steve Mann" style="width:auto; height:100%; display:block;" loading="lazy" decoding="async">
             </div>
           </div>
-        </sc-for>
-        </sc-if>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Steve Mann</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Civil Engineering</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">With over 30 years of experience in civil engineering, Steve specialises in water, stormwater, sewer and road infrastructure design. He supports Ant Consult on projects requiring specialist civil engineering expertise, bringing practical design experience and technical precision to complex infrastructure developments.</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <img src="assets/team-stefan.png" alt="Stefan van Veenendaal" style="width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;" loading="lazy" decoding="async">
+          </div>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Stefan van Veenendaal</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Surveyor and Town Planner</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Stefan is a registered Professional Land Surveyor and Professional Planner with expertise in land surveying, master planning and spatial development. His work brings surveying and planning expertise that supports practical, well-informed agricultural and land development projects.</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <img src="assets/team-noel.jpg" alt="Noel Stevens" style="width:100%; height:100%; object-fit:cover; object-position:center 14%; display:block;" loading="lazy" decoding="async">
+          </div>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Noel Stevens</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Quantity Surveyor</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Noel is an experienced Quantity Surveyor supporting greenfield and brownfield infrastructure projects. He provides cost planning, project evaluation and technical advisory services, and acts as a technical expert on complex engineering matters.</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Andrew</span>
+          </div>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Andrew Butler</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Agricultural Engineer</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <div style="margin-top:16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#8A4E14; background:#FBEEE1; padding:6px 9px; align-self:flex-start;">bio pending</div>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Jed</span>
+          </div>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Jed Sherwood</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Civil Engineer</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <div style="margin-top:16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#8A4E14; background:#FBEEE1; padding:6px 9px; align-self:flex-start;">bio pending</div>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Hans</span>
+          </div>
+          <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
+            <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:6px;">Hans Veenstra</div>
+            <div style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:16px;">Sugar Cane Management Expert</div>
+            <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <div style="margin-top:16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#8A4E14; background:#FBEEE1; padding:6px 9px; align-self:flex-start;">bio pending</div>
+          </div>
+        </div>
       </div>
     </div>
-    </sc-if>
   </div>
 
   <!-- VALUES -->
@@ -295,13 +341,31 @@
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our values</span>
     </div>
     <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#BCD2CD; border:1px solid #BCD2CD;">
-      <sc-for list="{{ values }}" as="v" hint-placeholder-count="5">
-        <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
-          <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">{{ v.num }}</div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">{{ v.title }}</div>
-          <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">{{ v.body }}</p>
-        </div>
-      </sc-for>
+      <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+        <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">01</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Work to the Glory of God</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We strive to work excellently and honourably in every project, recognising that the quality of our work reflects the character behind it.</p>
+      </div>
+      <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+        <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">02</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Value Our Partners and Clients</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Clients are integral members of the project team. The best outcomes come from strong, honest working relationships built over time.</p>
+      </div>
+      <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+        <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">03</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Continual Improvement</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We continuously learn, adapt and improve, so our knowledge and methods stay relevant in an industry that never stops changing.</p>
+      </div>
+      <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+        <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">04</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Walk Lightly on the Earth</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Sustainability is not a marketing position. It is an engineering responsibility, reflected in every design decision we make.</p>
+      </div>
+      <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
+        <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">05</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Humble and Accessible</div>
+        <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Expertise is built through listening. The farmers and operators who run our systems every day give us insight that makes the next design better.</p>
+      </div>
     </div>
   </div>
 
@@ -358,47 +422,14 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showStatsBand&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showGuarantee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showAssociatedExperts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Team&quot;}}">
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      ready: true,
-      statsBand: this.props.showStatsBand ?? true,
-      guarantee: this.props.showGuarantee ?? true,
-      experts: this.props.showAssociatedExperts ?? true,
-      aim: [
-        { num: '01', label: 'Align', body: 'Get the right people around the table' },
-        { num: '02', label: 'Challenge', body: 'Stress-test the initial design' },
-        { num: '03', label: 'Agree', body: 'Build alignment before detailed design' },
-        { num: '04', label: 'Implement', body: 'Deliver against an agreed scope' }
-      ],
-      values: [
-        { num: '01', title: 'Work to the Glory of God', body: 'We strive to work excellently and honourably in every project, recognising that the quality of our work reflects the character behind it.' },
-        { num: '02', title: 'Value Our Partners and Clients', body: 'Clients are integral members of the project team. The best outcomes come from strong, honest working relationships built over time.' },
-        { num: '03', title: 'Continual Improvement', body: 'We continuously learn, adapt and improve, so our knowledge and methods stay relevant in an industry that never stops changing.' },
-        { num: '04', title: 'Walk Lightly on the Earth', body: 'Sustainability is not a marketing position. It is an engineering responsibility, reflected in every design decision we make.' },
-        { num: '05', title: 'Humble and Accessible', body: 'Expertise is built through listening. The farmers and operators who run our systems every day give us insight that makes the next design better.' }
-      ],
-      team: [
-        { small: 'assets/team-steve.jpg', name: 'Steve Mann', role: 'Civil Engineering', body: 'With over 30 years of experience in civil engineering, Steve specialises in water, stormwater, sewer and road infrastructure design. He supports Ant Consult on projects requiring specialist civil engineering expertise, bringing practical design experience and technical precision to complex infrastructure developments.' },
-        { img: 'assets/team-stefan.png', pos: 'center 22%', name: 'Stefan van Veenendaal', role: 'Surveyor and Town Planner', body: 'Stefan is a registered Professional Land Surveyor and Professional Planner with expertise in land surveying, master planning and spatial development. His work brings surveying and planning expertise that supports practical, well-informed agricultural and land development projects.' },
-        { img: 'assets/team-noel.jpg', pos: 'center 14%', name: 'Noel Stevens', role: 'Quantity Surveyor', body: 'Noel is an experienced Quantity Surveyor supporting greenfield and brownfield infrastructure projects. He provides cost planning, project evaluation and technical advisory services, and acts as a technical expert on complex engineering matters.' },
-        { slot: 'portrait — Andrew', noImg: true, name: 'Andrew Butler', role: 'Agricultural Engineer', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
-        { slot: 'portrait — Jed', noImg: true, name: 'Jed Sherwood', role: 'Civil Engineer', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
-        { slot: 'portrait — Hans', noImg: true, name: 'Hans Veenstra', role: 'Sugar Cane Management Expert', pending: true, body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' }
-      ]
-    };
-  }
-}
-</script>
+
 </body>
 </html>

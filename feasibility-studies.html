@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>Feasibility Studies — Ant Consult</title>
+<meta name="description" content="Ant Consult feasibility studies give you the technical and financial clarity to decide which irrigation development option makes sense before construction begins.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; max-width:100vw; overflow-x:hidden; }
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
   *, *::before, *::after { box-sizing: border-box; }
   body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .lift-card-light { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card-light:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.12); }
+  .lift-card-dark { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card-dark:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.20); }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -94,12 +99,12 @@
     </div>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;">
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:40px 38px 38px; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.12)">
+      <div class="lift-card-light" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:40px 38px 38px;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:18px;">Technical feasibility</div>
         <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">First we establish the realistic ways of achieving what you want to develop. Depending on the project that means comparing water sources, storage options, pipe routes, irrigation methods and system layouts. Each option is tested against your site's physical constraints, how you need to operate and where you want the farm to be in twenty years.</p>
       </div>
-      <div style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:40px 38px 38px; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.20)">
+      <div class="lift-card-dark" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:40px 38px 38px;">
         <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:18px;">Financial feasibility</div>
         <p style="font-size:17px; line-height:1.75; color:rgba(255,255,255,0.84);margin:0; text-wrap:pretty;">Then we put numbers to those options. Capital cost, operating cost and projected return are quantified for each one. The result is a bankable feasibility report with clear IRR, NPV and ROI figures that give you and your stakeholders a sound basis for the investment decision.</p>
@@ -168,14 +173,13 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
 </body>
 </html>

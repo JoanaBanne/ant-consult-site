@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>Bulk Water Supply Engineering — Ant Consult</title>
+<meta name="description" content="Ant Consult designs bulk water infrastructure — pipelines, pump stations, balancing dams and canals — engineered for reliable delivery and the lowest lifecycle operating cost.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -19,8 +16,14 @@
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .lift-card-soft { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card-soft:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10); }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -95,7 +98,7 @@
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
 
-      <div style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card-soft" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipelines</div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
@@ -104,25 +107,25 @@
         </div>
       </div>
 
-      <div style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card-soft" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump stations</div>
         <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">This is where the energy cost of a bulk water system is either controlled or compounded. We size pump stations for the hydraulics of the full system, select equipment that stays efficient across the expected operating range, and design for straightforward maintenance and reliable long-term operation.</p>
       </div>
 
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Balancing dams and storage</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Storage buffers the gap between when water is available and when the scheme needs it. That lowers peak pump loads and gives you room to move when conditions change. We size storage to what the scheme requires, so you are not paying to build capacity that will never be used.</p>
       </div>
 
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Canals and open channels</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Where the terrain and the volumes suit open channel conveyance, we design canal systems that carry water efficiently from source to distribution point, with the control and measurement structures built into the design rather than added afterwards.</p>
       </div>
 
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Construction-ready deliverables</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You receive a complete construction package: hydraulic models, construction drawings, bills of quantities and technical specifications. Every element is documented: contractors can build accurately, and the people who will operate the scheme know how it is meant to run.</p>
@@ -217,14 +220,14 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
+
 </body>
 </html>

@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>Solutions — Ant Consult</title>
+<meta name="description" content="Six irrigation engineering services from Ant Consult, covering every stage of a project from feasibility through to system assessments, each engineered to the same lifecycle-cost standard.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; max-width:100vw; overflow-x:hidden; }
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
   *, *::before, *::after { box-sizing: border-box; }
   body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .lift-card { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.14); }
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .engineer-link { transition:color 140ms ease, border-color 140ms ease; }
+  .engineer-link:hover { color:#B96A22; border-bottom-color:#B96A22; }
+
+  .pricing-card { transition:background 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
+  .pricing-card:hover { background:#05515B; border-color:#05515B; box-shadow:0 20px 44px rgba(6,50,58,0.22); }
+  .pricing-card .pl-name { color:#5E6E6A; transition:color 160ms ease; }
+  .pricing-card:hover .pl-name { color:rgba(255,255,255,0.82); }
+  .pricing-card .pl-scope { color:#B96A22; transition:color 160ms ease; }
+  .pricing-card:hover .pl-scope { color:#F4A258; }
+  .pricing-card .pl-body { color:#485754; transition:color 160ms ease; }
+  .pricing-card:hover .pl-body { color:rgba(255,255,255,0.84); }
+  .pricing-card .pl-list-label { color:#5E6E6A; border-top-color:#DFE9E6; transition:color 160ms ease, border-color 160ms ease; }
+  .pricing-card:hover .pl-list-label { color:rgba(255,255,255,0.6); border-top-color:rgba(255,255,255,0.22); }
+  .pricing-card .pl-item { color:#2A3A38; transition:color 160ms ease; }
+  .pricing-card:hover .pl-item { color:rgba(255,255,255,0.92); }
+  .pricing-card .pl-dash { background:#B96A22; transition:background 160ms ease; }
+  .pricing-card:hover .pl-dash { background:#F4A258; }
+  .pricing-card .pl-btn { background:#05515B; color:#FFFFFF; transition:background 160ms ease, color 160ms ease; }
+  .pricing-card:hover .pl-btn { background:#F4A258; color:#08343C; }
 </style>
-<meta name="ext-resource-dependency" content="assets/irrigation-engineering-solutions-hero.jpg" data-resource-id="assets/irrigation-engineering-solutions-hero.jpg">
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -65,14 +86,42 @@
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-      <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="6">
-        <a href="{{ s.href }}" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease; background:{{ s.bg }}; border:1px solid {{ s.border }}; text-decoration:none; color:inherit;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(6,50,58,0.14)">
-          <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:{{ s.chipBg }}; color:{{ s.chipColor }};">{{ s.num }}</div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:{{ s.titleColor }};">{{ s.title }}</div>
-          <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:{{ s.bodyColor }};">{{ s.body }}</p>
-          <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:{{ s.pillBg }}; color:{{ s.pillColor }};">Learn more →</span>
-        </a>
-      </sc-for>
+      <a href="feasibility-studies.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#05515B; border:1px solid #05515B; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:rgba(255,255,255,0.13); color:#F4A258;">01</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#FFFFFF;">Feasibility studies</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:rgba(255,255,255,0.82);">Evaluate project viability before committing capital. We assess development options against real financial metrics so you can invest with confidence, or redirect before it costs you.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#F4A258; color:#08343C;">Learn more →</span>
+      </a>
+      <a href="masterplans.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DCE7E4; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:#F1F6F4; color:#B96A22;">02</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#05515B;">Masterplans</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:#2A3A38;">A phased development plan built around your operation. We turn feasibility studies into practical implementation plans that align technical priorities with financial reality.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#05515B; color:#FFFFFF;">Learn more →</span>
+      </a>
+      <a href="commercial-irrigation-design.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DCE7E4; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:#F1F6F4; color:#B96A22;">03</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#05515B;">Commercial irrigation design</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:#2A3A38;">The right system for your crop, your land, your operation. We design drip, micro, centre pivot and sprinkler systems that are practical, reliable and engineered to minimise lifetime operating costs.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#05515B; color:#FFFFFF;">Learn more →</span>
+      </a>
+      <a href="irrigation-upgrades.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DCE7E4; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:#F1F6F4; color:#B96A22;">04</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#05515B;">Irrigation upgrades</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:#2A3A38;">Improve performance without replacing what still works. We assess low pressure, uneven application and ageing infrastructure to identify targeted upgrades that deliver the greatest return on investment.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#05515B; color:#FFFFFF;">Learn more →</span>
+      </a>
+      <a href="bulk-water-supply.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DCE7E4; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:#F1F6F4; color:#B96A22;">05</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#05515B;">Bulk water supply</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:#2A3A38;">Move water efficiently from source to scheme. We design bulk pipelines and pump stations engineered for reliable operation, low lifecycle cost and straightforward maintenance.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#05515B; color:#FFFFFF;">Learn more →</span>
+      </a>
+      <a href="system-assessments.html" class="lift-card" style="border-radius:18px; padding:32px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DCE7E4; text-decoration:none; color:inherit;">
+        <div style="width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px; background:#F1F6F4; color:#B96A22;">06</div>
+        <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; letter-spacing:-0.01em; margin-bottom:14px; text-wrap:balance; color:#05515B;">System assessments</div>
+        <p style="font-size:15px; line-height:1.7; margin:0 0 30px; flex:1; text-wrap:pretty; color:#2A3A38;">Identify problems before they become expensive failures. We assess hydraulic performance, operational constraints and system reliability to recommend practical improvements that extend the life of your infrastructure.</p>
+        <span style="align-self:flex-start; padding:11px 22px; border-radius:999px; font-size:13px; font-weight:500; cursor:pointer; background:#05515B; color:#FFFFFF;">Learn more →</span>
+      </a>
     </div>
   </div>
 
@@ -96,30 +145,48 @@
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;">
-      <sc-for list="{{ levels }}" as="l" hint-placeholder-count="3">
-        <div style="border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column; background:{{ l.bg }}; border:1px solid {{ l.border }}; box-shadow:{{ l.shadow }}; transition:background 160ms ease, box-shadow 160ms ease;" onMouseEnter="{{ l.onEnter }}" onMouseLeave="{{ l.onLeave }}">
-          <div style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.2; font-weight:500; letter-spacing:-0.008em; margin-bottom:10px; color:{{ l.nameColor }};">{{ l.name }}</div>
-          <div style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.05; font-weight:500; letter-spacing:-0.022em; margin-bottom:20px; color:{{ l.accent }};">{{ l.scope }}</div>
-          <p style="font-size:15px; line-height:1.7; margin:0 0 26px; text-wrap:pretty; color:{{ l.bodyColor }};">{{ l.body }}</p>
-          <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; padding-top:22px; margin-bottom:18px; border-top:1px solid {{ l.rule }}; color:{{ l.labelColor }};">{{ l.listLabel }}</div>
-          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
-            <sc-for list="{{ l.items }}" as="it" hint-placeholder-count="4">
-              <div style="display:flex; gap:12px; align-items:flex-start; flex:none;">
-                <span style="width:14px; height:1px; flex:none; margin-top:11px; background:{{ l.accent }};"></span>
-                <span style="font-size:15px; line-height:1.6; text-wrap:pretty; color:{{ l.itemColor }};">{{ it }}</span>
-              </div>
-            </sc-for>
-          </div>
-          <div style="margin-top:auto;">
-            <span style="display:inline-block; padding:14px 30px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer; background:{{ l.btnBg }}; color:{{ l.btnColor }};">Explore plan</span>
-          </div>
+      <div class="pricing-card" style="border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DFE9E6;">
+        <div class="pl-name" style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.2; font-weight:500; letter-spacing:-0.008em; margin-bottom:10px;">Essential</div>
+        <div class="pl-scope" style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.05; font-weight:500; letter-spacing:-0.022em; margin-bottom:20px;">Design only</div>
+        <p class="pl-body" style="font-size:15px; line-height:1.7; margin:0 0 26px; text-wrap:pretty;">Our baseline package, for the operation that says "point me in the right direction and I'll handle it". Everything you need to construct a hydraulically excellent irrigation system on your own.</p>
+        <div class="pl-list-label" style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; padding-top:22px; margin-bottom:18px; border-top:1px solid;">Includes</div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Application rate determination</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Lifecycle cost optimised infield design, from farthest emitter to pumpstation exit flange</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Lifecycle cost optimised mainline design</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Pumpstation design: filtration, fertigation, pump selection, suction and structural design</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Outputs: report, drawings, bills of quantities and specifications</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">2 site visits and weekly clarification meetings</span></div>
         </div>
-      </sc-for>
+        <div style="margin-top:auto;"><span class="pl-btn" style="display:inline-block; padding:14px 30px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer;">Explore plan</span></div>
+      </div>
+      <div class="pricing-card" style="border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DFE9E6;">
+        <div class="pl-name" style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.2; font-weight:500; letter-spacing:-0.008em; margin-bottom:10px;">Professional</div>
+        <div class="pl-scope" style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.05; font-weight:500; letter-spacing:-0.022em; margin-bottom:20px;">Design + build support</div>
+        <p class="pl-body" style="font-size:15px; line-height:1.7; margin:0 0 26px; text-wrap:pretty;">For self-sufficient operations installing complex systems. Assurance that construction stays on track while you handle day-to-day management and quality control.</p>
+        <div class="pl-list-label" style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; padding-top:22px; margin-bottom:18px; border-top:1px solid;">Everything in Essential, plus</div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Senior engineer site visits during construction and commissioning (3 of): at kickoff, midway and for commissioning</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Priority response support: one-day turnaround on all queries during the construction period</span></div>
+        </div>
+        <div style="margin-top:auto;"><span class="pl-btn" style="display:inline-block; padding:14px 30px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer;">Explore plan</span></div>
+      </div>
+      <div class="pricing-card" style="border-radius:18px; padding:32px 30px 30px; display:flex; flex-direction:column; background:#FFFFFF; border:1px solid #DFE9E6;">
+        <div class="pl-name" style="font-family:'Ubuntu',sans-serif; font-size:18px; line-height:1.2; font-weight:500; letter-spacing:-0.008em; margin-bottom:10px;">Enterprise</div>
+        <div class="pl-scope" style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.05; font-weight:500; letter-spacing:-0.022em; margin-bottom:20px;">Design + full delivery</div>
+        <p class="pl-body" style="font-size:15px; line-height:1.7; margin:0 0 26px; text-wrap:pretty;">A full Engineering, Procurement and Construction Management package for large corporate agricultural operations looking for plug and play systems built to high standards. Only suitable for big projects.</p>
+        <div class="pl-list-label" style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600; padding-top:22px; margin-bottom:18px; border-top:1px solid;">Everything in Professional, plus</div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Facilitation of the procurement process</span></div>
+          <div style="display:flex; gap:12px; align-items:flex-start; flex:none;"><span class="pl-dash" style="width:14px; height:1px; flex:none; margin-top:11px;"></span><span class="pl-item" style="font-size:15px; line-height:1.6; text-wrap:pretty;">Full time construction supervision, from construction kickoff through to commissioning</span></div>
+        </div>
+        <div style="margin-top:auto;"><span class="pl-btn" style="display:inline-block; padding:14px 30px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer;">Explore plan</span></div>
+      </div>
     </div>
 
     <div style="margin-top:40px; padding-top:28px; border-top:1px solid #DFE9E6; display:flex; align-items:baseline; justify-content:space-between; gap:40px;">
       <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; max-width:620px; text-wrap:pretty;">These are starting points, not fixed packages. Most projects end up somewhere between two levels.</p>
-      <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#05515B; font-weight:700; cursor:pointer; padding-bottom:6px; border-bottom:2px solid #F4A258; flex:none;" style-hover="color:#B96A22; border-bottom-color:#B96A22">Build a scope with us <span style="font-size:15px;">→</span></span>
+      <span class="engineer-link" style="display:inline-flex; align-items:center; gap:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#05515B; font-weight:700; cursor:pointer; padding-bottom:6px; border-bottom:2px solid #F4A258; flex:none;">Build a scope with us <span style="font-size:15px;">→</span></span>
     </div>
   </div>
 
@@ -176,58 +243,14 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-const LEVELS = [
-  { name: 'Essential', scope: 'Design only', body: 'Our baseline package, for the operation that says "point me in the right direction and I\'ll handle it". Everything you need to construct a hydraulically excellent irrigation system on your own.', listLabel: 'Includes', items: ['Application rate determination', 'Lifecycle cost optimised infield design, from farthest emitter to pumpstation exit flange', 'Lifecycle cost optimised mainline design', 'Pumpstation design: filtration, fertigation, pump selection, suction and structural design', 'Outputs: report, drawings, bills of quantities and specifications', '2 site visits and weekly clarification meetings'] },
-  { name: 'Professional', scope: 'Design + build support', body: 'For self-sufficient operations installing complex systems. Assurance that construction stays on track while you handle day-to-day management and quality control.', listLabel: 'Everything in Essential, plus', items: ['Senior engineer site visits during construction and commissioning (3 of): at kickoff, midway and for commissioning', 'Priority response support: one-day turnaround on all queries during the construction period'] },
-  { name: 'Enterprise', scope: 'Design + full delivery', body: 'A full Engineering, Procurement and Construction Management package for large corporate agricultural operations looking for plug and play systems built to high standards. Only suitable for big projects.', listLabel: 'Everything in Professional, plus', items: ['Facilitation of the procurement process', 'Full time construction supervision, from construction kickoff through to commissioning'] }
-];
 
-class Component extends DCLogic {
-  state = { hover: null };
-  renderVals() {
-    return {
-      levels: LEVELS.map((l, i) => {
-        const on = this.state.hover === i;
-        return Object.assign({}, l, {
-          bg: on ? '#05515B' : '#FFFFFF',
-          border: on ? '#05515B' : '#DFE9E6',
-          shadow: on ? '0 20px 44px rgba(6,50,58,0.22)' : 'none',
-          nameColor: on ? 'rgba(255,255,255,0.82)' : '#5E6E6A',
-          accent: on ? '#F4A258' : '#B96A22',
-          bodyColor: on ? 'rgba(255,255,255,0.84)' : '#485754',
-          labelColor: on ? 'rgba(255,255,255,0.6)' : '#5E6E6A',
-          itemColor: on ? 'rgba(255,255,255,0.92)' : '#2A3A38',
-          rule: on ? 'rgba(255,255,255,0.22)' : '#DFE9E6',
-          btnBg: on ? '#F4A258' : '#05515B',
-          btnColor: on ? '#08343C' : '#FFFFFF',
-          onEnter: () => this.setState({ hover: i }),
-          onLeave: () => this.setState({ hover: null })
-        });
-      }),
-      solutions: (() => { const T = {
-        light: { bg:'#FFFFFF', border:'#DCE7E4', chipBg:'#F1F6F4', chipColor:'#B96A22', titleColor:'#05515B', bodyColor:'#2A3A38', pillBg:'#05515B', pillColor:'#FFFFFF' },
-        teal:  { bg:'#05515B', border:'#05515B', chipBg:'rgba(255,255,255,0.13)', chipColor:'#F4A258', titleColor:'#FFFFFF', bodyColor:'rgba(255,255,255,0.82)', pillBg:'#F4A258', pillColor:'#08343C' },
-      }; return [
-        { theme: 'teal', num: '01', href: 'feasibility-studies.html', title: 'Feasibility studies', body: 'Evaluate project viability before committing capital. We assess development options against real financial metrics so you can invest with confidence, or redirect before it costs you.' },
-        { theme: 'light', num: '02', href: 'masterplans.html', title: 'Masterplans', body: 'A phased development plan built around your operation. We turn feasibility studies into practical implementation plans that align technical priorities with financial reality.' },
-        { theme: 'light', num: '03', href: 'commercial-irrigation-design.html', title: 'Commercial irrigation design', body: 'The right system for your crop, your land, your operation. We design drip, micro, centre pivot and sprinkler systems that are practical, reliable and engineered to minimise lifetime operating costs.' },
-        { theme: 'light', num: '04', href: 'irrigation-upgrades.html', title: 'Irrigation upgrades', body: 'Improve performance without replacing what still works. We assess low pressure, uneven application and ageing infrastructure to identify targeted upgrades that deliver the greatest return on investment.' },
-        { theme: 'light', num: '05', href: 'bulk-water-supply.html', title: 'Bulk water supply', body: 'Move water efficiently from source to scheme. We design bulk pipelines and pump stations engineered for reliable operation, low lifecycle cost and straightforward maintenance.' },
-        { theme: 'light', num: '06', href: 'system-assessments.html', title: 'System assessments', body: 'Identify problems before they become expensive failures. We assess hydraulic performance, operational constraints and system reliability to recommend practical improvements that extend the life of your infrastructure.' }
-      ].map(x => ({ ...x, ...T[x.theme] })); })()
-    };
-  }
-}
-</script>
 </body>
 </html>

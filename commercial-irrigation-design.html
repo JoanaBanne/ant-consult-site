@@ -1,26 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<meta name="design_doc_mode" content="canvas">
+<title>Commercial Irrigation Design — Ant Consult</title>
+<meta name="description" content="Ant Consult designs drip, micro, centre pivot and sprinkler irrigation systems engineered for the lowest lifetime operating cost, matched to your crop, land and operation.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; max-width:100vw; overflow-x:hidden; }
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
   *, *::before, *::after { box-sizing: border-box; }
   body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C; }
+  .lift-card { transition:transform 180ms ease, box-shadow 180ms ease; }
+  .lift-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10); }
+
+  .ctp-radio { position:absolute; opacity:0; pointer-events:none; }
+  .ctp-photo { display:none; }
+  .ctp-desc { display:none; }
+  .ctp-title { color:#FFFFFF; }
+  .ctp-arrow-up { display:none; }
+  .ctp-arrow-down { display:inline; }
+
+  #ctp-drip:checked ~ .ctp-grid .ctp-photo-drip,
+  #ctp-micro:checked ~ .ctp-grid .ctp-photo-micro,
+  #ctp-pivot:checked ~ .ctp-grid .ctp-photo-pivot,
+  #ctp-sprinkler:checked ~ .ctp-grid .ctp-photo-sprinkler { display:block; }
+
+  #ctp-drip:checked ~ .ctp-grid .ctp-desc-drip,
+  #ctp-micro:checked ~ .ctp-grid .ctp-desc-micro,
+  #ctp-pivot:checked ~ .ctp-grid .ctp-desc-pivot,
+  #ctp-sprinkler:checked ~ .ctp-grid .ctp-desc-sprinkler { display:block; }
+
+  #ctp-drip:checked ~ .ctp-grid .ctp-title-drip,
+  #ctp-micro:checked ~ .ctp-grid .ctp-title-micro,
+  #ctp-pivot:checked ~ .ctp-grid .ctp-title-pivot,
+  #ctp-sprinkler:checked ~ .ctp-grid .ctp-title-sprinkler { color:#F4A258; }
+
+  #ctp-drip:checked ~ .ctp-grid .ctp-row-drip .ctp-arrow-down,
+  #ctp-micro:checked ~ .ctp-grid .ctp-row-micro .ctp-arrow-down,
+  #ctp-pivot:checked ~ .ctp-grid .ctp-row-pivot .ctp-arrow-down,
+  #ctp-sprinkler:checked ~ .ctp-grid .ctp-row-sprinkler .ctp-arrow-down { display:none; }
+
+  #ctp-drip:checked ~ .ctp-grid .ctp-row-drip .ctp-arrow-up,
+  #ctp-micro:checked ~ .ctp-grid .ctp-row-micro .ctp-arrow-up,
+  #ctp-pivot:checked ~ .ctp-grid .ctp-row-pivot .ctp-arrow-up,
+  #ctp-sprinkler:checked ~ .ctp-grid .ctp-row-sprinkler .ctp-arrow-up { display:inline; }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
@@ -93,70 +128,73 @@
       <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">We assess your crop type, land topography, soil conditions, water availability, management capability and long-term production objectives before a system type is selected.</p>
     </div>
 
-    <div style="margin:0 -72px 20px; display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
-      <div role="img" aria-label="{{ systemLabel }}" style="background-image:url('{{ systemPhoto }}'); background-size:cover; background-repeat:no-repeat; background-position:{{ systemPhotoPos }}; background-color:#0A6B78;"></div>
-      <div style="background:#04353D; padding:64px 60px 60px; display:flex; flex-direction:column; justify-content:center;">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:22px;">
-          <span style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500;">01</span>
-          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600; border:1px solid rgba(248,192,140,0.4); border-radius:999px; padding:8px 16px;">System types</span>
+    <div style="margin:0 -72px 20px;">
+      <input type="radio" name="ctype" id="ctp-drip" class="ctp-radio" checked>
+      <input type="radio" name="ctype" id="ctp-micro" class="ctp-radio">
+      <input type="radio" name="ctype" id="ctp-pivot" class="ctp-radio">
+      <input type="radio" name="ctype" id="ctp-sprinkler" class="ctp-radio">
+      <div class="ctp-grid" style="display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
+        <div style="position:relative;">
+          <div class="ctp-photo ctp-photo-drip" role="img" aria-label="Drip irrigation system" style="position:absolute; inset:0; background-image:url('assets/drip-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 60%; background-color:#0A6B78;"></div>
+          <div class="ctp-photo ctp-photo-micro" role="img" aria-label="Micro sprinkler irrigation system" style="position:absolute; inset:0; background-image:url('assets/micro-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 45%; background-color:#0A6B78;"></div>
+          <div class="ctp-photo ctp-photo-pivot" role="img" aria-label="Centre pivot irrigation system" style="position:absolute; inset:0; background-image:url('assets/center-pivot-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 50%; background-color:#0A6B78;"></div>
+          <div class="ctp-photo ctp-photo-sprinkler" role="img" aria-label="Sprinkler irrigation system" style="position:absolute; inset:0; background-image:url('assets/sprinkler-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 55%; background-color:#0A6B78;"></div>
         </div>
-        <h3 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#FFFFFF; margin:0 0 14px; text-wrap:balance;">Four ways to put water on a crop</h3>
-        <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.72); margin:0 0 30px; max-width:520px; text-wrap:pretty;">The right technology depends on the crop, field layout, available water, operating requirements and long-term production objectives. Our role is to find the system that fits those conditions best, not the one that is easiest to specify.</p>
-
-        <div onClick="{{ pick0 }}" style="border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
-            <span style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em; color:{{ tcol0 }};">Drip</span>
-            <span style="font-size:17px; color:#F4A258; flex:none;">{{ arrow0 }}</span>
+        <div style="background:#04353D; padding:64px 60px 60px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:22px;">
+            <span style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500;">01</span>
+            <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600; border:1px solid rgba(248,192,140,0.4); border-radius:999px; padding:8px 16px;">System types</span>
           </div>
-          <sc-if value="{{ open0 }}" hint-placeholder-val="{{ true }}">
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">Water delivered to the root zone at low flow, with the least lost to evaporation. Where water is scarce or expensive, drip usually returns the most per litre, and it carries fertigation well. It asks more of filtration and of the people maintaining it.</p>
-          </sc-if>
-        </div>
+          <h3 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#FFFFFF; margin:0 0 14px; text-wrap:balance;">Four ways to put water on a crop</h3>
+          <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.72); margin:0 0 30px; max-width:520px; text-wrap:pretty;">The right technology depends on the crop, field layout, available water, operating requirements and long-term production objectives. Our role is to find the system that fits those conditions best, not the one that is easiest to specify.</p>
 
-        <div onClick="{{ pick1 }}" style="border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
-            <span style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em; color:{{ tcol1 }};">Micro sprinkler</span>
-            <span style="font-size:17px; color:#F4A258; flex:none;">{{ arrow1 }}</span>
-          </div>
-          <sc-if value="{{ open1 }}" hint-placeholder-val="{{ false }}">
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">A fine spray that wets a wider footprint than drip without soaking the canopy. It suits orchards and crops with spreading root systems, and it is more tolerant of water quality than drip.</p>
-          </sc-if>
-        </div>
+          <label for="ctp-drip" class="ctp-row ctp-row-drip" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+              <span class="ctp-title ctp-title-drip" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Drip</span>
+              <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
+            </div>
+            <p class="ctp-desc ctp-desc-drip" style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">Water delivered to the root zone at low flow, with the least lost to evaporation. Where water is scarce or expensive, drip usually returns the most per litre, and it carries fertigation well. It asks more of filtration and of the people maintaining it.</p>
+          </label>
 
-        <div onClick="{{ pick2 }}" style="border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
-            <span style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em; color:{{ tcol2 }};">Centre pivot</span>
-            <span style="font-size:17px; color:#F4A258; flex:none;">{{ arrow2 }}</span>
-          </div>
-          <sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}">
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">One machine covering a large area with very little labour, which is why it dominates broad-acre production. It needs the land to suit it and the pressure to run it, so the capital and energy case has to be made before the shape of the field is settled.</p>
-          </sc-if>
-        </div>
+          <label for="ctp-micro" class="ctp-row ctp-row-micro" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+              <span class="ctp-title ctp-title-micro" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Micro sprinkler</span>
+              <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
+            </div>
+            <p class="ctp-desc ctp-desc-micro" style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">A fine spray that wets a wider footprint than drip without soaking the canopy. It suits orchards and crops with spreading root systems, and it is more tolerant of water quality than drip.</p>
+          </label>
 
-        <div onClick="{{ pick3 }}" style="border-top:1px solid rgba(255,255,255,0.16); border-bottom:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
-            <span style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em; color:{{ tcol3 }};">Conventional sprinkler</span>
-            <span style="font-size:17px; color:#F4A258; flex:none;">{{ arrow3 }}</span>
-          </div>
-          <sc-if value="{{ open3 }}" hint-placeholder-val="{{ false }}">
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">Simple, robust and repairable with parts available anywhere. For pasture, field crops and operations that maintain their own equipment, that reliability is often worth more than a few points of efficiency on paper.</p>
-          </sc-if>
+          <label for="ctp-pivot" class="ctp-row ctp-row-pivot" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+              <span class="ctp-title ctp-title-pivot" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Centre pivot</span>
+              <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
+            </div>
+            <p class="ctp-desc ctp-desc-pivot" style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">One machine covering a large area with very little labour, which is why it dominates broad-acre production. It needs the land to suit it and the pressure to run it, so the capital and energy case has to be made before the shape of the field is settled.</p>
+          </label>
+
+          <label for="ctp-sprinkler" class="ctp-row ctp-row-sprinkler" style="display:block; border-top:1px solid rgba(255,255,255,0.16); border-bottom:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+              <span class="ctp-title ctp-title-sprinkler" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Conventional sprinkler</span>
+              <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
+            </div>
+            <p class="ctp-desc ctp-desc-sprinkler" style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">Simple, robust and repairable with parts available anywhere. For pasture, field crops and operations that maintain their own equipment, that reliability is often worth more than a few points of efficiency on paper.</p>
+          </label>
         </div>
       </div>
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump stations, filtration and fertigation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Infield irrigation does not operate in isolation. Pump stations, filtration systems and fertigation infrastructure are engineered as integrated parts of the complete irrigation system rather than standalone components. The hydraulic performance of the full system, from source to emitter, is modelled and verified before the design is finalised.</p>
       </div>
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Designed for your operation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We match system complexity to your management capability. A sophisticated system your team cannot maintain is not a good design, whatever it looks like on paper. So we design for your operation as it runs, which means the system performs reliably in the hands of the people using it every day.</p>
       </div>
-      <div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column; transition:transform 180ms ease, box-shadow 180ms ease;" style-hover="transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10);">
+      <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Construction-ready deliverables</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You receive construction-ready drawings, detailed bills of quantities and specifications a contractor can build from without guessing. Clear documentation is what keeps your costs predictable on site: no expensive surprises mid-construction, and no gaps filled in by decisions that should have been made at the design stage.</p>
@@ -250,33 +288,13 @@
       <div style="display:flex; align-items:center; gap:18px;">
         <span>© 2026 Ant Consult. All rights reserved.</span>
         <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
-        <a href="/assets/ant-consult-paia-manual.pdf" style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease; text-decoration:none;" style-hover="color:#F8C08C;">Privacy Policy</a>
-        <span style="cursor:pointer; color:rgba(255,255,255,0.6); transition:color 140ms ease;" style-hover="color:#F8C08C;">Terms of Use</span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
       </div>
       <span>Engineered for the total cost of ownership.</span>
     </div>
   </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { open: 0 };
-  renderVals() {
-    const photos = ['assets/drip-irrigation-system.jpg', 'assets/micro-irrigation-system.jpg', 'assets/center-pivot-irrigation-system.jpg', 'assets/sprinkler-irrigation-system.jpg'];
-    const pos = ['center 60%', 'center 45%', 'center 50%', 'center 55%'];
-    const labels = ['Drip irrigation system', 'Micro sprinkler irrigation system', 'Centre pivot irrigation system', 'Sprinkler irrigation system'];
-    const o = this.state.open;
-    const v = { systemPhoto: photos[o], systemPhotoPos: pos[o], systemLabel: labels[o] };
-    for (let i = 0; i < 4; i++) {
-      v['open' + i] = o === i;
-      v['pick' + i] = () => this.setState({ open: i });
-      v['arrow' + i] = o === i ? '\u2191' : '\u2193';
-      v['tcol' + i] = o === i ? '#F4A258' : '#FFFFFF';
-    }
-    return v;
-  }
-}
-</script>
 </body>
 </html>
