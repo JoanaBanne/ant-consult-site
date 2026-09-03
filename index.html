@@ -18,6 +18,13 @@
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
   @keyframes ac-logo-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+  .desktop-only-view { display:block; }
+  .mobile-only-view { display:none; }
+  @media (max-width:768px) {
+    .desktop-only-view { display:none; }
+    .mobile-only-view { display:block; }
+  }
 </style>
 <meta name="ext-resource-dependency" content="assets/client-mouton-attr.svg" data-resource-id="assets/client-mouton-attr.svg" />
 <meta name="ext-resource-dependency" content="assets/client-nadec.svg" data-resource-id="assets/client-nadec.svg" />
@@ -39,11 +46,7 @@
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#05515B"/><g fill="none" stroke="#F4A258" stroke-width="7" stroke-linecap="round"><path d="M100 60v84"/><path d="M62 84h76"/><path d="M70 118h60"/></g><circle cx="100" cy="48" r="9" fill="#F4A258"/></svg>
 </template>
 
-<div style="display:flex; flex-direction:column; align-items:center; gap:64px; padding:64px 0 120px; background:#E2E7E6;">
-
-<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466; font-family:'Poppins',sans-serif;">Desktop — 1440</div>
-
-<div style="width:1440px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+<div class="desktop-only-view" style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- HERO -->
   <div style="position:relative; background:#05515B; color:#fff; padding:0;">
@@ -370,9 +373,7 @@
 
 </div>
 
-<div style="width:1440px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#7A7466; margin-top:32px;">Mobile — 390</div>
-
-<div style="width:390px; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden; font-size:16px;">
+<div class="mobile-only-view" style="width:100%; max-width:390px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden; font-size:16px;">
 
   <div style="position:relative; background:#05515B; color:#fff;">
     <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid rgba(255,255,255,0.14);">
@@ -627,7 +628,6 @@
     </div>
   </div>
 
-</div>
 </div>
 
 </x-dc>
