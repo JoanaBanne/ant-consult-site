@@ -18,7 +18,7 @@
   ::selection { background:#F4A258; color:#fff; }
 
   .hover-fade { transition:color 140ms ease; }
-  .hover-fade:hover { color:#F8C08C; }
+  .hover-fade:hover { color:#F8C08C !important; }
 
   .nav-link { transition:color 150ms ease, border-color 150ms ease; border-bottom:2px solid transparent; padding-bottom:4px; }
   .nav-link:hover { color:#fff; border-bottom-color:rgba(244,162,88,0.55); }
@@ -28,19 +28,19 @@
   .nav-drop:hover .nav-drop-panel { display:block; }
   .nav-drop-item { transition:background 140ms ease; }
   .nav-drop-item:hover { background:#F1F6F4; }
-  .nav-drop-all { transition:color 140ms ease; }
+  .nav-drop-all { color:#05515B; transition:color 140ms ease; }
   .nav-drop-all:hover { color:#B96A22; }
 
-  .roi-btn { transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
   .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
   .tool-card-light { transition:transform 180ms ease, box-shadow 180ms ease; }
   .tool-card-light:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10); }
   .tool-card-dark { transition:transform 180ms ease, box-shadow 180ms ease; }
   .tool-card-dark:hover { transform:translateY(-4px); box-shadow:0 16px 44px rgba(5,81,91,0.28); }
-  .tool-cta-light { transition:background 160ms ease, color 160ms ease, border-color 160ms ease; }
+  .tool-cta-light { background:#FFFFFF; border:1px solid #DCE7E4; color:#05515B; transition:background 160ms ease, color 160ms ease, border-color 160ms ease; }
   .tool-cta-light:hover { background:#05515B; color:#fff; border-color:#05515B; }
-  .tool-cta-dark { transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .tool-cta-dark { background:#FFFFFF; color:#05515B; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
   .tool-cta-dark:hover { background:transparent; color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.8); }
 
   .featured-post { transition:transform 180ms ease, box-shadow 180ms ease; }
@@ -49,7 +49,7 @@
   .post-card { transition:transform 180ms ease, box-shadow 180ms ease; }
   .post-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10); }
 
-  .subscribe-btn { transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .subscribe-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
   .subscribe-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 </style>
 </head>
@@ -61,10 +61,10 @@
   <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
     <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
-      <a href="about.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
-      <a href="aim.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
+      <a href="about.html" class="nav-link" style="cursor:pointer; text-decoration:none;">About</a>
+      <a href="aim.html" class="nav-link" style="cursor:pointer; text-decoration:none;">AIM</a>
       <div class="nav-drop">
-        <a href="solutions.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
+        <a href="solutions.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Solutions</a>
         <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
           <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Feasibility Studies</div>
@@ -74,11 +74,11 @@
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Bulk Water Supply</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">System Assessments</div>
           <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
-            <div class="nav-drop-all" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
           </div>
         </div></div>
       </div>
-      <a href="projects.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Projects</a>
+      <a href="projects.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Projects</a>
       <div class="nav-drop">
         <a href="insights.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; color:inherit; text-decoration:none;">Insights</a>
         <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
@@ -87,13 +87,13 @@
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Pipe Lifecycle Cost Analysis</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation ROI Calculator</div>
           <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
-            <div class="nav-drop-all" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
           </div>
         </div></div>
       </div>
-      <a href="contact.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
+      <a href="contact.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Contact</a>
       <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
-        <span class="roi-btn" style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+        <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
     </div>
   </div>
 
@@ -127,7 +127,7 @@
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Services Cost Estimator</div>
             <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Establish the ballpark design cost of a new irrigation development or an upgrade. Available in ZAR for Southern Africa and in USD elsewhere.</p>
-            <div class="tool-cta-light" style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer;">
+            <div class="tool-cta-light" style="display:inline-flex; align-items:center; gap:10px; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; cursor:pointer;">
               <span>Open the estimator</span>
               <span style="width:28px; height:28px; border-radius:999px; background:#05515B; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
             </div>
@@ -139,7 +139,7 @@
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:10px;">Pipe Lifecycle Cost Analysis</div>
             <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0 0 24px; text-wrap:pretty;">Compare pipe diameters and classes on what they cost to own, not what they cost to buy. The cheapest pipe on the quote is rarely the cheapest pipe to pump through.</p>
-            <div class="tool-cta-dark" style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer;">
+            <div class="tool-cta-dark" style="display:inline-flex; align-items:center; gap:10px; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; cursor:pointer;">
               <span>Open the analysis tool</span>
               <span style="width:28px; height:28px; border-radius:999px; background:#F4A258; color:#08343C; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
             </div>
@@ -151,7 +151,7 @@
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Irrigation ROI Calculator</div>
             <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Model capital cost, operating cost and return side by side, so you can see which system option actually pays and over what period.</p>
-            <div class="tool-cta-light" style="display:inline-flex; align-items:center; gap:10px; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; color:#05515B; cursor:pointer;">
+            <div class="tool-cta-light" style="display:inline-flex; align-items:center; gap:10px; border-radius:999px; padding:8px 8px 8px 20px; font-size:15px; font-weight:500; cursor:pointer;">
               <span>Open the calculator</span>
               <span style="width:28px; height:28px; border-radius:999px; background:#05515B; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px;">↗</span>
             </div>
@@ -324,7 +324,7 @@
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
           <span style="font-size:15px; color:rgba(255,255,255,0.66); flex:1;">Enter your email address</span>
-          <span class="subscribe-btn" style="background:#F4A258; color:#08343C; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer;">Get the monthly read</span>
+          <span class="subscribe-btn" style="padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; cursor:pointer;">Get the monthly read</span>
         </div>
         <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
       </div>

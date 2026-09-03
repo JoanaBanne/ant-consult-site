@@ -18,7 +18,7 @@
   ::selection { background:#F4A258; color:#fff; }
 
   .hover-fade { transition:color 140ms ease; }
-  .hover-fade:hover { color:#F8C08C; }
+  .hover-fade:hover { color:#F8C08C !important; }
 
   .nav-link { transition:color 150ms ease, border-color 150ms ease; border-bottom:2px solid transparent; padding-bottom:4px; }
   .nav-link:hover { color:#fff; border-bottom-color:rgba(244,162,88,0.55); }
@@ -28,13 +28,13 @@
   .nav-drop:hover .nav-drop-panel { display:block; }
   .nav-drop-item { transition:background 140ms ease; }
   .nav-drop-item:hover { background:#F1F6F4; }
-  .nav-drop-all { transition:color 140ms ease; }
+  .nav-drop-all { color:#05515B; transition:color 140ms ease; }
   .nav-drop-all:hover { color:#B96A22; }
 
-  .roi-btn, .send-btn { transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn, .send-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
   .roi-btn:hover, .send-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
-  .directions-link { transition:color 140ms ease; }
+  .directions-link { color:#05515B; transition:color 140ms ease; }
   .directions-link:hover { color:#B96A22; }
 
   .faq-radio { position:absolute; opacity:0; pointer-events:none; }
@@ -68,10 +68,10 @@
   <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
     <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
-      <a href="about.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
-      <a href="aim.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
+      <a href="about.html" class="nav-link" style="cursor:pointer; text-decoration:none;">About</a>
+      <a href="aim.html" class="nav-link" style="cursor:pointer; text-decoration:none;">AIM</a>
       <div class="nav-drop">
-        <a href="solutions.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
+        <a href="solutions.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Solutions</a>
         <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
           <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Feasibility Studies</div>
@@ -81,26 +81,26 @@
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Bulk Water Supply</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">System Assessments</div>
           <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
-            <div class="nav-drop-all" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
           </div>
         </div></div>
       </div>
-      <a href="projects.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Projects</a>
+      <a href="projects.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Projects</a>
       <div class="nav-drop">
-        <a href="insights.html" class="nav-link" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
+        <a href="insights.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Insights</a>
         <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
           <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Services Cost Estimator</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Pipe Lifecycle Cost Analysis</div>
           <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation ROI Calculator</div>
           <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
-            <div class="nav-drop-all" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
           </div>
         </div></div>
       </div>
       <a href="contact.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; color:inherit; text-decoration:none;">Contact</a>
       <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
-        <span class="roi-btn" style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+        <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
     </div>
   </div>
 
@@ -152,7 +152,7 @@
         </div>
         <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:14px;">Where is the project, and what are you growing?</div>
         <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px 46px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:24px;">What are you trying to achieve? Anything you already know about water, power or hectares helps.</div>
-        <div class="send-btn" style="display:inline-flex; align-items:center; gap:11px; background:#F4A258; color:#08343C; padding:16px 32px; border-radius:999px; font-size:16px; font-weight:600; cursor:pointer;">
+        <div class="send-btn" style="display:inline-flex; align-items:center; gap:11px; padding:16px 32px; border-radius:999px; font-size:16px; font-weight:600; cursor:pointer;">
           <span>Send message</span>
           <span>→</span>
         </div>
@@ -193,7 +193,7 @@
         <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; margin-bottom:18px;">Find us</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.35; font-weight:500; color:#12312F; letter-spacing:-0.01em; margin-bottom:14px;">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 22px; text-wrap:pretty;">Our office is in KwaZulu-Natal, and our work runs across southern Africa, North Africa and the Middle East. Site visits are part of every project.</p>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=10+Hilton+Avenue,+Hilton,+Pietermaritzburg,+3201" target="_blank" rel="noopener" class="directions-link" style="display:inline-flex; align-self:flex-start; align-items:center; gap:9px; font-size:15px; font-weight:500; color:#05515B; text-decoration:none; cursor:pointer;">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=10+Hilton+Avenue,+Hilton,+Pietermaritzburg,+3201" target="_blank" rel="noopener" class="directions-link" style="display:inline-flex; align-self:flex-start; align-items:center; gap:9px; font-size:15px; font-weight:500; text-decoration:none; cursor:pointer;">
           <span>Get directions</span>
           <span style="color:#B96A22;">↗</span>
         </a>
