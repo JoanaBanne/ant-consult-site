@@ -28,12 +28,12 @@
 
   <!-- NAV -->
   <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
-    <img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;">
+    <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;"></a>
     <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
-      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">About</span>
-      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">AIM</span>
+      <a href="about.html" style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease; color:inherit; text-decoration:none;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">About</a>
+      <a href="aim.html" style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease; color:inherit; text-decoration:none;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">AIM</a>
       <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openSolutions }}" onMouseLeave="{{ closeMenu }}">
-        <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Solutions</span>
+        <a href="solutions.html" style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease; color:inherit; text-decoration:none;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Solutions</a>
         <sc-if value="{{ solutionsOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
             <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
@@ -49,9 +49,9 @@
           </div></div>
         </sc-if>
       </div>
-      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Projects</span>
+      <a href="case-studies.html" style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease; color:inherit; text-decoration:none;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Projects</a>
       <div style="position:relative; display:flex; align-items:center;" onMouseEnter="{{ openInsights }}" onMouseLeave="{{ closeMenu }}">
-        <span style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258;">Insights</span>
+        <a href="insights.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; color:inherit; text-decoration:none;">Insights</a>
         <sc-if value="{{ insightsOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20;"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
             <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
@@ -64,7 +64,7 @@
           </div></div>
         </sc-if>
       </div>
-      <span style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Contact</span>
+      <a href="contact.html" style="cursor:pointer; padding-bottom:4px; border-bottom:2px solid transparent; transition:color 150ms ease, border-color 150ms ease; color:inherit; text-decoration:none;" style-hover="color:#fff; border-bottom-color:rgba(244,162,88,0.55);">Contact</a>
       <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
         <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease;" style-hover="background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258;">Calculate your ROI</span>
     </div>
@@ -212,7 +212,7 @@
   <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
     <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
-        <img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;">
+        <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
         <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
         <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
@@ -221,24 +221,24 @@
       <div>
         <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
         <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">About</span>
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">AIM</span>
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Solutions</span>
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Projects</span>
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Insights</span>
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Contact</span>
+          <a href="about.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">About</a>
+          <a href="aim.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">AIM</a>
+          <a href="solutions.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Solutions</a>
+          <a href="case-studies.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Projects</a>
+          <a href="insights.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Insights</a>
+          <a href="contact.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Contact</a>
         </div>
       </div>
       <div>
         <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
         <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Feasibility Studies</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Masterplans</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Commercial Irrigation Design</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation Upgrades</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Bulk Water Supply</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">System Assessments</span>
+          <a href="feasibility-studies.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Feasibility Studies</a><a href="masterplans.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Masterplans</a><a href="commercial-irrigation-design.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Commercial Irrigation Design</a><a href="irrigation-upgrades.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Irrigation Upgrades</a><a href="bulk-water-supply.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Bulk Water Supply</a><a href="system-assessments.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">System Assessments</a>
         </div>
       </div>
       <div>
         <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
         <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
-          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Services Cost Estimator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation ROI Calculator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Blog</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Case studies</span>
+          <span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Services Cost Estimator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Pipe Lifecycle Cost Analysis</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Irrigation ROI Calculator</span><span style="cursor:pointer; transition:color 140ms ease;" style-hover="color:#F8C08C;">Blog</span><a href="case-studies.html" style="cursor:pointer; transition:color 140ms ease; color:inherit; text-decoration:none;" style-hover="color:#F8C08C;">Case studies</a>
         </div>
       </div>
       <div>
