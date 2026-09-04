@@ -62,6 +62,10 @@
   .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
+  .contact-input { transition:border-color 160ms ease; }
+  .contact-input::placeholder { color:rgba(255,255,255,0.55); }
+  .contact-input:focus { outline:none; border-color:#F4A258 !important; }
+
   @media (max-width: 768px) {
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
@@ -155,20 +159,22 @@
       <div id="message-form" style="background:#05515B; border-radius:18px; padding:48px; color:#fff;">
         <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600; margin-bottom:18px;">Send us a message</div>
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; margin:0 0 28px; text-wrap:balance;">Tell us about the project</h2>
-        <div class="form-grid-container" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Name</div>
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Farm or company</div>
-        </div>
-        <div class="form-grid-container" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Email</div>
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55);">Phone</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:14px;">Where is the project, and what are you growing?</div>
-        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px 46px; font-size:15px; color:rgba(255,255,255,0.55); margin-bottom:24px;">What are you trying to achieve? Anything you already know about water, power or hectares helps.</div>
-        <div class="send-btn" style="display:inline-flex; align-items:center; gap:11px; padding:16px 32px; border-radius:999px; font-size:16px; font-weight:600; cursor:pointer;">
-          <span>Send message</span>
-          <span>→</span>
-        </div>
+        <form>
+          <div class="form-grid-container" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+            <input type="text" name="name" placeholder="Name" required class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%;">
+            <input type="text" name="company" placeholder="Farm or company" class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%;">
+          </div>
+          <div class="form-grid-container" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+            <input type="email" name="email" placeholder="Email" required class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%;">
+            <input type="tel" name="phone" placeholder="Phone" class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%;">
+          </div>
+          <textarea name="project_location" placeholder="Where is the project, and what are you growing?" rows="2" class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%; margin-bottom:14px; resize:vertical;"></textarea>
+          <textarea name="project_goal" placeholder="What are you trying to achieve? Anything you already know about water, power or hectares helps." rows="3" class="contact-input" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:12px; padding:15px 18px; font-size:15px; color:#fff; font-family:inherit; width:100%; margin-bottom:24px; resize:vertical;"></textarea>
+          <button type="submit" class="send-btn" style="display:inline-flex; align-items:center; gap:11px; padding:16px 32px; border-radius:999px; font-size:16px; font-weight:600; cursor:pointer; border:none; font-family:inherit;">
+            <span>Send message</span>
+            <span>→</span>
+          </button>
+        </form>
       </div>
 
 

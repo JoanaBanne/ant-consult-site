@@ -54,6 +54,13 @@
 
   .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -61,9 +68,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="about.html" class="nav-link" style="cursor:pointer; text-decoration:none;">About</a>
       <a href="aim.html" class="nav-link" style="cursor:pointer; text-decoration:none;">AIM</a>
       <div class="nav-drop">
@@ -101,7 +108,7 @@
   </div>
 
   <!-- HERO -->
-  <div style="position:relative; height:520px; background:linear-gradient(180deg,rgba(5,81,91,0.52) 0%,rgba(5,81,91,0.40) 40%,rgba(5,81,91,0.78) 100%),url('assets/irrigation-insights-resources-hero.jpg') center 62%/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 72px; color:#fff;" role="img" aria-label="Irrigation engineering tools and resources">
+  <div class="section-pad-lg" style="position:relative; height:520px; background:linear-gradient(180deg,rgba(5,81,91,0.52) 0%,rgba(5,81,91,0.40) 40%,rgba(5,81,91,0.78) 100%),url('assets/irrigation-insights-resources-hero.jpg') center 62%/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 72px; color:#fff;" role="img" aria-label="Irrigation engineering tools and resources">
     <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
       <span style="width:44px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Tools &amp; Thinking</span>
@@ -111,7 +118,7 @@
   </div>
 
   <!-- TOOLS -->
-  <div style="background:#FFFFFF; padding:96px 72px 100px;">
+  <div class="section-pad-lg" style="background:#FFFFFF; padding:96px 72px 100px;">
     <div style="display:grid; grid-template-columns:0.85fr 1.35fr; gap:56px; align-items:start;">
 
       <div>
@@ -126,7 +133,7 @@
 
       <div style="display:flex; flex-direction:column; gap:24px;">
 
-        <div id="services-cost-estimator" class="tool-card-light" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
+        <div id="services-cost-estimator" class="tool-card-light two-col-grid" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Services Cost Estimator</div>
             <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Establish the ballpark design cost of a new irrigation development or an upgrade. Available in ZAR for Southern Africa and in USD elsewhere.</p>
@@ -138,7 +145,7 @@
           <div role="img" aria-label="Services Cost Estimator tool" style="height:150px; border-radius:14px; background:url('assets/drone-survey-irrigation-planning-tool.jpg') center 56%/cover no-repeat; border:1px solid #CBD9D5;"></div>
         </div>
 
-        <div class="tool-card-dark" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
+        <div class="tool-card-dark two-col-grid" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:10px;">Pipe Lifecycle Cost Analysis</div>
             <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0 0 24px; text-wrap:pretty;">Compare pipe diameters and classes on what they cost to own, not what they cost to buy. The cheapest pipe on the quote is rarely the cheapest pipe to pump through.</p>
@@ -150,7 +157,7 @@
           <div role="img" aria-label="Pipe Lifecycle Cost Analysis tool" style="height:150px; border-radius:14px; background:url('assets/irrigation-filtration-system-tool.jpg') center 50%/cover no-repeat; border:1px solid rgba(255,255,255,0.2);"></div>
         </div>
 
-        <div class="tool-card-light" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
+        <div class="tool-card-light two-col-grid" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Irrigation ROI Calculator</div>
             <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Model capital cost, operating cost and return side by side, so you can see which system option actually pays and over what period.</p>
@@ -167,7 +174,7 @@
   </div>
 
   <!-- FEATURED POST -->
-  <div style="background:#F4F7F6; padding:92px 72px 40px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:92px 72px 40px;">
     <div style="display:flex; align-items:center; gap:14px; margin-bottom:34px;">
       <span style="width:44px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600;">Latest</span>
@@ -190,7 +197,7 @@
   </div>
 
   <!-- POST GRID -->
-  <div id="blog" style="background:#F4F7F6; padding:56px 72px 104px;">
+  <div id="blog" class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 104px;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0 0 40px;">More from the blog</h2>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <a href="blog/irrigation-engineering-design-situation-appropriate.html" class="post-card" style="background:#FFFFFF; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; text-decoration:none; color:inherit;">
@@ -314,7 +321,7 @@
   </div>
 
   <!-- SUBSCRIBE -->
-  <div style="background:#FFFFFF; padding:0 72px 96px;">
+  <div class="section-pad-lg" style="background:#FFFFFF; padding:0 72px 96px;">
     <div style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
       <div>
         <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
@@ -335,7 +342,7 @@
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
     <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>

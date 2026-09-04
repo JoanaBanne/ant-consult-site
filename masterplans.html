@@ -30,6 +30,13 @@
 
   .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -37,9 +44,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
       <a href="solutions.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; color:inherit; text-decoration:none;">Solutions</a>
@@ -52,8 +59,8 @@
   </div>
 
   <!-- HERO -->
-  <div style="background:#F4F7F6; padding:56px 72px 76px;">
-    <div style="display:grid; grid-template-columns:1fr 330px; gap:72px; align-items:end; padding-top:64px;">
+  <div class="page-hero section-pad-lg" style="background:#F4F7F6; padding:56px 72px 76px;">
+    <div class="two-col-grid" style="display:grid; grid-template-columns:1fr 330px; gap:72px; align-items:end; padding-top:64px;">
       <div>
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
           <span style="width:22px; height:1px; background:#F4A258;"></span>
@@ -91,7 +98,7 @@
   <div role="img" aria-label="Irrigation masterplan riverworks site" style="height:460px; background:url('assets/irrigation-masterplan-riverworks-site.jpg') center 46%/cover no-repeat;"></div>
 
   <!-- INTRO -->
-  <div style="background:#fff; padding:88px 72px 96px;">
+  <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">A feasibility study tells you what is possible and what makes financial sense. A masterplan tells you how to get there, in what sequence, and at what cost.</p>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">We develop masterplans for large-scale agricultural operations and water supply schemes, turning feasibility findings into a plan you can act on. It sets out the development phases, the infrastructure priorities and the capital required, so every stage builds on the last instead of undoing it.</p>
@@ -99,7 +106,7 @@
   </div>
 
   <!-- WHAT IT INVOLVES -->
-  <div style="background:#F4F7F6; padding:96px 72px 104px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:96px 72px 104px;">
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.018em; color:#12312F; margin:0; text-wrap:balance;">What a masterplan involves</h2>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">Few large-scale developments are built all at once. Working from the technical and financial findings, we sit down with your team and produce a definitive layout and a phased implementation plan, so each phase earns its keep now while still fitting the system you are working towards.</p>
@@ -130,7 +137,7 @@
   </div>
 
   <!-- CTA -->
-  <div style="background:#fff; padding:88px 72px 96px;">
+  <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
     <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
       <div style="padding:64px 56px 66px;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Good projects are built in phases. Great projects are planned that way from the start.</h2>
@@ -144,7 +151,7 @@
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
     <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
