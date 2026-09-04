@@ -51,9 +51,15 @@ function escapeAttr(str) {
   return escapeHtml(str).replace(/"/g, '&quot;');
 }
 
-function humanizeAuthor(slug) {
-  if (!slug || !slug.trim()) return 'Ant Consult Team';
-  return slug.split('-').filter(Boolean).map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+const AUTHORS = {
+  'jonathan-kirkman': { name: 'Jon Kirkman', title: 'Professional Engineer and founder of Ant Consult | Passionate about solving problems' },
+  'joana-banne': { name: 'Joana Banne', title: 'Marketing Coordinator at Ant Consult | Translating engineering expertise into practical insights' },
+};
+
+function getAuthor(slug) {
+  const key = (slug || '').trim();
+  if (AUTHORS[key]) return AUTHORS[key];
+  return { name: 'Ant Consult Team', title: 'Ant Consult Team' };
 }
 
 function initials(name) {
@@ -166,8 +172,9 @@ for (const r of records) {
 
   const isDraft = rec['Draft'].trim().toLowerCase() === 'true';
   const isArchived = rec['Archived'].trim().toLowerCase() === 'true';
-  const authorName = humanizeAuthor(rec['Author'].trim());
-  const authorTitle = 'Ant Consult Team';
+  const author = getAuthor(rec['Author']);
+  const authorName = author.name;
+  const authorTitle = author.title;
   const dateStr = formatDate(rec['Published On']) || formatDate(rec['Created On']) || 'Undated';
   const readTime = estimateReadTime(rec['Blog Post Text']);
   const summary = rec['Blog Post Summary'].trim();
