@@ -31,16 +31,16 @@
   .nav-drop-all { color:#05515B; transition:color 140ms ease; }
   .nav-drop-all:hover { color:#B96A22; }
 
-  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
   .tool-card-light { transition:transform 180ms ease, box-shadow 180ms ease; }
   .tool-card-light:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10); }
   .tool-card-dark { transition:transform 180ms ease, box-shadow 180ms ease; }
   .tool-card-dark:hover { transform:translateY(-4px); box-shadow:0 16px 44px rgba(5,81,91,0.28); }
-  .tool-cta-light { background:#FFFFFF; border:1px solid #DCE7E4; color:#05515B; transition:background 160ms ease, color 160ms ease, border-color 160ms ease; }
+  .tool-cta-light { background:#FFFFFF; border:1px solid #DCE7E4; color:#05515B; transition:all 0.3s ease; }
   .tool-cta-light:hover { background:#05515B; color:#fff; border-color:#05515B; }
-  .tool-cta-dark { background:#FFFFFF; color:#05515B; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .tool-cta-dark { background:#FFFFFF; color:#05515B; transition:all 0.3s ease; }
   .tool-cta-dark:hover { background:transparent; color:#fff; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.8); }
 
   .featured-post { transition:transform 180ms ease, box-shadow 180ms ease; }
@@ -49,8 +49,11 @@
   .post-card { transition:transform 180ms ease, box-shadow 180ms ease; }
   .post-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(16,49,47,0.10); }
 
-  .subscribe-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .subscribe-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .subscribe-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
+  .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 </style>
 </head>
 <body>
@@ -371,7 +374,7 @@
         </div>
         <form class="newsletter-form" style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
           <input type="email" name="email" class="newsletter-input" placeholder="Enter email to subscribe" required style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:13px; color:#fff;">
-          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; background:#F4A258; color:#08343C; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
+          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
         </form>
       </div>
     </div>

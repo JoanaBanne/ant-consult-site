@@ -17,8 +17,8 @@
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
 
-  .hero-outline-btn { transition:background 160ms ease; }
-  .hero-outline-btn:hover { background:rgba(255,255,255,0.1); color:#fff !important; }
+  .hero-outline-btn { border:1px solid rgba(255,255,255,0.45); color:#fff; transition:all 0.3s ease; }
+  .hero-outline-btn:hover { background:#F4A258; color:#08343C; border-color:#F4A258; }
   @keyframes ac-logo-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 
   .desktop-only-view { display:block; }
@@ -49,20 +49,23 @@
   .pricing-card:hover .pl-item { color:rgba(255,255,255,0.92); }
   .pricing-card .pl-dash { background:#B96A22; transition:background 160ms ease; }
   .pricing-card:hover .pl-dash { background:#F4A258; }
-  .pricing-card .pl-btn { background:#05515B; color:#FFFFFF; transition:background 160ms ease, color 160ms ease; }
+  .pricing-card .pl-btn { background:#05515B; color:#FFFFFF; transition:all 0.3s ease; }
   .pricing-card:hover .pl-btn { background:#F4A258; color:#08343C; }
 
-  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
-  .cta-btn-orange { background:#F4A258; color:#08343C; transition:background 160ms ease; }
-  .cta-btn-orange:hover { background:#f2934a; }
+  .cta-btn-orange { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
+  .cta-btn-orange:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
-  .cta-btn-teal { background:#05515B; color:#fff; transition:background 160ms ease; }
-  .cta-btn-teal:hover { background:#063e46; }
+  .cta-btn-teal { background:#05515B; color:#fff; transition:all 0.3s ease; }
+  .cta-btn-teal:hover { background:transparent; color:#05515B; box-shadow:inset 0 0 0 1px #05515B; }
 
-  .btn-outline-teal { color:#05515B; transition:background 160ms ease, color 160ms ease; }
+  .btn-outline-teal { border:1px solid #05515B; color:#05515B; transition:all 0.3s ease; }
   .btn-outline-teal:hover { background:#05515B; color:#fff; }
+
+  .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
+  .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 </style>
 </head>
 <body>
@@ -99,7 +102,7 @@
       <p style="font-size:16px; line-height:1.65; color:rgba(255,255,255,0.86); margin:0 0 40px; max-width:560px; text-wrap:pretty;">Ant Consult designs irrigation, pumping and water distribution systems built for the lowest possible cost of ownership. Every design is shaped by the realities of your operation, and the people who will manage it.</p>
       <div style="display:flex; gap:14px; margin-bottom:56px;">
         <a href="contact.html" class="cta-btn-orange" style="font-weight:600; padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer;text-decoration:none;">Book a discovery call</a>
-        <a href="projects.html" class="hero-outline-btn" style="border:1px solid rgba(255,255,255,0.45); color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer; text-decoration:none;">See our projects</a>
+        <a href="projects.html" class="hero-outline-btn" style="padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer; text-decoration:none;">See our projects</a>
       </div>
     </div>
   </div>
@@ -370,7 +373,7 @@
         </div>
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; max-width:620px; text-wrap:balance;">Tools, guides and insights for better engineering decisions</h2>
       </div>
-      <a href="insights.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 28px; border-radius:999px; cursor:pointer; margin-bottom:8px; white-space:nowrap; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
+      <a href="insights.html" class="btn-outline-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 28px; border-radius:999px; cursor:pointer; margin-bottom:8px; white-space:nowrap; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
@@ -470,7 +473,7 @@
         </div>
         <form class="newsletter-form" style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
           <input type="email" name="email" class="newsletter-input" placeholder="Enter email to subscribe" required style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:13px; color:#fff;">
-          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; background:#F4A258; color:#08343C; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
+          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
         </form>
       </div>
     </div>
@@ -509,7 +512,7 @@
       <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin:0 0 28px;">Ant Consult designs irrigation, pumping and water distribution systems built for the lowest possible cost of ownership. Every design is shaped by the realities of your operation, and the people who will manage it.</p>
       <div style="display:flex; flex-direction:column; gap:12px;">
         <a href="contact.html" class="cta-btn-orange" style="font-weight:600; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer;text-decoration:none;">Book a discovery call</a>
-<a href="projects.html" class="hero-outline-btn" style="border:1px solid rgba(255,255,255,0.45); color:#fff; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer; text-decoration:none;">See our projects</a>
+<a href="projects.html" class="hero-outline-btn" style="padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer; text-decoration:none;">See our projects</a>
       </div>
     </div>
   </div>
@@ -764,7 +767,7 @@
       </div>
     </div>
     <div style="margin-top:24px; text-align:center;">
-      <a href="insights.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; box-sizing:border-box; font-size:16px; font-weight:500; padding:16px; border-radius:999px; cursor:pointer; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
+      <a href="insights.html" class="btn-outline-teal" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; box-sizing:border-box; font-size:16px; font-weight:500; padding:16px; border-radius:999px; cursor:pointer; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
     </div>
   </div>
 
@@ -819,7 +822,7 @@
     <div style="margin-top:32px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.16);">
       <form class="newsletter-form" style="display:flex; align-items:center; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.22); border-radius:999px; padding:11px 11px 11px 18px; gap:10px;">
         <input type="email" name="email" class="newsletter-input" placeholder="Enter email to subscribe" required style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:13px; color:#fff;">
-        <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; background:#F4A258; color:#08343C; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
+        <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
       </form>
       <div style="display:flex; align-items:center; gap:14px; margin-top:26px; font-size:13px;">
         <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
