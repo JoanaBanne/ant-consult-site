@@ -38,6 +38,13 @@
   .case-body a { color:#05515B; text-decoration:underline; }
   .case-body a:hover { color:#B96A22; }
   .case-body strong { font-weight:600; color:#12312F; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -46,9 +53,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="../about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="../aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
       <a href="../solutions.html" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
@@ -61,7 +68,7 @@
   </div>
 
   <!-- CASE STUDY HEADER -->
-  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
     <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
       <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case Studies</a>
       <span style="color:#A9B8B4;">/</span>
@@ -75,10 +82,10 @@
   </div>
 
   <!-- HERO IMAGE -->
-  <div role="img" aria-label="Mount Verde Estate Hydraulic Masterplan" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69a136ffe13f85d8013209ee_P0016%20340%20001%20MT%20Verde%20Masterplan%20001-page-001.jpg') center/cover no-repeat;"></div>
+  <div class="section-pad-lg" role="img" aria-label="Mount Verde Estate Hydraulic Masterplan" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69a136ffe13f85d8013209ee_P0016%20340%20001%20MT%20Verde%20Masterplan%20001-page-001.jpg') center/cover no-repeat;"></div>
 
   <!-- THE CHALLENGE -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Challenge</h2>
       <div class="case-body"><h3>Executive summary</h3><p>Mount Verde Estate is progressing a major, phased expansion comprising <strong>91 subdivisions (2–3 ha)</strong> and additional residential development totalling approximately <strong>774 units</strong>. Ant Consult was appointed to produce a <strong>hydraulic masterplan</strong> to quantify demands, confirm storage needs, and propose a robust, low-maintenance bulk water configuration that prioritises <strong>operational simplicity and reliability</strong>.</p><p>The recommended concept leverages the existing <strong>municipal gravity feed (Ø160mm)</strong> and <strong>high-level storage at Plot A16 (250 kL)</strong> as the command reservoir, while using <strong>targeted offtakes</strong>, <strong>pressure management</strong>, and <strong>limited booster pumping only where unavoidable</strong>.</p><h3>Client context</h3><p>Mount Verde’s existing water supply and constraints included:</p><ul><li>Municipal supply via <strong>Ø160mm pipeline</strong>, with measured boundary pressure of <strong>~6 bar</strong>.</li><li>An existing <strong>Ø200mm UPVC CL12</strong> line from the boundary to a <strong>250 kL reservoir</strong> at the estate high point.</li><li>Existing internal reticulation consisting mainly of <strong>HDPE PN10 (Ø50–Ø110mm)</strong>.</li><li>Planned development growth (circa <strong>800 units total</strong>) requiring a supply services masterplan to support <strong>phasing and infrastructure investment decisions</strong>.</li></ul><h3>Objectives and scope</h3><p>The appointment required:</p><ol><li>Quantify and spatially allocate present and future <strong>water demands</strong>.</li><li>Size <strong>storage reservoirs</strong> to provide adequate buffering.</li><li>Identify <strong>optimal reservoir locations</strong> to minimise pipe runs while maintaining gravity head.</li><li>Route and size <strong>main water lines</strong> for the preferred future configuration.</li><li>Compare the “ideal” arrangement to the status quo and recommend <strong>strategic upgrades</strong>.</li></ol><p>A key instruction was to prioritise <strong>ease of management and lower operating cost</strong> over minimum capital cost.</p></div>
@@ -86,7 +93,7 @@
   </div>
 
   <!-- THE STRATEGY -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Strategy</h2>
       <div class="case-body"><h3>Approach (method)</h3><p>Ant Consult followed a masterplanning workflow aligned with common industry practice for water supply masterplans:</p><ul><li><strong>Data review</strong> and validation of supplied drawings and surveys.</li><li>Development of <strong>planning-level hydraulic assumptions</strong> and material standards.</li><li>Demand modelling using recognised guidance (Red Book, 2019 categories).</li><li>Network concept modelling using preliminary ring mains to approximate final friction losses and operational performance.</li><li>Identification of pressure and topography risks, followed by definition of mitigation measures (e.g., pressure management strategy).</li></ul><h3>Key technical assumptions (planning level)</h3><ul><li><strong>Pipe materials:</strong> HDPE PN10 for ≤110 mm, UPVC CL12 for &gt;110 mm.</li><li><strong>Pressure management:</strong><ul><li>PRVs acceptable at offtakes.</li><li>Avoid PRVs in series (risk of “hunting” and pressure oscillations).</li><li>Prefer <strong>break-pressure tanks</strong> for long downhill runs.</li></ul></li><li><strong>Reservoir control:</strong> modulating float valves (e.g., Bermad 750 series or similar).</li><li><strong>Design philosophy:</strong> “right infrastructure in the right place” with the fewest moving parts, minimal pumping, and minimised maintenance.</li></ul></div>
@@ -96,7 +103,7 @@
 
 
   <!-- RESULTS -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">Results</h2>
       <div class="case-body"><h3>Demand and storage outcomes</h3><p>The development demand profile (planning categories) included:</p><ul><li>Agricultural (domestic use only): <strong>2,000 ℓ/day × 90 units</strong></li><li>Residential high density: <strong>700 ℓ/day × 430 units</strong></li><li>Residential medium density: <strong>900 ℓ/day × 354 units</strong></li></ul><p>This yielded a total annual average daily demand of <strong>~711 kL/day</strong>.</p><p>Given the low-risk nature of the municipal gravity source and upstream buffering, <strong>24 hours of storage</strong> was adopted as sufficient (risk-based decision).</p><p><strong>24-hour storage requirements (recommended):</strong></p><ul><li>Forest Hills reservoir: <strong>~120 kL</strong></li><li>Scheme command reservoir: <strong>~500 kL</strong>, with recommendation to <strong>double storage at the command site</strong> using a second identical tank with interconnected outlets.</li></ul><h3>Recommended masterplan concept</h3><p>The recommended estate-wide configuration:</p><ul><li>Retain municipal gravity supply to the Mount Verde boundary (Ø160 mm, ~6 bar).</li><li>Continue conveying supply via <strong>Ø200 mm UPVC CL12</strong> to the existing <strong>250 kL command reservoir .</strong></li><li>Address hydraulic “distance from command storage” by supplying certain regions via <strong>direct offtakes off the mainline</strong>, each controlled by a suitably sized PRV.</li></ul><h3>Firefighting considerations</h3><ul><li>Agricultural plots fall under the local agricultural fire protection association, so <strong>no fire flow provision</strong> was included for those areas.</li><li>Residential areas were assessed as low risk or potentially Medium Risk 2 (depending on the final development type).</li></ul><h3>Outcomes and value delivered</h3><p>The masterplan provided:</p><ul><li>A quantified demand basis and storage sizing for phased development.</li><li>A clear, operationally robust water supply configuration centred on gravity supply and strategic buffering.</li><li>A pressure management strategy suited to steep topography (break-pressure tanks and limited PRV use).</li><li>Defined upgrade triggers (survey certainty, firefighting classification, and development phasing).</li></ul><h3>Recommendations and next steps</h3><ol><li>Conduct a <strong>site-wide LIDAR survey</strong> to remove terrain-related uncertainty.</li><li>Use LIDAR to confirm the masterplan and proceed to <strong>detailed design</strong> of mainlines and offtakes, including pipeline-reservoir interfaces and air/scour valve siting.</li><li>Complete detailed design downstream of offtakes <strong>~6 months ahead</strong> of each phase construction start.</li></ol><h3>Deliverables</h3><ul><li>Hydraulic masterplan report</li><li>Supporting drawing set</li></ul></div>
@@ -104,14 +111,14 @@
   </div>
 
   <!-- CTA -->
-  <div style="background:#F4F7F6; padding:56px 72px; text-align:center;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px; text-align:center;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.2; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 20px;">Bring us a project like this one</h2>
     <a href="../contact.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

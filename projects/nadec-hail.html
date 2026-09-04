@@ -38,6 +38,13 @@
   .case-body a { color:#05515B; text-decoration:underline; }
   .case-body a:hover { color:#B96A22; }
   .case-body strong { font-weight:600; color:#12312F; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -46,9 +53,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="../about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="../aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
       <a href="../solutions.html" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
@@ -61,7 +68,7 @@
   </div>
 
   <!-- CASE STUDY HEADER -->
-  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
     <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
       <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case Studies</a>
       <span style="color:#A9B8B4;">/</span>
@@ -75,10 +82,10 @@
   </div>
 
   <!-- HERO IMAGE -->
-  <div role="img" aria-label="Controlled Environment Agriculture Masterplan" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/6930494473f723a0071b483a_20250424_165345.jpg') center/cover no-repeat;"></div>
+  <div class="section-pad-lg" role="img" aria-label="Controlled Environment Agriculture Masterplan" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/6930494473f723a0071b483a_20250424_165345.jpg') center/cover no-repeat;"></div>
 
   <!-- THE CHALLENGE -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Challenge</h2>
       <div class="case-body"><h3>Client Context</h3><p id="">The National Agricultural Development Corporation (NADEC) is developing a large, high‑value crop and processing hub outside Hail, including blueberries, strawberries, leaf salads, seed potatoes, high‑wire greenhouse crops, mushroom compost facilities and multiple food processing plants. The development will roll out over several phases, with a total cultivated area of roughly 190 ha and a full suite of supporting industrial facilities.</p><p id="">NADEC required a coherent, future‑proof services masterplan that:</p><ul id=""><li id="">Integrates agricultural fields, greenhouses and factories into one serviced campus.</li><li id="">Provides a reliable bulk water, power, roads and sanitation layout from day one.</li><li id="">Manages significant reverse‑osmosis (RO) reject water volumes safely and cost‑effectively.</li><li id="">Gives early visibility on capital cost and phasing for board‑level investment decisions.</li></ul><p id="">Ant Consult was appointed to lead the civil and infrastructure masterplanning.</p></div>
@@ -86,7 +93,7 @@
   </div>
 
   <!-- THE STRATEGY -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Strategy</h2>
       <div class="case-body"><h3>Our Role</h3><p id="">Ant Consult delivered an initial masterplan, supported by an ongoing iterative development process, as well as the Phase 1 Civil Works detailed design:</p><ol id=""><li id="">Masterplan<ul id=""><li id="">Spatially correct overall layout derived from NADEC’s conceptual plan.</li><li id="">High‑level layouts for roads, bulk water, electrical and sanitation networks, plus greenbelts.</li><li id="">Topographic and LiDAR survey specification.</li><li id="">Class 5 “order‑of‑magnitude” cost estimate.</li></ul></li><li id="">Iterative Discussion and Refinement<ul id=""><li id="">Detailed water demand modelling for all agricultural and industrial components, including RO reject fractions at peak irrigation season.</li><li id="">Option analysis for reject water disposal, bulk water storage philosophy and greenbelt irrigation using saline water.</li><li id="">Alignment of bulk services concept with NADEC’s electrical design and construction sequencing.</li><li id="">Completion of Phase 1 Civil Works detailed design for the industrial park and key trunk infrastructure.</li></ul></li></ol><h3>Technical Solution Highlights</h3><h3>Robust Bulk Water Strategy</h3><ul id=""><li id="">Dual bulk water systems:<ul id=""><li id="">A Primary ring main carries all raw water demands (irrigation and potable feed) from multiple boreholes to agricultural and industrial users, with a central master reservoir for buffering and peak‑shaving.</li><li id="">A Secondary borehole system can be switched from centre‑pivots to high‑value greenhouse crops during emergencies, providing a failsafe supply strategy.</li></ul></li><li id="">Demand‑driven sizing:<ul id=""><li id="">Agricultural blocks designed at based on design flows provided by respective facility specialists, including 20% safety factor and 30% Reverse Osmosis reject allowance.</li><li id="">Industrial water and wash‑water demands modelled per facility, giving clear design flows for RO plants and networks.</li></ul></li><li id="">Storage philosophy:<ul id=""><li id="">Comparison of distributed on‑farm storage plus a central buffer vs. large centralised storage.</li><li id="">Recommendation for significant central buffer storage due to arid environment and risk of mechanical failure of supply boreholes.</li></ul></li></ul><h3>Managing RO Reject Water at Scale</h3><p id="">Reject water disposal is the project’s most challenging issue, with peak daily volumes exceeding 4 000 m³ in early phases and growing with expansion.</p><p id="">Ant Consult quantified reject volumes per phase and per production unit, and evaluated:</p><ul id=""><li id="">Dilution and irrigation via existing centre pivots.</li><li id="">Evaporation ponds sized to realistic evaporation rates.</li><li id="">Disposal to unproductive ground, highlighting environmental risk.</li></ul><p id="">Each option comes with its own complexities and issues. Dilution and irrigation &nbsp;minimises bulk pipe diameters, concentrates operational management at one node and makes productive use of water that would otherwise be a liability.</p><h3>Integrated Roads, Sanitation, Electrical and Greenbelts</h3><ul id=""><li id="">Roads: Three road classes (heavy, medium and agricultural) laid out to separate industrial heavy‑haul routes from lighter traffic, with 5 m service reserves along each side for buried utilities and future greenbelts.</li><li id="">Sanitation: On-site, septic tank based.</li><li id="">Electrical: Coordination with NADEC’s electrical engineer around a double‑circuit bulk line and distributed transformers, aligning pipe and cable corridors for constructability.</li><li id="">Greenbelts and cooling: 10 m wide greenbelts along roads and between developments to create a cooler microclimate and provide an additional sink for saline irrigation water where suitable species can be used.</li></ul></div>
@@ -96,7 +103,7 @@
 
 
   <!-- RESULTS -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">Results</h2>
       <div class="case-body"><h3>Value Delivered</h3><p id="">Through the NADEC Hail project, Ant Consult has provided NADEC with:</p><ul id=""><li id="">A spatially coherent, services‑driven masterplan that ties production units, housing, processing and logistics into one integrated site.</li><li id="">A clear understanding of infrastructure capital cost and its phasing, enabling informed investment decisions.</li><li id="">A technically robust and practical strategy for bulk water supply, storage and reject water management in a challenging arid, saline environment.</li><li id="">A well‑defined path from concept to construction, with Phase 1 civil works tender design already complete and aligned with the long‑term masterplan.</li></ul><p id="">The result is a future‑ready agro‑industrial platform that balances reliability, environmental responsibility and long‑term operating efficiency, supporting NADEC’s ambitions to expand high‑value crop and food processing capacity at Hail.</p></div>
@@ -104,14 +111,14 @@
   </div>
 
   <!-- CTA -->
-  <div style="background:#F4F7F6; padding:56px 72px; text-align:center;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px; text-align:center;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.2; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 20px;">Bring us a project like this one</h2>
     <a href="../contact.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

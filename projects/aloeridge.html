@@ -38,6 +38,13 @@
   .case-body a { color:#05515B; text-decoration:underline; }
   .case-body a:hover { color:#B96A22; }
   .case-body strong { font-weight:600; color:#12312F; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -46,9 +53,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="../about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="../aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
       <a href="../solutions.html" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
@@ -61,7 +68,7 @@
   </div>
 
   <!-- CASE STUDY HEADER -->
-  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
     <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
       <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case Studies</a>
       <span style="color:#A9B8B4;">/</span>
@@ -75,10 +82,10 @@
   </div>
 
   <!-- HERO IMAGE -->
-  <div role="img" aria-label="Water System Analysis" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69314d87c8704acf6d1b6a8b_20250213_104948.jpg') center/cover no-repeat;"></div>
+  <div class="section-pad-lg" role="img" aria-label="Water System Analysis" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69314d87c8704acf6d1b6a8b_20250213_104948.jpg') center/cover no-repeat;"></div>
 
   <!-- THE CHALLENGE -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Challenge</h2>
       <div class="case-body"><h3>Challenge</h3><p id="">The client manages the Aloe Ridge development, a large multi‑village estate. By 2024 they were facing:</p><ul id=""><li id="">Significant, expensive water losse from the water network</li><li id="">Ageing, Class 6 pipework with limited bedding quality</li><li id="">Outdated or incomplete as‑built drawings</li><li id="">Uncertainty about whether to repair, pressure‑manage or fully replace key systems</li></ul><p id="">CCH needed hard data to guide multi‑million‑rand decisions, rather than relying on assumptions.</p></div>
@@ -86,7 +93,7 @@
   </div>
 
   <!-- THE STRATEGY -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Strategy</h2>
       <div class="case-body"><h3>Our Brief</h3><p id="">African Crake Projects (Pty) Ltd, supported by Ant Consult, was appointed to undertake a full hydraulic investigation of Aloe Ridge Villages 1 and 2, supported by detailed network mapping and modelling.</p><p id="">The objectives were to:</p><ol id=""><li id="">Rebuild accurate as‑builts for potable, fire, sewer and stormwater networks</li><li id="">Quantify real water losses and distinguish leakage from legitimate consumption</li><li id="">Locate critical leaks and weaknesses in the fire and potable systems</li><li id="">Recommend practical interventions – from quick wins to full system renewal – with cost estimates for budgeting</li></ol></div>
@@ -94,7 +101,7 @@
   </div>
 
   <!-- THE EXECUTION -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Execution</h2>
       <div class="case-body"><h3>What We Did</h3><h3>1. Ground‑truthing and mapping</h3><ul id=""><li id="">Multiple site visits with targeted excavation to prove pipe sizes, alignments and classes</li><li id="">Identification of all valves, meters, fire hydrants, scours and air valves</li><li id="">Capture of the full potable water, fire water, sewer and stormwater network in a geo‑referenced GIS database and PDF as‑built drawings, now used by CCH as its primary record.</li></ul><h3>2. Monitoring and hydraulic modelling</h3><ul id=""><li id="">Flow logging on bulk meters for both villages</li><li id="">Pressure logging at strategic locations on potable and fire systems</li><li id="">Construction and calibration of detailed Civil Designer / EPANET models</li><li id="">Side‑by‑side comparison of modelled vs measured behaviour to pinpoint:<ul id=""><li id="">Systemic leakage</li><li id="">Localised faults</li><li id="">Unmetered connections and bypasses</li><li id="">Over‑pressure and partially closed valves</li></ul></li></ul><h3>Key Insights</h3><h3>Village 1 – High losses and structural issues</h3><ul id=""><li id="">Discovered and closed an unmetered Ø250 mm bypass between Villages 1 and 2, restoring proper metering.</li><li id="">Confirmed no unwanted municipal or fire‑potable interconnections, focusing attention inside the village network.</li><li id="">Quantified leakage:<ul id=""><li id="">Fire system baseflow ≈ 0.5 l/s plus daytime peaks from domestic use of fire lines</li><li id="">Potable system leakage ≈ 1.7 l/s – about 49% of average inflow</li></ul></li><li id="">Identified hotspot leak zones by finding areas of localized low pressures</li><li id="">Documented excessive pressures on low‑class pipe:<ul id=""><li id="">Potable pressures up to 120 m (12 bar) on Class 6 (60 m) mains</li><li id="">Modelled fire system pressures up to 118 m</li></ul></li><li id="">Produced a detailed replacement cost estimate for fire and potable water systems.</li></ul><h3>Village 2 – Sound network, over‑pressurised</h3><ul id=""><li id="">Demonstrated minimal systemic leakage:<ul id=""><li id="">Potable baseflow at bulk meters close to zero</li><li id="">Fire system night flows approaching zero</li></ul></li><li id="">Showed that peaks on the fire system were due to intermittent domestic use, not continuous leaks.</li><li id="">Flagged local risk areas.</li><li id="">Confirmed that both potable and fire networks behave hydraulically as expected, but with more pressure than necessary:<ul id=""><li id="">Scope to safely reduce pressures by ~20–30 m without compromising service levels.</li></ul></li></ul></div>
@@ -102,7 +109,7 @@
   </div>
 
   <!-- RESULTS -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">Results</h2>
       <div class="case-body"><h3>Recommended Actions</h3><p id="">Short‑term operational wins</p><ul id=""><li id="">Keep the Village 1 bypass permanently closed and blanked.</li><li id="">Repair / install pressure reducing valves (PRVs):<ul id=""><li id="">New PRV on Village 1 incoming line, set to around 30 m</li><li id="">Repair the failed PRV on the Village 1 MK section</li><li id="">PRVs on Village 2 incomers to trim pressures by 20–30 m</li></ul></li><li id="">Strengthen controls to prevent domestic use of fire lines.</li></ul><p id="">Targeted maintenance</p><ul id=""><li id="">Focus leak detection and repair on identified areas.</li></ul><h3>Results for the Client</h3><p id="">For Capital City Housing, the study delivered:</p><ul id=""><li id="">A definitive picture of where water is actually being lost – and where it is not</li><li id="">Confidence to avoid unnecessary large‑scale replacements in Village 2</li><li id="">A quantified leakage and risk profile for Village 1, tied to specific locations and pressures</li><li id="">A clear, costed roadmap to:<ul id=""><li id="">Cut non‑revenue water</li><li id="">Reduce burst risk on under‑rated mains</li><li id="">Protect service to residents</li><li id="">Justify future capital spend with solid engineering evidence</li></ul></li></ul><p id="">The Aloe Ridge work transformed a poorly documented, high‑loss system into a data‑driven asset management plan, enabling CCH to prioritise interventions with confidence.</p></div>
@@ -110,14 +117,14 @@
   </div>
 
   <!-- CTA -->
-  <div style="background:#F4F7F6; padding:56px 72px; text-align:center;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px; text-align:center;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.2; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 20px;">Bring us a project like this one</h2>
     <a href="../contact.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

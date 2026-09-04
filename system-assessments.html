@@ -35,7 +35,7 @@
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
     .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
-    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
   }
 </style>
 </head>
@@ -99,7 +99,7 @@
 
   <!-- INTRO -->
   <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">When a complex water supply system fails, the cause is rarely obvious and the cost of getting the diagnosis wrong is high. Bursting pipes, reservoirs running dry and pump failures are symptoms. Finding what is behind them means looking at how the whole system behaves, not only at the component that failed most visibly.</p>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">We assess large-scale irrigation and water infrastructure that is underperforming or failing. Our work is to find the interactions between components that are causing the problem, then recommend the interventions that restore performance without replacing what does not need replacing.</p>
     </div>
@@ -107,17 +107,17 @@
 
   <!-- WHAT IT INVOLVES -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:96px 72px 104px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; text-wrap:balance;">What the assessment involves</h2>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">Every assessment begins with how the system was designed to operate and how it is operating now. That gap is where most failure causes are found.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
 
       <div class="lift-card" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Hydraulic system analysis</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We analyse how the system behaves as a whole: pump capacities, pipe and canal sizing, reservoir volumes and the way all of them interact as conditions change through the season.</p>
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Complex systems rarely fail because one part is inadequate. They fail because parts that each look adequate are no longer matched to one another. Modelling those interactions is what shows where the system is breaking down, and why.</p>
         </div>
@@ -132,7 +132,7 @@
       <div class="lift-card" style="grid-column:span 3; background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Water hammer analysis</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">Pressure surges, known as water hammer, are one of the most damaging failure modes and one of the most often misdiagnosed. A pump trip, a valve closing or a power failure changes flow velocity suddenly, and the surge that follows can burst pipes, wreck valves and destroy pump infrastructure.</p>
           <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">We analyse the transient pressure behaviour of your system and recommend surge protection that removes the risk without oversizing everything downstream of it.</p>
         </div>
@@ -144,7 +144,7 @@
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Every assessment ends with a prioritised set of recommendations. Each one is weighed for its effect on performance and its cost, so you can see which fixes recover the most for the least spend. Where a targeted intervention will restore performance, we will not recommend wholesale replacement.</p>
       </div>
 
-      <div class="lift-card" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:grid; grid-template-columns:0.85fr 1.3fr; gap:44px; align-items:start;">
+      <div class="lift-card three-col-grid" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:grid; grid-template-columns:0.85fr 1.3fr; gap:44px; align-items:start;">
         <div>
           <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
           <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin:0; text-wrap:balance;">Report and implementation support</div>
@@ -186,7 +186,7 @@
 
   <!-- CTA -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:88px 72px 96px;">
-    <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
+    <div class="three-col-grid" style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
       <div style="padding:72px 56px 74px; display:flex; flex-direction:column; justify-content:center;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">The cheapest repair is the one that fixes the right thing.</h2>
         <p style="font-size:16px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Tell us what the system is doing and send whatever records you have. We will tell you what it will take to find the cause.</p>
@@ -200,7 +200,7 @@
 
   <!-- FOOTER -->
   <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

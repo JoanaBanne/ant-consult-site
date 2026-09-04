@@ -35,7 +35,7 @@
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
     .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
-    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
   }
 </style>
 </head>
@@ -99,7 +99,7 @@
 
   <!-- INTRO -->
   <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">Irrigation systems rarely fail all at once. They drift, through years of modifications, extensions and repairs that each made sense at the time but together leave you with a system that no longer performs as it should. Low pressure, uneven application and recurring pipe failures are symptoms of that drift, not isolated faults.</p>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">We keep what still works and improve what does not. Finding exactly where the constraints sit means we can design a targeted upgrade instead of a replacement, which restores performance and gets more years out of infrastructure you have already paid for.</p>
     </div>
@@ -107,12 +107,12 @@
 
   <!-- APPROACH -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:96px 72px 104px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; text-wrap:balance;">How we approach irrigation upgrades</h2>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">We start by understanding the system you already have, then work out which changes will make the biggest difference for the least money. You decide how much to take on and when.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">System evaluation</div>
@@ -131,7 +131,7 @@
       <div class="lift-card" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipe, pressure and coverage improvements</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pressure problems come from accumulated changes to pipe layout, flow rates and demand that have pulled the hydraulics away from what the system was originally designed to do. We model the whole system to find the critical constraints, then recommend the cheapest route back to even pressure and even application across the scheme.</p>
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Where expansion or a change of crop has outgrown the existing capacity, we design extensions and modifications that increase coverage without replacing the whole system.</p>
         </div>
@@ -146,7 +146,7 @@
 
   <!-- CTA -->
   <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
-    <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
+    <div class="three-col-grid" style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
       <div style="padding:72px 56px 74px; display:flex; flex-direction:column; justify-content:center;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Most systems have more life in them than their owners think.</h2>
         <p style="font-size:16px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Before you budget for a replacement, find out what a targeted upgrade would cost and how many years it would buy you.</p>
@@ -160,7 +160,7 @@
 
   <!-- FOOTER -->
   <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

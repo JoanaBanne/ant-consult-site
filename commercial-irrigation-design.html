@@ -67,7 +67,8 @@
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
     .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
-    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
+    .bleed-full { margin-left:-22px !important; margin-right:-22px !important; }
   }
 </style>
 </head>
@@ -131,7 +132,7 @@
 
   <!-- INTRO -->
   <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">Infield irrigation carries the longest financial consequences of any decision on the farm. The system you install will run for the next 20 to 30 years, either holding your energy and maintenance costs down or quietly compounding them season after season.</p>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">We design commercial irrigation systems that are practical, reliable and engineered for the lowest lifetime operating cost we can achieve on your site. We sell no equipment, so every component we recommend is chosen on technical merit and fit for your conditions, never off a supplier's catalogue.</p>
     </div>
@@ -139,17 +140,17 @@
 
   <!-- WHAT IT INVOLVES -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:96px 72px 104px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; text-wrap:balance;">What the design involves</h2>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">We assess your crop type, land topography, soil conditions, water availability, management capability and long-term production objectives before a system type is selected.</p>
     </div>
 
-    <div style="margin:0 -72px 20px;">
+    <div class="bleed-full" style="margin:0 -72px 20px;">
       <input type="radio" name="ctype" id="ctp-drip" class="ctp-radio" checked>
       <input type="radio" name="ctype" id="ctp-micro" class="ctp-radio">
       <input type="radio" name="ctype" id="ctp-pivot" class="ctp-radio">
       <input type="radio" name="ctype" id="ctp-sprinkler" class="ctp-radio">
-      <div class="ctp-grid" style="display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
+      <div class="ctp-grid three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
         <div style="position:relative;">
           <div class="ctp-photo ctp-photo-drip" role="img" aria-label="Drip irrigation system" style="position:absolute; inset:0; background-image:url('assets/drip-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 60%; background-color:#0A6B78;"></div>
           <div class="ctp-photo ctp-photo-micro" role="img" aria-label="Micro sprinkler irrigation system" style="position:absolute; inset:0; background-image:url('assets/micro-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 45%; background-color:#0A6B78;"></div>
@@ -199,7 +200,7 @@
       </div>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump stations, filtration and fertigation</div>
@@ -249,7 +250,7 @@
 
   <!-- CTA -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:88px 72px 96px;">
-    <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
+    <div class="three-col-grid" style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
       <div style="padding:72px 56px 74px; display:flex; flex-direction:column; justify-content:center;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">The irrigation system you choose today will influence your operation for decades.</h2>
         <p style="font-size:16px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Before you commit to a system type, know what it will cost to run for the next twenty years and whether your team can maintain it.</p>
@@ -263,7 +264,7 @@
 
   <!-- FOOTER -->
   <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

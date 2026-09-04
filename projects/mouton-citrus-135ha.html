@@ -38,6 +38,13 @@
   .case-body a { color:#05515B; text-decoration:underline; }
   .case-body a:hover { color:#B96A22; }
   .case-body strong { font-weight:600; color:#12312F; }
+
+  @media (max-width: 768px) {
+    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
+    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
+  }
 </style>
 </head>
 <body>
@@ -46,9 +53,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
-    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+    <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="../about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="../aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
       <a href="../solutions.html" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
@@ -61,7 +68,7 @@
   </div>
 
   <!-- CASE STUDY HEADER -->
-  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
     <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
       <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case Studies</a>
       <span style="color:#A9B8B4;">/</span>
@@ -75,10 +82,10 @@
   </div>
 
   <!-- HERO IMAGE -->
-  <div role="img" aria-label="135 ha Irrigation Design" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69303b1af9edda22e8ff3ec5_IMG-20250910-WA0017.jpg') center/cover no-repeat;"></div>
+  <div class="section-pad-lg" role="img" aria-label="135 ha Irrigation Design" style="height:460px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/69303b1af9edda22e8ff3ec5_IMG-20250910-WA0017.jpg') center/cover no-repeat;"></div>
 
   <!-- THE CHALLENGE -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Challenge</h2>
       <div class="case-body"><h3>Project Background and Objectives</h3><p>A large citrus industry client recently acquired a large farm with a reliable gravity-fed water supply, canal system and substantial buffer dam, but no existing irrigation infrastructure. The client planned 135 ha of mixed citrus, rolled out in two phases (93 ha and 42 ha).</p><p>The client required a partner to:</p><ul><li>Design a fully integrated drip irrigation system from pumphouse to infield dripperlines.</li><li>Ensure high water-use efficiency and energy efficiency.</li><li>Provide operational flexibility for phased development and changing water demand.</li><li>Enable future automation of irrigation and fertigation.</li></ul><p>Ant Consult was appointed to deliver the full hydraulic, mechanical and structural design for the irrigation development.</p></div>
@@ -86,7 +93,7 @@
   </div>
 
   <!-- THE STRATEGY -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Strategy</h2>
       <div class="case-body"><h3>Solution Overview</h3><p>Ant Consult designed the new irrigation system around four key principles:</p><ol><li>Reliability and water security</li><li>Energy-efficient pumping and pipe sizing</li><li>Conservative, robust filtration matched to water quality</li><li>Modular, automation-ready infield layout</li></ol><p>The completed design covers the full system:</p><ul><li>Infield drip irrigation (blocks, manifolds, dripperlines)</li><li>Mainlines and rising mains</li><li>Filtration and fertigation systems</li><li>Pump selection and control philosophy</li><li>Pumphouse layout and structural design</li><li>Provision for phased expansion from one to three dripperlines per tree row</li></ul><h3>Infield Irrigation Design</h3><p>The infield system is optimised for water use efficiency and application uniformity:</p><ul><li>Dripperlines: Parallel Netafim Uniram RC 20012, 1.6 l/hr pressure-compensated drippers</li><li>Maximum dripline length: 190 m</li></ul><p>Design checks include an extreme case of 1.9 l/hr per dripper to account for manufacturing variation and long-term wear, with all manifold velocities kept below 2 m/s. Submains and manifolds downstream of filters are specified as welded HDPE PE100 PN8–PN10, providing durability and low friction.</p><p>Block control is via 80 mm Bermad 1020‑55L high-flow valves arranged in central valve clusters of 6–8 valves. This clustered approach:</p><ul><li>Minimises infield infrastructure and operating complexity</li><li>Simplifies supervision and automation</li><li>Supports clear separation of fertigation groups and shifts</li></ul><h3>Mainlines and System Layout</h3><p>To manage 135 ha efficiently, the system is divided into four fertigation groups, each with a dedicated mainline and split into two shifts. Under full development:</p><ul><li>Each mainline operates approximately 60 hours per week.</li><li>Future reconfiguration to four sets per mainline can extend operating hours up to 120 hours per week, reducing instantaneous flows and friction losses.</li></ul><p>Mainline design features:</p><ul><li>Class 9 MPVC pipelines between pumphouse and filter clusters</li><li>Nominal diameters 200 mm and 250 mm, selected via lifecycle-cost optimisation</li><li>50 mm air valves at all high points</li><li>Pipe bedding and installation details fully specified for constructability and longevity</li></ul><h3>Filtration and Water Quality Management</h3><p>Given the farm’s source water and the sensitivity of drip systems, filtration was deliberately conservative.</p><p>Secondary filters at field clusters:</p><ul><li>Netafim Super Leader 6 inch, 130 micron (manual flushing unit)</li><li>Sizing aligned with “Poor” water quality guidance.</li></ul><p>Pumphouse primary filtration was selected to be Alphadisc Inline filters due to ease of maintenance and reliability.</p><p>Filter banks are sized against the maximum combined flows of each pump pair at both 1.6 l/hr and 1.9 l/hr dripper flows. The design provides:</p><ul><li>Adequate capacity at full development</li><li>Staged use of filter banks during early phases of development with fewer dripperlines installed</li><li>130 micron filtration across the system for emitter protection</li></ul><p>All filters use AC solenoids on the backflush valves, for easy linking to automated control systems.</p><h3>Pumping System and Energy Efficiency</h3><p>Pumping is designed around two pump pairs of identical pumps to give both flexibility and redundancy:</p><ul><li>Pair 1 focuses on low head and high flow situations</li><li>Pair 2 focuses on high flow and low head situations</li></ul><p>Key performance aspects:</p><ul><li>Each pair supplies two rising mains, allowing operation of single or twin pumps to match demand.</li><li>Pump selection is based on a full scatter of operating points, with speed control between 35 Hz and 55 Hz using variable speed drives (VSDs).</li></ul><p>This combination delivers:</p><ul><li>Low-flow efficiency when only part of the farm is irrigated</li><li>High-flow capacity at peak demand</li><li>Reduced energy consumption across seasons and development stages</li></ul><h3>Pumpstation Pipework</h3><p>The pumpstation pipework is separated into discharge and suction manifolds.</p><p>Discharge side:</p><ul><li>Sized to 250 mm to match filter flanges, keeping velocities below 2 m/s in HDPE pipes.</li><li>Double manifold arrangement allows any pump to feed any rising main, either before or after the filters, for maximum flexibility.</li></ul><p>Suction side:</p><ul><li>A common 500 mm suction manifold gives velocities under 0.8 m/s, protecting pump NPSH and improving reliability.</li><li>The existing 250 mm steel pipe through the dam wall is assessed for three development stages. Velocities rise from 0.8 m/s (1 line) to 1.7 m/s (2 lines) and 2.5 m/s (3 lines).</li></ul><p>Ant Consult recommended upgrading this suction pipe before the second dripperline is installed, managing risk proactively.</p><h3>Fertigation System</h3><p>To support intensive citrus production and precise nutrient management, the design includes a robust fertigation plant:</p><ul><li>Storage: 8 × 10 000 l tanks (80 000 l total) on an elevated bunded platform</li><li>Mixing capacity: 2 × 2 500 l horizontal mixing tanks</li><li>Additional dosing: 4 conical tanks for specialised or batch applications</li><li>Provision for blowers to ensure adequate agitation</li></ul><p>The layout allows gravity feed from storage to mixing and conical tanks, simplifying operation and increasing reliability during power interruptions.</p><h3>Pumphouse and Other Infrastructure</h3><p>The pumphouse is a portal-frame building with provision for a tractor shed on the north side. The design includes:</p><ul><li>Pump, filter, manifold and control room layout</li><li>Structural details (steelwork, foundations and bracing)</li><li>Clear access for maintenance and potential future equipment upgrades</li></ul></div>
@@ -96,7 +103,7 @@
 
 
   <!-- RESULTS -->
-  <div style="display:flex; justify-content:center; padding:56px 72px 0;">
+  <div class="section-pad-lg" style="display:flex; justify-content:center; padding:56px 72px 0;">
     <div style="max-width:760px; width:100%;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">Results</h2>
       <div class="case-body"><h3>Outcomes and Client Benefits</h3><p>The Ant Consult design provides Mouton Citrus with:</p><ul><li>Efficient irrigation for up to 135 ha using pressure-compensated dripperlines.</li><li>A conservative, resilient system that tolerates variation in dripper performance and source water quality.</li><li>High operational flexibility, with four fertigation groups, two pump pairs, multiple shift options and the ability to operate from partial to full farm demand without compromising efficiency.</li><li>Energy-optimised pumping, supported by VSDs, lifecycle-cost-based pipe sizing and conservative suction design.</li><li>Automation-ready infrastructure, from centralised valve clusters to integrated filtration control and fertigation systems.</li><li>A clear upgrade path from one to three dripperlines.</li></ul><p>Overall, this irrigation development is a future-proof, high-performance irrigation system that supports our client in optimising productivity while preserving water and energy resources.</p></div>
@@ -104,14 +111,14 @@
   </div>
 
   <!-- CTA -->
-  <div style="background:#F4F7F6; padding:56px 72px; text-align:center;">
+  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px; text-align:center;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.2; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 20px;">Bring us a project like this one</h2>
     <a href="../contact.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+  <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

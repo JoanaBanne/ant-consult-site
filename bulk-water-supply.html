@@ -35,7 +35,7 @@
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
     .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
-    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
   }
 </style>
 </head>
@@ -99,7 +99,7 @@
 
   <!-- INTRO -->
   <div class="section-pad-lg" style="background:#fff; padding:88px 72px 96px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">Moving water from source to scheme edge sounds straightforward. In practice it means working with elevation differences, managing pressure across long pipeline routes, sizing pump stations, and deciding how much storage and balancing the scheme needs. Get any of it wrong at the start and the operating cost compounds for decades.</p>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; text-wrap:pretty;">We design bulk water infrastructure for large-scale irrigation schemes and water supply projects. Every system is engineered to balance capital investment with long-term operating costs, because the least expensive system to build is rarely the least expensive system to run.</p>
     </div>
@@ -107,17 +107,17 @@
 
   <!-- WHAT IT INVOLVES -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:96px 72px 104px;">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:56px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; text-wrap:balance;">What the process involves</h2>
       <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">We start with the whole journey the water has to make. Source location, elevation profile, flow requirements, storage needs and energy costs are all assessed before we propose a configuration, so the design is optimised for the full life of the infrastructure rather than the construction budget alone.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
 
       <div class="lift-card-soft" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
         <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipelines</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pipeline design means selecting the right pipe material, diameter and pressure rating for the flow volumes, operating pressures and terrain along the specific route. There is no standard answer, because no two routes present the same conditions.</p>
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pipe sizing sets both the capital cost of construction and the energy cost of pumping for the life of the system. Size up and you pay more today; size down and you pay every hour the pumps run. We optimise the two together rather than treating them as separate decisions.</p>
         </div>
@@ -181,7 +181,7 @@
 
   <!-- CTA -->
   <div class="section-pad-lg" style="background:#F4F7F6; padding:88px 72px 96px;">
-    <div style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
+    <div class="three-col-grid" style="background:#D3E5E1; border-radius:18px; display:grid; grid-template-columns:1fr 1fr; align-items:stretch; overflow:hidden;">
       <div style="padding:72px 56px 74px; display:flex; flex-direction:column; justify-content:center;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Bulk water infrastructure is designed once, but paid for every day it operates.</h2>
         <p style="font-size:16px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Send us your scheme layout and demand figures. We will show you where the energy cost is hiding before you commit to a route or a pump.</p>
@@ -195,7 +195,7 @@
 
   <!-- FOOTER -->
   <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>

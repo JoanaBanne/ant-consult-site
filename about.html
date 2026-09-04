@@ -37,7 +37,7 @@
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
     .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
     .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
-    .two-col-grid, .three-col-grid { display:flex !important; flex-direction:column !important; }
+    .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
   }
 </style>
 </head>
@@ -75,7 +75,7 @@
 
   <!-- STATS -->
   <div class="section-pad-lg" style="background:#04424B; color:#fff; padding:52px 72px 56px;">
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
       <div style="padding:0 44px 0 0; display:flex; flex-direction:column;">
         <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
           <span style="font-size:54px;">25</span><span style="font-size:28px; color:#F4A258;">+</span>
@@ -110,7 +110,7 @@
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our story</span>
     </div>
 
-    <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:80px; align-items:start;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1.05fr 1fr; gap:80px; align-items:start;">
       <div style="display:flex; flex-direction:column;">
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; color:#05515B; margin:0 0 28px; text-wrap:balance;">Built to do one thing well</h2>
         <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0 0 20px; text-wrap:pretty;">Water scarcity is one of the defining challenges facing agriculture in Africa and the Middle East. The farms and projects that will feed the next generation need water infrastructure that works, not just on paper, but in the ground, for decades.</p>
@@ -138,14 +138,14 @@
       <span style="width:22px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">What we do</span>
     </div>
-    <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:start;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:start;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#05515B; margin:0; text-wrap:balance;">Engineering water from source to field</h2>
       <div>
         <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0 0 20px; text-wrap:pretty;">Ant Consult designs agricultural water infrastructure for large-scale farming operations across Africa and the Middle East. From feasibility studies and development masterplans to irrigation, pumping and bulk water supply, we help clients plan, build and optimise systems that perform reliably for decades.</p>
         <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Every project follows the same structured engineering process, ensuring consistent quality from feasibility through to final design.</p>
       </div>
     </div>
-    <div style="margin-top:56px; display:grid; grid-template-columns:1.5fr 1fr; gap:24px;">
+    <div class="three-col-grid" style="margin-top:56px; display:grid; grid-template-columns:1.5fr 1fr; gap:24px;">
       <div style="height:340px; overflow:hidden; border-radius:18px; background:#C6DAD5;">
         <img src="assets/citrus-orchard-irrigation-scheme.jpg" alt="Citrus orchard under irrigation" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy" decoding="async">
       </div>
@@ -161,12 +161,12 @@
       <span style="width:22px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our approach</span>
     </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:64px;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:64px;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; color:#12312F; margin:0; text-wrap:balance;">The Ant Implementation Method</h2>
       <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0; padding-top:6px; text-wrap:pretty;">Scope drift is one of the most common reasons irrigation projects go over budget. AIM gets the right people around the table early and stress-tests the first draft design before it becomes the final one, so the system your team signs off on is the one that gets built.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #CBDCD8;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #CBDCD8;">
       <div style="padding:34px 0 40px 0; position:relative;">
         <div style="position:absolute; top:-1px; left:0; width:56px; height:2px; background:#F4A258;"></div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:31px; font-weight:500; letter-spacing:-0.015em; color:#F4A258; line-height:1; margin-bottom:16px;">01</div>
@@ -204,11 +204,11 @@
       <span style="width:22px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Why clients work with us</span>
     </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.1; font-weight:500; letter-spacing:-0.018em; margin:0; text-wrap:balance;">Precision in design. Confidence in delivery.</h2>
       <p style="font-size:16px; line-height:1.75; color:rgba(255,255,255,0.86); margin:0; padding-top:6px; text-wrap:pretty;">Our work is measured at the point where the design meets the ground. That means construction-ready drawings your contractors can build from without guesswork, detailed bills of quantities with no expensive surprises, and systems your team can operate without ongoing intervention.</p>
     </div>
-    <div style="margin-top:64px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.18); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+    <div class="three-col-grid" style="margin-top:64px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.18); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
       <div style="height:320px; overflow:hidden; border-radius:18px; background:#0A4550;">
         <img src="assets/irrigation-design-review-meeting.jpg" alt="Design review over a drawing set" style="width:100%; height:100%; object-fit:cover; object-position:58% 55%; display:block;" loading="lazy" decoding="async">
       </div>
@@ -230,7 +230,7 @@
 
   <!-- GUARANTEE -->
   <div class="section-pad-lg" style="background:#D3E5E1; padding:80px 72px 84px;">
-    <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:center;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1.15fr; gap:80px; align-items:center;">
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#05515B; margin:0; text-wrap:balance;">We stand behind our work</h2>
       <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">If your irrigation system is not performing as intended, we will provide a complimentary technical review to identify the cause, optimise system performance, and train your team on effective operation.</p>
     </div>
@@ -247,7 +247,7 @@
       <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You get the right expertise for your project, not an ad hoc effort from the guy in the next office who has time on his hands.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:1.62fr 1fr; gap:32px; margin-bottom:80px; align-items:stretch;">
+    <div class="two-col-grid" style="display:grid; grid-template-columns:1.62fr 1fr; gap:32px; margin-bottom:80px; align-items:stretch;">
       <div style="display:flex; flex-direction:column; gap:24px;">
       <div class="two-col-grid" style="flex:1; background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:grid; grid-template-columns:300px 1fr;">
         <div style="min-height:360px; overflow:hidden; background:#C6DAD5;">
@@ -282,7 +282,7 @@
         <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600; flex:none;">Associated experts</span>
         <span style="height:1px; background:#CBDCD8; flex:1;"></span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
           <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <div style="width:100%; height:100%; background:#DCD9D4; display:flex; align-items:flex-end; justify-content:center;">
@@ -358,7 +358,7 @@
       <span style="width:22px; height:1px; background:#F4A258;"></span>
       <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#05515B; font-weight:600;">Our values</span>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#BCD2CD; border:1px solid #BCD2CD;">
+    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#BCD2CD; border:1px solid #BCD2CD;">
       <div style="background:#fff; padding:34px 26px 32px; display:flex; flex-direction:column;">
         <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:#B96A22; margin-bottom:20px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:19px; line-height:1.25; font-weight:500; color:#05515B; letter-spacing:-0.006em; margin-bottom:14px; text-wrap:balance;">Work to the Glory of God</div>
@@ -399,7 +399,7 @@
 
   <!-- FOOTER -->
   <div class="section-pad-lg" style="background:#05515B; color:#fff; padding:72px 72px 32px;">
-    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+    <div class="footer-cols-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
       <div>
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
         <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
