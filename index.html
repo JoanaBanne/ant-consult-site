@@ -17,6 +17,19 @@
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
 
+  .mobile-nav-toggle { position:absolute; opacity:0; pointer-events:none; }
+  .mobile-nav-panel {
+    position:absolute; top:100%; left:0; right:0;
+    display:flex; flex-direction:column;
+    background:#05515B;
+    padding:8px 22px 22px; border-top:1px solid rgba(255,255,255,0.14);
+    box-shadow:0 20px 40px rgba(4,40,46,0.28); z-index:60;
+    opacity:0; visibility:hidden; transform:translateY(-8px);
+    transition:opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .mobile-nav-toggle:checked ~ .mobile-nav-panel { opacity:1; visibility:visible; transform:translateY(0); }
+  .mobile-nav-panel a { display:block; color:#fff; text-decoration:none; padding:14px 6px; border-bottom:1px solid rgba(255,255,255,0.10); font-size:15px; }
+
   .hero-outline-btn { border:1px solid rgba(255,255,255,0.45); color:#fff; transition:all 0.3s ease; }
   .hero-outline-btn:hover { background:#F4A258; color:#08343C; border-color:#F4A258; }
   @keyframes ac-logo-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
@@ -493,13 +506,23 @@
 <div class="mobile-only-view" style="width:100%; max-width:390px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden; font-size:16px;">
 
   <div style="position:relative; background:#05515B; color:#fff;">
-    <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <div style="position:relative; display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid rgba(255,255,255,0.14);">
       <div style="display:flex; align-items:baseline; gap:6px; font-family:'Ubuntu',sans-serif;">
         <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:30px; width:auto; display:block;" loading="lazy" decoding="async"></a>
       </div>
-      <div style="display:flex; flex-direction:column; gap:5px; width:26px; height:44px; justify-content:center; cursor:pointer;">
+      <input type="checkbox" id="mobile-nav-toggle" class="mobile-nav-toggle">
+      <label for="mobile-nav-toggle" class="hamburger-btn" aria-label="Open menu" style="display:flex; flex-direction:column; gap:5px; width:26px; height:44px; justify-content:center; cursor:pointer;">
         <span style="height:2px; background:#fff;"></span><span style="height:2px; background:#fff;"></span>
-      </div>
+      </label>
+      <nav class="mobile-nav-panel">
+        <a href="about.html">About</a>
+        <a href="aim.html">AIM</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="projects.html">Case Studies</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <span class="roi-btn" style="font-weight:600; padding:12px 20px; border-radius:999px; font-size:14px; cursor:pointer; text-align:center; margin-top:10px; display:inline-block;">Calculate your ROI</span>
+      </nav>
     </div>
     <div role="img" aria-label="Large-scale agricultural irrigation engineering project, Africa and the Middle East" style="height:180px; background:linear-gradient(180deg,rgba(5,81,91,0.1) 30%,rgba(5,81,91,0.85) 100%),url('assets/large-scale-agricultural-irrigation-engineering-hero.jpg') center/cover no-repeat;">
     </div>
@@ -508,7 +531,7 @@
         <span style="width:18px; height:1px; background:#F4A258;"></span>
         <span style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; line-height:1.5; color:#F8C08C; font-weight:600;">Large-scale agriculture, Africa and the Middle East</span>
       </div>
-      <h1 style="font-family:'Ubuntu',sans-serif; font-size:41px; line-height:1.08; font-weight:500; letter-spacing:-0.015em; margin:0 0 18px;">Independent water engineering for <span style="color:#F4A258;">large-scale agriculture</span></h1>
+      <h1 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.15; font-weight:500; letter-spacing:-0.015em; margin:0 0 18px;">Independent water engineering for <span style="color:#F4A258;">large-scale agriculture</span></h1>
       <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin:0 0 28px;">Ant Consult designs irrigation, pumping and water distribution systems built for the lowest possible cost of ownership. Every design is shaped by the realities of your operation, and the people who will manage it.</p>
       <div style="display:flex; flex-direction:column; gap:12px;">
         <a href="contact.html" class="cta-btn-orange" style="font-weight:600; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer;text-decoration:none;">Book a discovery call</a>

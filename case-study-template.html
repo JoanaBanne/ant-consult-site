@@ -16,6 +16,10 @@
   a { color:#F4A258; text-decoration:none; }
   a:hover { color:#05515B; }
   ::selection { background:#F4A258; color:#fff; }
+.mobile-nav-toggle { position:absolute; opacity:0; pointer-events:none; }
+  .hamburger-btn { display:none; flex-direction:column; justify-content:center; gap:5px; width:26px; height:20px; cursor:pointer; flex:none; }
+  .hamburger-btn span { display:block; height:2px; background:#fff; border-radius:1px; }
+  img { max-width:100%; }
 
   .hover-fade { transition:color 140ms ease; }
   .hover-fade:hover { color:#F8C08C !important; }
@@ -34,8 +38,38 @@
 
   @media (max-width: 768px) {
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
-    .nav-links-row { flex-wrap:wrap !important; row-gap:12px !important; justify-content:center !important; }
-    .page-hero h1 { font-size:38px !important; line-height:1.15 !important; }
+    .hamburger-btn { display:flex !important; }
+    .nav-links-row {
+      position:absolute; top:100%; left:0; right:0;
+      flex-direction:column !important;
+      align-items:stretch !important;
+      gap:0 !important;
+      background:#05515B;
+      padding:10px 22px 26px !important;
+      border-top:1px solid rgba(255,255,255,0.14);
+      box-shadow:0 20px 40px rgba(4,40,46,0.28);
+      z-index:60;
+      opacity:0 !important;
+      visibility:hidden !important;
+      transform:translateY(-8px) !important;
+      transition:opacity 0.2s ease, transform 0.2s ease, visibility 0.2s !important;
+    }
+    .mobile-nav-toggle:checked ~ .nav-links-row {
+      opacity:1 !important;
+      visibility:visible !important;
+      transform:translateY(0) !important;
+    }
+    .nav-links-row > a, .nav-links-row .nav-link {
+      display:block !important;
+      width:100% !important;
+      padding:14px 6px !important;
+      border-bottom:1px solid rgba(255,255,255,0.10);
+    }
+    .nav-links-row .nav-drop { width:100%; }
+    .nav-links-row span[style*="width:1px"] { display:none !important; }
+    .nav-links-row .roi-btn { display:inline-block !important; width:auto !important; margin:14px 0 0 !important; text-align:center; }
+    p { font-size:15px !important; line-height:1.6 !important; }
+    .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; }
   }
 </style>
@@ -66,8 +100,9 @@
 <div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
 
   <!-- NAV -->
-  <div class="section-pad-lg" style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+  <div class="section-pad-lg" style="position:relative; z-index:100; background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
     <a href="index.html" style="display:block;"><img src="assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
+    <input type="checkbox" id="mobile-nav-toggle" class="mobile-nav-toggle"><label for="mobile-nav-toggle" class="hamburger-btn" aria-label="Open menu"><span></span><span></span><span></span></label>
     <div class="nav-links-row" style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
       <a href="about.html" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
       <a href="aim.html" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
@@ -81,7 +116,7 @@
   </div>
 
   <!-- CASE STUDY HEADER -->
-  <div class="section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
+  <div class="page-hero section-pad-lg" style="background:#F4F7F6; padding:56px 72px 48px;">
     <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
       <a href="projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case Studies</a>
       <span style="color:#A9B8B4;">/</span>
