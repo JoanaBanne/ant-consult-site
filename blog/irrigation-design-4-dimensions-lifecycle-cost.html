@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Irrigation Design: the 4 Dimensions that Decide Yield and Lifetime cost — Ant Consult</title>
+<meta name="description" content="A good irrigation or water supply system has 4 dimensions: uniformity, scheduling, depth, and lifetime cost. Learn why designing for minimum OPEX beats minimum CAPEX, and how pipe and pump choices drive lifecycle cost.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C !important; }
+
+  .nav-link { transition:color 150ms ease, border-color 150ms ease; border-bottom:2px solid transparent; padding-bottom:4px; }
+  .nav-link:hover { color:#fff; border-bottom-color:rgba(244,162,88,0.55); }
+
+  .nav-drop { position:relative; display:flex; align-items:center; }
+  .nav-drop-panel { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20; }
+  .nav-drop:hover .nav-drop-panel { display:block; }
+  .nav-drop-item { transition:background 140ms ease; }
+  .nav-drop-item:hover { background:#F1F6F4; }
+  .nav-drop-all { color:#05515B; transition:color 140ms ease; }
+  .nav-drop-all:hover { color:#B96A22; }
+
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .subscribe-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .subscribe-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .post-body h1,.post-body h2,.post-body h3,.post-body h4 { font-family:'Ubuntu',sans-serif; font-weight:500; color:#12312F; line-height:1.24; letter-spacing:-0.01em; }
+  .post-body h1 { font-size:32px; margin:36px 0 16px; }
+  .post-body h2 { font-size:28px; margin:36px 0 16px; }
+  .post-body h3 { font-size:22px; margin:28px 0 14px; }
+  .post-body h4 { font-size:18px; margin:24px 0 12px; }
+  .post-body p { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; }
+  .post-body ul,.post-body ol { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px; }
+  .post-body li { margin-bottom:8px; }
+  .post-body a { color:#05515B; text-decoration:underline; }
+  .post-body a:hover { color:#B96A22; }
+  .post-body strong { font-weight:600; color:#12312F; }
+  .post-body img { max-width:100%; height:auto; border-radius:12px; margin:8px 0 24px; display:block; }
+  .post-body figure { margin:0 0 24px; }
+  .post-body figcaption { font-size:13px; color:#5E6E6A; margin-top:8px; }
+</style>
+</head>
+<body>
+
+
+<div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- NAV -->
+  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
+    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+      <a href="../about.html" class="nav-link" style="cursor:pointer; text-decoration:none;">About</a>
+      <a href="../aim.html" class="nav-link" style="cursor:pointer; text-decoration:none;">AIM</a>
+      <div class="nav-drop">
+        <a href="../solutions.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Solutions</a>
+        <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Feasibility Studies</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Masterplans</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Commercial Irrigation Design</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation Upgrades</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Bulk Water Supply</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">System Assessments</div>
+          <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
+          </div>
+        </div></div>
+      </div>
+      <a href="../projects.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Projects</a>
+      <div class="nav-drop">
+        <a href="../insights.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; text-decoration:none;">Insights</a>
+        <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Services Cost Estimator</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Pipe Lifecycle Cost Analysis</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation ROI Calculator</div>
+          <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
+          </div>
+        </div></div>
+      </div>
+      <a href="../contact.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Contact</a>
+      <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+      <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
+      <a href="../insights.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
+      <span style="color:#A9B8B4;">/</span>
+      <span style="color:#05515B; font-weight:500;">Insights</span>
+    </div>
+    <span class="cms-tag" style="margin-bottom:20px; display:inline-block;">Insights</span>
+    <h1 style="font-family:'Ubuntu',sans-serif; font-size:52px; line-height:1.1; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:20px 0 24px; max-width:820px; text-wrap:balance;">Irrigation Design: the 4 Dimensions that Decide Yield and Lifetime cost</h1>
+    <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#5E6E6A;">
+      <span>By Jonathan Kirkman</span>
+      <span style="width:1px; height:14px; background:#CBDCD8;"></span>
+      <span>19 May 2026</span>
+      <span style="width:1px; height:14px; background:#CBDCD8;"></span>
+      <span>9 min read</span>
+    </div>
+  </div>
+
+  <!-- FEATURED IMAGE -->
+  <div role="img" aria-label="Irrigation Design: the 4 Dimensions that Decide Yield and Lifetime cost" style="height:440px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/6a0c67f94ffefe180ffd27d6_20260416_164007.jpg') center/cover no-repeat;"></div>
+
+  <!-- BODY -->
+  <div style="display:flex; justify-content:center; padding:56px 72px 40px;">
+    <div style="max-width:760px; width:100%;">
+
+      <!-- POST BODY -->
+      <div class="post-body"><h2>The 4 dimensions of a good irrigation or water supply system</h2><p>A good irrigation or water supply system has four dimensions. Miss any one of them and you pay for it, either in yield, downtime, or monthly operating cost.</p><h3>1) Right place (uniformity)</h3><p><strong>Uniformity</strong> is how evenly water is applied across the field or block. Poor uniformity creates wet spots and dry spots. The average application can look fine while parts of the crop are stressed.</p><p>Uniformity is driven by hydraulics (pressure variation), emitter or nozzle selection, spacing, filtration, and maintenance reality (clogging, wear, and vandalism).</p><h3>2) Right time (scheduling)</h3><p>Scheduling is whether the system can deliver water when the crop needs it. This is not a “farmer discipline” problem only. It is often a <strong>system capacity and control</strong> problem.</p><p>If the system cannot maintain stable pressure at the required flow across operating scenarios, the schedule fails in peak demand weeks. That is when yield gets decided.</p><h3>3) Right depth (volume)</h3><p>Depth is the volume of water applied, matched to soil storage, rooting depth, and climate demand. Depth is not the same as runtime. Runtime is a proxy that fails when flow varies or blocks do not receive equal pressure.</p><p>Depth also includes leaching requirements where applicable. If the design cannot deliver both productive irrigation and necessary leaching, salinity becomes tomorrow’s problem.</p><h3>4) Lifetime cost (CAPEX + OPEX)</h3><p>Lifetime cost is what the system costs you over its working life. It includes:</p><ul><li><strong>CAPEX</strong>: purchase and installation cost.</li><li><strong>OPEX</strong>: energy, repairs, maintenance labour, spares, and operational losses.</li></ul><p>Dimensions 1–3 decide production. Dimension 4 decides profitability.</p><h2>Production problems come from dimensions 1–3</h2><p>Most farm teams can spot a broken pump or a leaking mainline. What is harder to spot is the slow bleed of production from a design that cannot hold uniformity, scheduling, and depth under real operating conditions.</p><h3>Uniformity: the yield killer you do not see</h3><p>Uniformity problems are usually design problems first, maintenance problems second. The common causes are predictable:</p><ul><li>Pressure variation that exceeds emitter or sprinkler tolerance.</li><li>Incorrect submain and lateral sizing for the block geometry.</li><li>Filtration that looks good on paper but clogs in season.</li></ul><p>If you are relying on “we will manage it” to fix a hydraulic problem, you are accepting ongoing losses.</p><h3>Scheduling: pressure, flow, and control</h3><p>A schedule is only as good as the system’s ability to deliver the required <strong>flow at the required pressure</strong>, consistently. When a system is marginal on capacity, the schedule fails exactly when you need it most: heatwaves, peak evapotranspiration, or load shedding constraints.</p><p>Good water system design treats scheduling as a capacity and control question, not a hope-and-discipline question.</p><h3>Depth: volume is not the same as time</h3><p>Operators often use runtime as a stand-in for depth. That only works when flow is stable. If pressure fluctuates, filters foul, or valves leak, your “hours” are not your “millimetres.”</p><p>Design should make correct depth easy to achieve, and incorrect depth hard to achieve. That means stable hydraulics, good block isolation, and measurement where it counts.</p><h2>Profitability problems come from dimension 4</h2><p>Here is the part most projects get wrong: lifecycle economics.</p><p>On many irrigation and farm water supply systems, <strong>70–90% of lifecycle cost sits in OPEX</strong>. CAPEX is typically 10–30%.</p><p>So if you design to minimise CAPEX, you are optimising a small slice of the total cost and potentially inflating the big slice for the next 15–30 years.</p><h3>Lifecycle cost basics: CAPEX vs OPEX</h3><p>Keep it simple:</p><ul><li><strong>CAPEX</strong> is paid once.</li><li><strong>OPEX</strong> is paid every month.</li><li>Energy price increases make OPEX worse over time.</li></ul><p>If your design raises pumping power by a few kilowatts, that is not a rounding error. It is a permanent operating tax.</p><h3>Why 70–90% of lifecycle cost is OPEX</h3><p>Energy dominates OPEX on pumped systems. Maintenance and repairs add up too, but the compounding effect comes from kilowatt-hours.</p><p>High friction losses, poor pump efficiency at the duty point, and unstable control strategies all convert straight into operating cost.</p><h3>The decision you are actually making at design stage</h3><p>Most design decisions are trade-offs between pipe cost and energy cost. Pipe cost is usually the capital cost driver of water systems.</p><p>That is why the “small pipe, big pump” philosophy is always cheaper to install.</p><p>Nothing could be worse for minimising lifecycle cost.</p><h2>Why “small pipe, big pump” is cheap to install and expensive to own</h2><p>Let’s break down what happens when you undersize pipe.</p><h3>Pipe friction: where the money goes</h3><p>Smaller pipe increases velocity, which increases friction losses. Friction loss is essentially wasted pressure that the pump must create just to overcome the pipe, not to irrigate the crop.</p><p>Friction losses show up as:</p><ul><li>Higher required pump head and larger motor power.</li><li>Lower pressure stability at the field, reducing uniformity.</li><li>Less operational flexibility when blocks or pivots change.</li></ul><h3>Pumps do not create pressure for free</h3><p>Pumps convert electrical energy into hydraulic energy. Every extra metre of head you demand from the pump costs energy, every hour the system runs.</p><p>Two systems can deliver the same flow to the same field, but the one with lower friction runs at lower head, lower power, and lower monthly cost.</p><h3>A simple comparison: bigger pipe vs higher energy</h3><p>At design stage, it is tempting to save money on pipe because the quote is visible and immediate. Energy cost is less visible, and often someone else pays it later.</p><p>A disciplined approach is to compare options on lifecycle cost, not installation cost. In practice, <strong>designing for minimum OPEX can cut lifecycle cost by as much as 50%</strong> compared to designing for minimum CAPEX, depending on operating hours, tariffs, and the original pipe sizing strategy.</p><p>The exact saving depends on your duty point (flow and head), operating hours per year, energy price, and expected system life. The point stands: you cannot “value engineer” your way out of physics.</p><h2>Design around minimum OPEX: what changes in the engineering</h2><p>Designing around minimum OPEX is not about gold-plating. It is about putting money where it buys down operating cost and risk.</p><h3>Pipe sizing: target friction losses, not minimum diameter</h3><p>Minimum-code thinking produces minimum-diameter pipe. Minimum-OPEX thinking targets sensible friction losses for the duty cycle.</p><p>What that looks like in practice:</p><ul><li>Set friction loss targets for mains, submains, and laterals.</li><li>Check multiple operating scenarios, not one “happy case.”</li><li>Size for future flexibility where expansion is likely.</li></ul><p>This is where good <strong>water system design</strong> pays for itself. Pipe is expensive once. Energy is expensive forever.</p><h3>Pump selection: efficiency at duty point, not nameplate kW</h3><p>Two pumps with the same nameplate power can have very different efficiencies at your operating point. A pump that runs far from its best efficiency point wastes energy and often suffers reliability issues.</p><p>Minimum-OPEX pump selection includes:</p><ul><li>Matching the pump curve to the system curve, including control strategy.</li><li>Checking efficiency at expected operating points across the season.</li><li>Allowing for wear, water quality, and realistic suction conditions.</li></ul><h3>Control philosophy: stable pressure and fewer starts</h3><p>Control strategy is part of lifecycle cost. Poor control increases energy use, increases pipe bursts, and reduces equipment life.</p><p>Depending on the system, this can include variable speed drives (VSDs), proper pressure control valves, and a control approach that avoids hunting and repeated start-stop cycles.</p><h3>Automation and measurement: you cannot manage what you cannot see</h3><p>You do not need a fancy SCADA system to get value from measurement. You do need enough instrumentation to confirm that the system is operating as designed.</p><p>High-leverage items include:</p><ul><li>Flow measurement on key mains or pump discharge lines.</li><li>Pressure measurement at critical field points and pump discharge.</li><li>Energy measurement to track kWh per cubic metre pumped.</li></ul><h3>Maintainability: access, valves, and standardisation</h3><p>Maintenance is part of OPEX. Designs that ignore maintainability create predictable operating pain.</p><p>Practical maintainability features include:</p><ul><li>Isolation valves located where people can reach them.</li><li>Air release and scour valves placed for the actual topography.</li><li>Standardised fittings and spares to simplify repairs.</li></ul><h2>A practical lifecycle cost checklist for irrigation design</h2><p>If you want a system that performs and stays affordable to run, do not sign off a design until these basics are clear.</p><h3>Data you need before design starts</h3><ul><li>Required flow rates per block and total peak demand.</li><li>Static levels, dynamic levels, and water source constraints.</li><li>Operating hours per season and expected expansion plans.</li></ul><h3>Questions to ask any designer or supplier</h3><ul><li>What friction loss and flow velocity targets are you using, and why?</li><li>What is the expected pumping power at duty point?</li><li>Show lifecycle cost comparison, not only a bill of quantities.</li></ul><h3>Red flags that predict high OPEX</h3><ul><li>Pipe diameters chosen to meet budget, not hydraulics.</li><li>Pump selected off catalogue without duty-point efficiency checks.</li><li>No measurement plan for flow, pressure, and energy.</li></ul><h2>How Ant Consult approaches lifecycle-cost irrigation design (AIM)</h2><p>Ant Consult (Pty) Ltd designs irrigation and farm water systems for clients who care about two things: reliable production and predictable operating cost.</p><h3>Independent engineering, not product-driven layouts</h3><p>We are independent. That matters because supplier-affiliated design often optimises for product sales, not lifecycle cost. Our job is to optimise for your ROI and operational reality.</p><h3>Fast, transparent delivery with senior oversight</h3><p>Our work is led by a registered professional engineer. You get direct access, clear scope, and tight feedback cycles. That is the core of our AIM (Ant Implementation Method) framework: align stakeholders early, lock requirements, then iterate fast with engineering discipline.</p><h3>Performance accountability and design integrity guarantee</h3><p>We stand behind our designs. If systems do not perform as intended, our troubleshooting and management training is free. That policy keeps the incentives clean: build it right, build it once.</p><h2>Next step: get an irrigation system that pays off long-term</h2><p>If you are planning a new system, an expansion, or an upgrade, treat <strong>irrigation design</strong> as a lifecycle cost decision, not a shopping list.</p><h3>Book a scoping call</h3><p>Want a system that pays off long-term?<a href="https://calendly.com/antconsult/30min"> Book a call</a>. We will sanity-check your capacity, hydraulics, and likely OPEX drivers before you commit to the wrong pipe and pump philosophy.</p><h3>What to prepare for the first meeting</h3><ul><li>Recent electricity tariffs and estimated annual operating hours.</li><li>Existing drawings, pump details, and any pressure or flow readings.</li><li>Your expansion plan for the next 3–10 years.</li></ul></div>
+
+      <!-- AUTHOR BIO -->
+      <div style="display:flex; align-items:center; gap:16px; margin-top:40px; padding-top:32px; border-top:1px solid #DFE9E6;">
+        <div style="width:56px; height:56px; border-radius:50%; flex:none; display:flex; align-items:center; justify-content:center; background:#05515B; color:#fff; font-family:'Ubuntu',sans-serif; font-size:16px; font-weight:500;">JK</div>
+        <div>
+          <div style="font-size:15px; font-weight:600; color:#12312F;">Jonathan Kirkman</div>
+          <div style="font-size:13px; color:#5E6E6A; margin-top:2px;">Ant Consult Team</div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;">
+        <a href="../insights.html" style="display:inline-flex; align-items:center; gap:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#05515B; font-weight:700; cursor:pointer; text-decoration:none;"><span>←</span><span>Back to Insights</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="background:#FFFFFF; padding:0 72px 96px;">
+    <div style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+          <span style="width:44px; height:1px; background:#F4A258;"></span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Monthly</span>
+        </div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#FFFFFF; margin:0 0 20px; text-wrap:balance;">One long read a month on irrigation engineering</h2>
+        <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.82); margin:0; max-width:540px; text-wrap:pretty;">New agritech, growing trends and the engineering behind them. Written for commercial growers, agricultural corporates, project developers and farm operators alike.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <form style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
+          <input type="email" name="email" required placeholder="Enter your email address" style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:15px; color:#fff;">
+          <button type="submit" class="subscribe-btn" style="white-space:nowrap; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
+        </form>
+        <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <a href="../about.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
+          <a href="../aim.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
+          <a href="../solutions.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
+          <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Projects</a>
+          <a href="../insights.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
+          <a href="../contact.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <a href="../feasibility-studies.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Feasibility Studies</a><a href="../masterplans.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Masterplans</a><a href="../commercial-irrigation-design.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Commercial Irrigation Design</a><a href="../irrigation-upgrades.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Irrigation Upgrades</a><a href="../bulk-water-supply.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Bulk Water Supply</a><a href="../system-assessments.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">System Assessments</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span class="hover-fade" style="cursor:pointer;">Services Cost Estimator</span><span class="hover-fade" style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span class="hover-fade" style="cursor:pointer;">Irrigation ROI Calculator</span><span class="hover-fade" style="cursor:pointer;">Blog</span><a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case studies</a>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <form class="newsletter-form" style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <input type="email" name="email" class="newsletter-input" placeholder="Enter email to subscribe" required style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:13px; color:#fff;">
+          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; background:#F4A258; color:#08343C; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

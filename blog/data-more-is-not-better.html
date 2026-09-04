@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Data: More is NOT Better — Ant Consult</title>
+<meta name="description" content="What on am I supposed to do with a 10 cm grid point cloud of 10 000 ha?">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; max-width:100vw; width:100%; overflow-x:hidden; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { background:#E2E7E6; font-family:'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif; }
+  a { color:#F4A258; text-decoration:none; }
+  a:hover { color:#05515B; }
+  ::selection { background:#F4A258; color:#fff; }
+
+  .hover-fade { transition:color 140ms ease; }
+  .hover-fade:hover { color:#F8C08C !important; }
+
+  .nav-link { transition:color 150ms ease, border-color 150ms ease; border-bottom:2px solid transparent; padding-bottom:4px; }
+  .nav-link:hover { color:#fff; border-bottom-color:rgba(244,162,88,0.55); }
+
+  .nav-drop { position:relative; display:flex; align-items:center; }
+  .nav-drop-panel { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20; }
+  .nav-drop:hover .nav-drop-panel { display:block; }
+  .nav-drop-item { transition:background 140ms ease; }
+  .nav-drop-item:hover { background:#F1F6F4; }
+  .nav-drop-all { color:#05515B; transition:color 140ms ease; }
+  .nav-drop-all:hover { color:#B96A22; }
+
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .subscribe-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .subscribe-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .post-body h1,.post-body h2,.post-body h3,.post-body h4 { font-family:'Ubuntu',sans-serif; font-weight:500; color:#12312F; line-height:1.24; letter-spacing:-0.01em; }
+  .post-body h1 { font-size:32px; margin:36px 0 16px; }
+  .post-body h2 { font-size:28px; margin:36px 0 16px; }
+  .post-body h3 { font-size:22px; margin:28px 0 14px; }
+  .post-body h4 { font-size:18px; margin:24px 0 12px; }
+  .post-body p { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; }
+  .post-body ul,.post-body ol { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px; }
+  .post-body li { margin-bottom:8px; }
+  .post-body a { color:#05515B; text-decoration:underline; }
+  .post-body a:hover { color:#B96A22; }
+  .post-body strong { font-weight:600; color:#12312F; }
+  .post-body img { max-width:100%; height:auto; border-radius:12px; margin:8px 0 24px; display:block; }
+  .post-body figure { margin:0 0 24px; }
+  .post-body figcaption { font-size:13px; color:#5E6E6A; margin-top:8px; }
+</style>
+</head>
+<body>
+
+
+<div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFFFF; box-shadow:0 24px 80px rgba(16,40,40,0.16); overflow:hidden;">
+
+  <!-- NAV -->
+  <div style="background:#05515B; display:flex; align-items:center; justify-content:space-between; padding:26px 72px; border-bottom:1px solid rgba(255,255,255,0.14);">
+    <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:52px; width:auto; display:block;" loading="lazy" decoding="async"></a>
+    <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:rgba(255,255,255,0.92);">
+      <a href="../about.html" class="nav-link" style="cursor:pointer; text-decoration:none;">About</a>
+      <a href="../aim.html" class="nav-link" style="cursor:pointer; text-decoration:none;">AIM</a>
+      <div class="nav-drop">
+        <a href="../solutions.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Solutions</a>
+        <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Services</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Feasibility Studies</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Masterplans</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Commercial Irrigation Design</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation Upgrades</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Bulk Water Supply</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">System Assessments</div>
+          <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">All solutions →</div>
+          </div>
+        </div></div>
+      </div>
+      <a href="../projects.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Projects</a>
+      <div class="nav-drop">
+        <a href="../insights.html" style="cursor:pointer; color:#fff; padding-bottom:4px; border-bottom:2px solid #F4A258; text-decoration:none;">Insights</a>
+        <div class="nav-drop-panel"><div style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; box-shadow:0 24px 60px rgba(4,40,46,0.22); padding:14px; display:flex; flex-direction:column; gap:2px;">
+          <div style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#B96A22; font-weight:600; padding:6px 16px 10px;">Tools</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Services Cost Estimator</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Pipe Lifecycle Cost Analysis</div>
+          <div class="nav-drop-item" style="font-size:15px; color:#05515B; padding:11px 16px; border-radius:12px; cursor:pointer;">Irrigation ROI Calculator</div>
+          <div style="border-top:1px solid #E7EEEC; margin:8px 16px 0; padding-top:10px;">
+            <div class="nav-drop-all" style="font-size:15px; padding:11px 16px; border-radius:12px; cursor:pointer; padding-left:0;">Blog →</div>
+          </div>
+        </div></div>
+      </div>
+      <a href="../contact.html" class="nav-link" style="cursor:pointer; text-decoration:none;">Contact</a>
+      <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
+      <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <div style="background:#F4F7F6; padding:56px 72px 48px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#5E6E6A; margin-bottom:24px;">
+      <a href="../insights.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
+      <span style="color:#A9B8B4;">/</span>
+      <span style="color:#05515B; font-weight:500;">Insights</span>
+    </div>
+    <span class="cms-tag" style="margin-bottom:20px; display:inline-block;">Insights</span>
+    <h1 style="font-family:'Ubuntu',sans-serif; font-size:52px; line-height:1.1; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:20px 0 24px; max-width:820px; text-wrap:balance;">Data: More is NOT Better</h1>
+    <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#5E6E6A;">
+      <span>By Jonathan Kirkman</span>
+      <span style="width:1px; height:14px; background:#CBDCD8;"></span>
+      <span>11 December 2025</span>
+      <span style="width:1px; height:14px; background:#CBDCD8;"></span>
+      <span>2 min read</span>
+    </div>
+  </div>
+
+  <!-- FEATURED IMAGE -->
+  <div role="img" aria-label="Data: More is NOT Better" style="height:440px; margin:0 72px; border-radius:18px; background:#E3EFEC url('https://cdn.prod.website-files.com/6706b353e6104e7b6f495952/681d9c846de612740649a21c_Post%203_Resize.jpg') center/cover no-repeat;"></div>
+
+  <!-- BODY -->
+  <div style="display:flex; justify-content:center; padding:56px 72px 40px;">
+    <div style="max-width:760px; width:100%;">
+
+      <!-- POST BODY -->
+      <div class="post-body"><p id="">We are able to collect more data right now than at any point in history. Yet a high volume of data does not imply high data quality. More data does not imply better data.</p><p id="">LIDAR surveys are a case in point.</p><p id="">What on am I supposed to do with a 10 cm grid point cloud of 10 000 ha?</p><p id="">A huge amount of completely unnecessary detail is picked up - who is interested in the clods and molehills in the middle of a field? It is irrelevant to the design. Yet the data point clogs up my hard drive. &nbsp;The brutal thinning process necessary to translate it into a digital terrain model that can actually be used in irrigation/civil design software takes time and needs continual sense-checking to make sure the useful points stay, and the noise goes.</p><p id="">To me, the accuracy of lidar and photogrammetric data is often in question as well. The most hilarious example of inaccurate data that I have seen is a survey that I was given to do a flood inundation model. There were too few ground control points over a long, narrow strip survey, and the survey showed a rise of 4 m in river bed level! Needless to say, the flood model was not representative of reality. I have also seen “ground level” surveys of sugar cane where the “ground level” varies by cane age - i.e. what is being picked up is not ground level.</p><p id="">A small amount of intelligently collected, clean data beats data spam all the time. More data does not imply a better design, often it means that the design process takes longer than it needs to due to the time requirements of cleaning and thinning &nbsp;dirty, dense data.</p><p id="">Yes, dense data makes very impressive 3D models and visualizations, but as far as engineering usefulness goes, it is hard to beat a proper surveyor with a staff.</p><p id="">‍</p></div>
+
+      <!-- AUTHOR BIO -->
+      <div style="display:flex; align-items:center; gap:16px; margin-top:40px; padding-top:32px; border-top:1px solid #DFE9E6;">
+        <div style="width:56px; height:56px; border-radius:50%; flex:none; display:flex; align-items:center; justify-content:center; background:#05515B; color:#fff; font-family:'Ubuntu',sans-serif; font-size:16px; font-weight:500;">JK</div>
+        <div>
+          <div style="font-size:15px; font-weight:600; color:#12312F;">Jonathan Kirkman</div>
+          <div style="font-size:13px; color:#5E6E6A; margin-top:2px;">Ant Consult Team</div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;">
+        <a href="../insights.html" style="display:inline-flex; align-items:center; gap:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#05515B; font-weight:700; cursor:pointer; text-decoration:none;"><span>←</span><span>Back to Insights</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="background:#FFFFFF; padding:0 72px 96px;">
+    <div style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
+          <span style="width:44px; height:1px; background:#F4A258;"></span>
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600;">Monthly</span>
+        </div>
+        <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#FFFFFF; margin:0 0 20px; text-wrap:balance;">One long read a month on irrigation engineering</h2>
+        <p style="font-size:17px; line-height:1.7; color:rgba(255,255,255,0.82); margin:0; max-width:540px; text-wrap:pretty;">New agritech, growing trends and the engineering behind them. Written for commercial growers, agricultural corporates, project developers and farm operators alike.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <form style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
+          <input type="email" name="email" required placeholder="Enter your email address" style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:15px; color:#fff;">
+          <button type="submit" class="subscribe-btn" style="white-space:nowrap; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
+        </form>
+        <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#05515B; color:#fff; padding:72px 72px 32px;">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr 1.3fr 1.2fr 1.2fr; gap:40px; padding-bottom:56px;">
+      <div>
+        <a href="../index.html" style="display:block;"><img src="../assets/logo.png" alt="Ant Consult" style="height:34px; width:auto; display:block; margin-bottom:24px;" loading="lazy" decoding="async"></a>
+        <div style="font-size:14px; line-height:1.7; color:rgba(255,255,255,0.75);">10 Hilton Avenue, Hilton<br>Pietermaritzburg, 3201</div>
+        <div style="font-size:14px; line-height:1.8; color:#F8C08C; margin-top:14px;">info@antconsult.co.za<br>+27 76 375 5043</div>
+        <div style="font-size:14px; font-weight:600; margin-top:22px;">Office Hours</div>
+        <div style="font-size:14px; color:rgba(255,255,255,0.75); margin-top:4px;">Monday – Friday 08 AM – 04 PM</div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <a href="../about.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">About</a>
+          <a href="../aim.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">AIM</a>
+          <a href="../solutions.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Solutions</a>
+          <a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Projects</a>
+          <a href="../insights.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
+          <a href="../contact.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Our Expertise</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <a href="../feasibility-studies.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Feasibility Studies</a><a href="../masterplans.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Masterplans</a><a href="../commercial-irrigation-design.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Commercial Irrigation Design</a><a href="../irrigation-upgrades.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Irrigation Upgrades</a><a href="../bulk-water-supply.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Bulk Water Supply</a><a href="../system-assessments.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">System Assessments</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
+          <span class="hover-fade" style="cursor:pointer;">Services Cost Estimator</span><span class="hover-fade" style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span class="hover-fade" style="cursor:pointer;">Irrigation ROI Calculator</span><span class="hover-fade" style="cursor:pointer;">Blog</span><a href="../projects.html" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Case studies</a>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:26px;">
+          <span style="font-size:14px; font-weight:600;">Follow us</span>
+          <span style="width:30px; height:30px; border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer;">in</span>
+        </div>
+        <form class="newsletter-form" style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:9px 9px 9px 18px; gap:10px;">
+          <input type="email" name="email" class="newsletter-input" placeholder="Enter email to subscribe" required style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:13px; color:#fff;">
+          <button type="submit" class="newsletter-btn" style="white-space:nowrap; flex:none; width:auto; border-radius:999px; border:none; background:#F4A258; color:#08343C; font-size:13px; font-weight:600; font-family:inherit; line-height:1; padding:12px 24px; cursor:pointer;">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.16); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:24px; font-size:13px; color:rgba(255,255,255,0.6);">
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span>© 2026 Ant Consult. All rights reserved.</span>
+        <span style="width:1px; height:12px; background:rgba(255,255,255,0.22);"></span>
+        <a href="/assets/ant-consult-paia-manual.pdf" class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6); text-decoration:none;">Privacy Policy</a>
+        <span class="hover-fade" style="cursor:pointer; color:rgba(255,255,255,0.6);">Terms of Use</span>
+      </div>
+      <span>Engineered for the total cost of ownership.</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
