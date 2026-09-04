@@ -175,8 +175,8 @@ const CASE_BODY_CSS = `
   .case-body h3 { font-family:'Ubuntu',sans-serif; font-size:22px; font-weight:500; color:#12312F; line-height:1.24; letter-spacing:-0.01em; margin:28px 0 14px; }
   .case-body h3:first-child { margin-top:0; }
   .case-body h4 { font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; color:#12312F; margin:20px 0 10px; }
-  .case-body p { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 18px; }
-  .case-body ul,.case-body ol { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 18px; padding-left:22px; }
+  .case-body p { font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 18px; }
+  .case-body ul,.case-body ol { font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 18px; padding-left:22px; }
   .case-body li { margin-bottom:6px; }
   .case-body a { color:#05515B; text-decoration:underline; }
   .case-body a:hover { color:#B96A22; }
@@ -186,8 +186,6 @@ template = template.replace('</style>', CASE_BODY_CSS);
 
 const META_ROW_BLOCK = `    <div style="display:flex; align-items:center; gap:32px; font-size:14px; color:#5E6E6A; flex-wrap:wrap;">
       <div><span style="text-transform:uppercase; letter-spacing:0.1em; font-size:11px; color:#B96A22; font-weight:600; display:block; margin-bottom:4px;">Client</span>{{ case.client_name }}</div>
-      <div><span style="text-transform:uppercase; letter-spacing:0.1em; font-size:11px; color:#B96A22; font-weight:600; display:block; margin-bottom:4px;">Location</span>{{ case.location }}</div>
-      <div><span style="text-transform:uppercase; letter-spacing:0.1em; font-size:11px; color:#B96A22; font-weight:600; display:block; margin-bottom:4px;">Completed</span>{{ case.completion_date }}</div>
     </div>`;
 
 const HERO_IMAGE_BLOCK = `  <!-- HERO IMAGE (field: Hero Image) -->
@@ -207,7 +205,7 @@ const CHALLENGE_BLOCK = `  <!-- THE CHALLENGE -->
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Challenge</h2>
       <div class="field-slot" style="padding:32px;">
         <div class="field-tag" style="margin-bottom:18px;">[[ CASE STUDY: THE CHALLENGE — rich text field ]]</div>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Describe the problem the client came to Ant Consult with: what was failing, what it was costing them, and what constraints (budget, timeline, site conditions) shaped the brief.</p>
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Describe the problem the client came to Ant Consult with: what was failing, what it was costing them, and what constraints (budget, timeline, site conditions) shaped the brief.</p>
       </div>
     </div>
   </div>`;
@@ -218,7 +216,7 @@ const STRATEGY_BLOCK = `  <!-- THE STRATEGY -->
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">The Strategy</h2>
       <div class="field-slot" style="padding:32px;">
         <div class="field-tag" style="margin-bottom:18px;">[[ CASE STUDY: THE STRATEGY — rich text field ]]</div>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Explain the approach Ant Consult proposed and why: the design principles applied, the trade-offs weighed, and how this option beat the alternatives on lifecycle cost.</p>
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Explain the approach Ant Consult proposed and why: the design principles applied, the trade-offs weighed, and how this option beat the alternatives on lifecycle cost.</p>
       </div>
     </div>
   </div>`;
@@ -235,7 +233,7 @@ const EXECUTION_BLOCK = `  <!-- THE EXECUTION -->
       </div>
       <div class="field-slot" style="padding:32px;">
         <div class="field-tag" style="margin-bottom:18px;">[[ CASE STUDY: THE EXECUTION — rich text field ]]</div>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Walk through how the project was delivered: phasing, site visits, who was involved, and how issues that came up during construction were handled.</p>
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Walk through how the project was delivered: phasing, site visits, who was involved, and how issues that came up during construction were handled.</p>
       </div>
     </div>
   </div>`;
@@ -246,7 +244,7 @@ const RESULTS_AND_QUOTE_BLOCK = `  <!-- RESULTS -->
       <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.16; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 24px;">Results</h2>
       <div class="field-slot" style="padding:32px; margin-bottom:24px;">
         <div class="field-tag" style="margin-bottom:18px;">[[ CASE STUDY: RESULTS — rich text field ]]</div>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Tie the outcome back to the summary metrics above: what changed for the client, and what it means for them going forward.</p>
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0;">Placeholder copy. Tie the outcome back to the summary metrics above: what changed for the client, and what it means for them going forward.</p>
       </div>
       <div style="background:#05515B; border-radius:18px; padding:40px; color:#fff;">
         <p style="font-family:'Ubuntu',sans-serif; font-size:22px; line-height:1.5; margin:0 0 20px;">"{{ case.quote_text }}"</p>
@@ -310,7 +308,6 @@ for (const r of records) {
 
   const metaRowReplacement = `    <div style="display:flex; align-items:center; gap:32px; font-size:14px; color:#5E6E6A; flex-wrap:wrap;">
       <div><span style="text-transform:uppercase; letter-spacing:0.1em; font-size:11px; color:#B96A22; font-weight:600; display:block; margin-bottom:4px;">Client</span>${escapeHtml(client)}</div>
-      <div><span style="text-transform:uppercase; letter-spacing:0.1em; font-size:11px; color:#B96A22; font-weight:600; display:block; margin-bottom:4px;">Completed</span>${escapeHtml(dateStr)}</div>
     </div>`;
   page = page.replace(META_ROW_BLOCK, metaRowReplacement);
 

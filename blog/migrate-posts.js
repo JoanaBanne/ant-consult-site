@@ -114,8 +114,8 @@ const POST_BODY_CSS = `
   .post-body h2 { font-size:28px; margin:36px 0 16px; }
   .post-body h3 { font-size:22px; margin:28px 0 14px; }
   .post-body h4 { font-size:18px; margin:24px 0 12px; }
-  .post-body p { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; }
-  .post-body ul,.post-body ol { font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px; }
+  .post-body p { font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 20px; }
+  .post-body ul,.post-body ol { font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px; }
   .post-body li { margin-bottom:8px; }
   .post-body a { color:#05515B; text-decoration:underline; }
   .post-body a:hover { color:#B96A22; }
@@ -139,9 +139,9 @@ const POST_BODY_BLOCK = `      <!-- POST BODY (Webflow CMS field: Post Body — 
       <div class="cms-slot" style="padding:36px;">
         <div class="cms-tag" style="margin-bottom:20px;">[[ WEBFLOW CMS: POST BODY — Rich Text field ]]</div>
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.24; font-weight:500; color:#12312F; margin:0 0 16px;">Example heading rendered from the rich text field</h2>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px;">Example body paragraph. Everything inside this dashed box is placeholder copy showing how the Webflow rich-text editor's output (headings, paragraphs, lists, links, images) should inherit this page's typography once the real Post Body field is bound here.</p>
-        <p style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px;">A second placeholder paragraph, so line-height and paragraph spacing can be checked against real multi-paragraph content.</p>
-        <ul style="font-size:17px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px;">
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 20px;">Example body paragraph. Everything inside this dashed box is placeholder copy showing how the Webflow rich-text editor's output (headings, paragraphs, lists, links, images) should inherit this page's typography once the real Post Body field is bound here.</p>
+        <p style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 20px;">A second placeholder paragraph, so line-height and paragraph spacing can be checked against real multi-paragraph content.</p>
+        <ul style="font-size:16px; line-height:1.75; color:#2A3A38; margin:0 0 20px; padding-left:22px;">
           <li>Example list item one</li>
           <li>Example list item two</li>
         </ul>
