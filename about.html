@@ -39,6 +39,16 @@
 
   @media (max-width: 768px) {
     .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .stats-grid-2col {
+      display:grid !important;
+      grid-template-columns:repeat(2,1fr) !important;
+      gap:28px 20px !important;
+      text-align:center !important;
+    }
+    .stats-grid-2col > div { padding:0 !important; border:none !important; align-items:center !important; }
+    .stats-grid-2col > div > div:first-child { justify-content:center !important; height:auto !important; margin-bottom:6px !important; }
+    .stats-grid-2col > div > div:last-child { max-width:none !important; }
+    .page-hero, .contact-hero { height:auto !important; padding:48px 22px !important; }
     .hamburger-btn { display:flex !important; }
     .nav-links-row {
       position:absolute; top:100%; left:0; right:0;
@@ -110,7 +120,7 @@
 
   <!-- STATS -->
   <div class="section-pad-lg" style="background:#04424B; color:#fff; padding:52px 72px 56px;">
-    <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
+    <div class="stats-grid-2col" style="display:grid; grid-template-columns:repeat(4,1fr); align-items:stretch;">
       <div style="padding:0 44px 0 0; display:flex; flex-direction:column;">
         <div style="display:flex; align-items:baseline; gap:4px; font-family:'Ubuntu',sans-serif; font-weight:500; letter-spacing:-0.024em; line-height:1; height:56px;">
           <span style="font-size:54px;">25</span><span style="font-size:28px; color:#F4A258;">+</span>
