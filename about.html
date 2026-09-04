@@ -38,7 +38,8 @@
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
   @media (max-width: 768px) {
-    .section-pad-lg { padding-left:22px !important; padding-right:22px !important; }
+    .section-pad-lg { padding:36px 22px !important; }
+    h2 { font-size:26px !important; line-height:1.3 !important; }
     .stats-grid-2col {
       display:grid !important;
       grid-template-columns:repeat(2,1fr) !important;
@@ -48,6 +49,17 @@
     .stats-grid-2col > div { padding:0 !important; border:none !important; align-items:center !important; }
     .stats-grid-2col > div > div:first-child { justify-content:center !important; height:auto !important; margin-bottom:6px !important; }
     .stats-grid-2col > div > div:last-child { max-width:none !important; }
+    .team-photo {
+      aspect-ratio:auto !important;
+      min-height:auto !important;
+      height:240px !important;
+      width:240px !important;
+      max-width:240px !important;
+      max-height:240px !important;
+      margin:0 auto !important;
+      border-radius:12px !important;
+    }
+    .team-photo img { width:100% !important; height:100% !important; object-fit:cover !important; border-radius:12px !important; }
     .page-hero, .contact-hero { height:auto !important; padding:48px 22px !important; }
     .hamburger-btn { display:flex !important; }
     .nav-links-row {
@@ -298,7 +310,7 @@
     <div class="two-col-grid" style="display:grid; grid-template-columns:1.62fr 1fr; gap:32px; margin-bottom:80px; align-items:stretch;">
       <div style="display:flex; flex-direction:column; gap:24px;">
       <div class="two-col-grid" style="flex:1; background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:grid; grid-template-columns:300px 1fr;">
-        <div style="min-height:360px; overflow:hidden; background:#C6DAD5;">
+        <div class="team-photo" style="min-height:360px; overflow:hidden; background:#C6DAD5;">
           <img src="assets/team-jon.jpg" alt="Jon Kirkman" style="width:100%; height:100%; object-fit:cover; object-position:64% 20%; display:block;" loading="lazy" decoding="async">
         </div>
         <div style="padding:34px 32px 32px;">
@@ -314,7 +326,7 @@
 
       </div>
       <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden;">
-        <div style="height:300px; overflow:hidden; background:#DCD9D4; display:flex; align-items:center; justify-content:center;">
+        <div class="team-photo" style="height:300px; overflow:hidden; background:#DCD9D4; display:flex; align-items:center; justify-content:center;">
           <img src="assets/team-joana.png" alt="Joana Banne" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block;" loading="lazy" decoding="async">
         </div>
         <div style="padding:34px 32px 32px;">
@@ -332,7 +344,7 @@
       </div>
       <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <div style="width:100%; height:100%; background:#DCD9D4; display:flex; align-items:flex-end; justify-content:center;">
               <img src="assets/team-steve.jpg" alt="Steve Mann" style="width:auto; height:100%; display:block;" loading="lazy" decoding="async">
             </div>
@@ -344,7 +356,7 @@
           </div>
         </div>
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <img src="assets/team-stefan.png" alt="Stefan van Veenendaal" style="width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;" loading="lazy" decoding="async">
           </div>
           <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
@@ -354,7 +366,7 @@
           </div>
         </div>
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <img src="assets/team-noel.jpg" alt="Noel Stevens" style="width:100%; height:100%; object-fit:cover; object-position:center 14%; display:block;" loading="lazy" decoding="async">
           </div>
           <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
@@ -364,7 +376,7 @@
           </div>
         </div>
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Andrew</span>
           </div>
           <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
@@ -375,7 +387,7 @@
           </div>
         </div>
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Jed</span>
           </div>
           <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
@@ -386,7 +398,7 @@
           </div>
         </div>
         <div style="background:#fff; border:1px solid #DFE9E6; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
-          <div style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
+          <div class="team-photo" style="aspect-ratio:4/5; overflow:hidden; background:repeating-linear-gradient(135deg,#D3E5E1 0 9px,#C6DAD5 9px 18px); display:flex; align-items:center; justify-content:center;">
             <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:0.06em; color:#4C6B66; background:rgba(255,255,255,0.75); padding:6px 10px;">portrait — Hans</span>
           </div>
           <div style="padding:26px 26px 28px; display:flex; flex-direction:column; flex:1;">
