@@ -25,8 +25,8 @@
   .nav-link:hover { color:#fff; border-bottom-color:rgba(244,162,88,0.55); }
 
   .nav-drop { position:relative; display:flex; align-items:center; }
-  .nav-drop-panel { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:18px; min-width:288px; z-index:20; }
-  .nav-drop:hover .nav-drop-panel { display:block; }
+  .nav-drop-panel { position:absolute; top:100%; left:50%; padding-top:18px; min-width:288px; z-index:20; opacity:0; visibility:hidden; transform:translate(-50%, 8px); transition:opacity 0.15s ease, transform 0.15s ease, visibility 0.15s; }
+  .nav-drop:hover .nav-drop-panel { opacity:1; visibility:visible; transform:translate(-50%, 0); }
   .nav-drop-item { transition:background 140ms ease; }
   .nav-drop-item:hover { background:#F1F6F4; }
   .nav-drop-all { color:#05515B; transition:color 140ms ease; }
