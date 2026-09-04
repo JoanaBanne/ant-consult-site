@@ -60,6 +60,10 @@
       border-radius:12px !important;
     }
     .team-photo img { width:100% !important; height:100% !important; object-fit:cover !important; border-radius:12px !important; }
+    .sabi-card { flex-direction:column !important; align-items:center !important; text-align:center !important; }
+    .sabi-divider { display:none !important; }
+    .sabi-logo { max-width:140px !important; height:auto !important; }
+    .sabi-text { width:100% !important; margin-top:16px !important; }
     .page-hero, .contact-hero { height:auto !important; padding:48px 22px !important; }
     .hamburger-btn { display:flex !important; }
     .nav-links-row {
@@ -318,10 +322,10 @@
           <div style="font-size:13px; letter-spacing:0.1em; text-transform:uppercase; color:#5E6E6A; font-weight:600; margin-bottom:20px;">PrEng BSc Eng Agric — Founder</div>
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Jon founded Ant Consult to bring structured, independent engineering to large-scale agricultural water infrastructure. He is a degree-qualified Agricultural Engineer (UKZN) and a Registered Professional Engineer with the Engineering Council of South Africa. His work spans irrigation design, bulk water supply, feasibility studies and masterplanning across Africa and the Middle East. Jon is personally involved in every project Ant Consult undertakes, providing clients with direct access to senior engineering expertise from concept through to delivery.</p>
         </div>
-      </div><div style="display:flex; align-items:center; gap:26px; padding:18px 32px; background:#fff; border:1px solid #DFE9E6; border-radius:18px;">
-        <img src="assets/sabi.png" alt="South African Irrigation Institute" style="height:38px; width:auto; display:block; flex:none;" loading="lazy" decoding="async">
-        <span style="height:38px; width:1px; background:#DFE9E6; flex:none;"></span>
-        <div style="font-size:15px; line-height:1.6; color:#2A3A38; text-wrap:pretty;">Our engineers are SABI-qualified and registered with the Engineering Council of South Africa.</div>
+      </div><div class="sabi-card" style="display:flex; align-items:center; gap:26px; padding:18px 32px; background:#fff; border:1px solid #DFE9E6; border-radius:18px;">
+        <img class="sabi-logo" src="assets/sabi.png" alt="South African Irrigation Institute" style="height:38px; width:auto; display:block; flex:none;" loading="lazy" decoding="async">
+        <span class="sabi-divider" style="height:38px; width:1px; background:#DFE9E6; flex:none;"></span>
+        <div class="sabi-text" style="font-size:15px; line-height:1.6; color:#2A3A38; text-wrap:pretty;">Our engineers are SABI-qualified and registered with the Engineering Council of South Africa.</div>
       </div>
 
       </div>
