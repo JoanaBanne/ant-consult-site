@@ -94,6 +94,7 @@ for (const page of ROOT_PAGES) {
 }
 template = replaceAll(template, 'src="assets/logo.png"', 'src="../assets/logo.png"');
 template = replaceAll(template, 'href="assets/favicon.png"', 'href="../assets/favicon.png"');
+template = replaceAll(template, 'href="insights.html#blog"', 'href="../insights.html#blog"');
 
 // Strip the template-only CMS legend comment and placeholder-only CSS — these
 // generated pages carry real content, not a framework demo.
