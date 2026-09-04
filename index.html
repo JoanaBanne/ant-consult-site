@@ -51,6 +51,18 @@
   .pricing-card:hover .pl-dash { background:#F4A258; }
   .pricing-card .pl-btn { background:#05515B; color:#FFFFFF; transition:background 160ms ease, color 160ms ease; }
   .pricing-card:hover .pl-btn { background:#F4A258; color:#08343C; }
+
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .cta-btn-orange { background:#F4A258; color:#08343C; transition:background 160ms ease; }
+  .cta-btn-orange:hover { background:#f2934a; }
+
+  .cta-btn-teal { background:#05515B; color:#fff; transition:background 160ms ease; }
+  .cta-btn-teal:hover { background:#063e46; }
+
+  .btn-outline-teal { color:#05515B; transition:background 160ms ease, color 160ms ease; }
+  .btn-outline-teal:hover { background:#05515B; color:#fff; }
 </style>
 </head>
 <body>
@@ -74,7 +86,7 @@
         <a href="insights.html" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
         <a href="contact.html" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
         <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
-        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+        <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
       </div>
     </div>
 
@@ -86,7 +98,7 @@
       <h1 style="font-family:'Ubuntu',sans-serif; font-size:72px; line-height:1.04; font-weight:500; letter-spacing:-0.02em; margin:0 0 28px; text-wrap:balance;">Independent water engineering for <span style="color:#F4A258;">large-scale agriculture</span></h1>
       <p style="font-size:16px; line-height:1.65; color:rgba(255,255,255,0.86); margin:0 0 40px; max-width:560px; text-wrap:pretty;">Ant Consult designs irrigation, pumping and water distribution systems built for the lowest possible cost of ownership. Every design is shaped by the realities of your operation, and the people who will manage it.</p>
       <div style="display:flex; gap:14px; margin-bottom:56px;">
-        <a href="contact.html" style="background:#F4A258; color:#08343C; font-weight:600; padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer;text-decoration:none;">Book a discovery call</a>
+        <a href="contact.html" class="cta-btn-orange" style="font-weight:600; padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer;text-decoration:none;">Book a discovery call</a>
         <a href="projects.html" class="hero-outline-btn" style="border:1px solid rgba(255,255,255,0.45); color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; cursor:pointer; text-decoration:none;">See our projects</a>
       </div>
     </div>
@@ -292,7 +304,7 @@
     </div>
 
     <div style="margin-top:48px;">
-      <span style="display:inline-block; border:1px solid #05515B; color:#05515B; padding:15px 36px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;">See how AIM works</span>
+      <a href="aim.html" class="btn-outline-teal" style="display:inline-block; border:1px solid #05515B; padding:15px 36px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer; text-decoration:none;">See how AIM works</a>
     </div>
   </div>
 
@@ -358,7 +370,7 @@
         </div>
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0; max-width:620px; text-wrap:balance;">Tools, guides and insights for better engineering decisions</h2>
       </div>
-      <span style="display:inline-flex; align-items:center; gap:10px; background:#05515B; color:#fff; font-size:15px; font-weight:500; padding:15px 28px; border-radius:999px; cursor:pointer; margin-bottom:8px; white-space:nowrap;">View all resources <span style="color:#F4A258;">→</span></span>
+      <a href="insights.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 28px; border-radius:999px; cursor:pointer; margin-bottom:8px; white-space:nowrap; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; overflow:hidden; display:flex; flex-direction:column;">
@@ -417,7 +429,7 @@
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:54px; line-height:1.1; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px;">What can we help you achieve?</h2>
     <p style="font-size:16px; line-height:1.7; color:#2A3A38; margin:0 auto 36px; max-width:520px; text-wrap:pretty;">Bring us your project. Thirty minutes with the engineer who would do the work, and an honest read on whether it is worth pursuing.</p>
     <div style="display:flex; gap:14px; justify-content:center; margin-bottom:40px;">
-      <a href="contact.html" style="background:#05515B; color:#fff; padding:17px 40px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;text-decoration:none;">Book your discovery meeting</a>
+      <a href="contact.html" class="cta-btn-teal" style="padding:17px 40px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;text-decoration:none;">Book your discovery meeting</a>
     </div>
   </div>
 
@@ -496,7 +508,7 @@
       <h1 style="font-family:'Ubuntu',sans-serif; font-size:41px; line-height:1.08; font-weight:500; letter-spacing:-0.015em; margin:0 0 18px;">Independent water engineering for <span style="color:#F4A258;">large-scale agriculture</span></h1>
       <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,0.85); margin:0 0 28px;">Ant Consult designs irrigation, pumping and water distribution systems built for the lowest possible cost of ownership. Every design is shaped by the realities of your operation, and the people who will manage it.</p>
       <div style="display:flex; flex-direction:column; gap:12px;">
-        <a href="contact.html" style="background:#F4A258; color:#08343C; font-weight:600; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer;text-decoration:none;">Book a discovery call</a>
+        <a href="contact.html" class="cta-btn-orange" style="font-weight:600; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer;text-decoration:none;">Book a discovery call</a>
 <a href="projects.html" class="hero-outline-btn" style="border:1px solid rgba(255,255,255,0.45); color:#fff; padding:16px; border-radius:999px; font-size:16px; text-align:center; cursor:pointer; text-decoration:none;">See our projects</a>
       </div>
     </div>
@@ -667,7 +679,7 @@
       </div>
     </div>
     <div style="margin-top:28px;">
-      <span style="display:block; border:1px solid #05515B; color:#05515B; padding:15px; border-radius:999px; font-size:16px; font-weight:500; text-align:center; cursor:pointer;">See how AIM works</span>
+      <a href="aim.html" class="btn-outline-teal" style="display:block; border:1px solid #05515B; padding:15px; border-radius:999px; font-size:16px; font-weight:500; text-align:center; cursor:pointer; text-decoration:none;">See how AIM works</a>
     </div>
   </div>
 
@@ -752,7 +764,7 @@
       </div>
     </div>
     <div style="margin-top:24px; text-align:center;">
-      <span style="display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; box-sizing:border-box; background:#05515B; color:#fff; font-size:16px; font-weight:500; padding:16px; border-radius:999px; cursor:pointer;">View all resources <span style="color:#F4A258;">→</span></span>
+      <a href="insights.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; box-sizing:border-box; font-size:16px; font-weight:500; padding:16px; border-radius:999px; cursor:pointer; text-decoration:none;">View all resources <span style="color:#F4A258;">→</span></a>
     </div>
   </div>
 
@@ -780,7 +792,7 @@
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:34px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 16px;">What can we help you achieve?</h2>
     <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 28px;">Bring us your project. Thirty minutes with the engineer who would do the work, and an honest read on whether it is worth pursuing.</p>
     <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
-      <a href="contact.html" style="background:#05515B; color:#fff; padding:16px; border-radius:999px; font-size:16px; cursor:pointer;text-decoration:none;">Book your discovery meeting</a>
+      <a href="contact.html" class="cta-btn-teal" style="padding:16px; border-radius:999px; font-size:16px; cursor:pointer;text-decoration:none;">Book your discovery meeting</a>
     </div>
   </div>
 

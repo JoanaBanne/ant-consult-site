@@ -53,6 +53,12 @@
   #ctp-micro:checked ~ .ctp-grid .ctp-row-micro .ctp-arrow-up,
   #ctp-pivot:checked ~ .ctp-grid .ctp-row-pivot .ctp-arrow-up,
   #ctp-sprinkler:checked ~ .ctp-grid .ctp-row-sprinkler .ctp-arrow-up { display:inline; }
+
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .cta-btn-teal { background:#05515B; color:#fff; transition:background 160ms ease; }
+  .cta-btn-teal:hover { background:#063e46; }
 </style>
 </head>
 <body>
@@ -70,7 +76,7 @@
       <a href="insights.html" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
       <a href="contact.html" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
       <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
-        <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+        <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
     </div>
   </div>
 
@@ -238,7 +244,7 @@
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#12312F; margin:0 0 20px; text-wrap:balance;">The irrigation system you choose today will influence your operation for decades.</h2>
         <p style="font-size:16px; line-height:1.7; color:#3C514E; margin:0 0 36px; max-width:460px; text-wrap:pretty;">Before you commit to a system type, know what it will cost to run for the next twenty years and whether your team can maintain it.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="contact.html" style="background:#05515B; color:#fff; padding:16px 34px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;text-decoration:none;">Book a discovery call</a>
+          <a href="contact.html" class="cta-btn-teal" style="padding:16px 34px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer;text-decoration:none;">Book a discovery call</a>
         </div>
       </div>
       <div role="img" aria-label="Commercial irrigation pump station design" style="min-height:420px; background:url('assets/commercial-irrigation-pump-station-design.jpg') center 55%/cover no-repeat;"></div>

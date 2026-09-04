@@ -20,6 +20,12 @@
   .hover-fade { transition:color 140ms ease; }
   .hover-fade:hover { color:#F8C08C !important; }
 
+  .roi-btn { background:#F4A258; color:#08343C; transition:background 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
+
+  .cta-btn-teal { background:#05515B; color:#fff; transition:background 160ms ease; }
+  .cta-btn-teal:hover { background:#063e46; }
+
   .case-body h3 { font-family:'Ubuntu',sans-serif; font-size:22px; font-weight:500; color:#12312F; line-height:1.24; letter-spacing:-0.01em; margin:28px 0 14px; }
   .case-body h3:first-child { margin-top:0; }
   .case-body h4 { font-family:'Ubuntu',sans-serif; font-size:18px; font-weight:500; color:#12312F; margin:20px 0 10px; }
@@ -47,7 +53,7 @@
       <a href="../insights.html" style="cursor:pointer; color:inherit; text-decoration:none;">Insights</a>
       <a href="../contact.html" style="cursor:pointer; color:inherit; text-decoration:none;">Contact</a>
       <span style="width:1px; height:18px; background:rgba(255,255,255,0.22);"></span>
-      <span style="background:#F4A258; color:#08343C; font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
+      <span class="roi-btn" style="font-weight:600; padding:10px 20px; border-radius:999px; font-size:14px; cursor:pointer; margin-left:4px;">Calculate your ROI</span>
     </div>
   </div>
 
@@ -103,7 +109,7 @@
   <!-- CTA -->
   <div style="background:#F4F7F6; padding:56px 72px; text-align:center;">
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:30px; line-height:1.2; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 20px;">Bring us a project like this one</h2>
-    <a href="../contact.html" style="display:inline-flex; align-items:center; gap:10px; background:#05515B; color:#fff; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
+    <a href="../contact.html" class="cta-btn-teal" style="display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:500; padding:15px 32px; border-radius:999px; text-decoration:none;">Talk to an engineer <span style="color:#F4A258;">→</span></a>
   </div>
 
   <!-- FOOTER -->
