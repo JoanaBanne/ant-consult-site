@@ -26,37 +26,38 @@
   .lift-card { transition:transform 180ms ease, box-shadow 180ms ease; }
   .lift-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,40,40,0.10); }
 
-  .ctp-radio { position:absolute; opacity:0; pointer-events:none; }
+  .ctp-radio { position:absolute; top:0; left:0; opacity:0; pointer-events:none; }
+  .ctp-row { position:relative; }
   .ctp-photo { display:none; }
   .ctp-desc { display:none; }
   .ctp-title { color:#FFFFFF; }
   .ctp-arrow-up { display:none; }
   .ctp-arrow-down { display:inline; }
 
-  #ctp-drip:checked ~ .ctp-grid .ctp-photo-drip,
-  #ctp-micro:checked ~ .ctp-grid .ctp-photo-micro,
-  #ctp-pivot:checked ~ .ctp-grid .ctp-photo-pivot,
-  #ctp-sprinkler:checked ~ .ctp-grid .ctp-photo-sprinkler { display:block; }
+  .ctp-grid:has(#ctp-drip:checked) .ctp-photo-drip,
+  .ctp-grid:has(#ctp-micro:checked) .ctp-photo-micro,
+  .ctp-grid:has(#ctp-pivot:checked) .ctp-photo-pivot,
+  .ctp-grid:has(#ctp-sprinkler:checked) .ctp-photo-sprinkler { display:block; }
 
-  #ctp-drip:checked ~ .ctp-grid .ctp-desc-drip,
-  #ctp-micro:checked ~ .ctp-grid .ctp-desc-micro,
-  #ctp-pivot:checked ~ .ctp-grid .ctp-desc-pivot,
-  #ctp-sprinkler:checked ~ .ctp-grid .ctp-desc-sprinkler { display:block; }
+  .ctp-grid:has(#ctp-drip:checked) .ctp-desc-drip,
+  .ctp-grid:has(#ctp-micro:checked) .ctp-desc-micro,
+  .ctp-grid:has(#ctp-pivot:checked) .ctp-desc-pivot,
+  .ctp-grid:has(#ctp-sprinkler:checked) .ctp-desc-sprinkler { display:block; }
 
-  #ctp-drip:checked ~ .ctp-grid .ctp-title-drip,
-  #ctp-micro:checked ~ .ctp-grid .ctp-title-micro,
-  #ctp-pivot:checked ~ .ctp-grid .ctp-title-pivot,
-  #ctp-sprinkler:checked ~ .ctp-grid .ctp-title-sprinkler { color:#F4A258; }
+  .ctp-grid:has(#ctp-drip:checked) .ctp-title-drip,
+  .ctp-grid:has(#ctp-micro:checked) .ctp-title-micro,
+  .ctp-grid:has(#ctp-pivot:checked) .ctp-title-pivot,
+  .ctp-grid:has(#ctp-sprinkler:checked) .ctp-title-sprinkler { color:#F4A258; }
 
-  #ctp-drip:checked ~ .ctp-grid .ctp-row-drip .ctp-arrow-down,
-  #ctp-micro:checked ~ .ctp-grid .ctp-row-micro .ctp-arrow-down,
-  #ctp-pivot:checked ~ .ctp-grid .ctp-row-pivot .ctp-arrow-down,
-  #ctp-sprinkler:checked ~ .ctp-grid .ctp-row-sprinkler .ctp-arrow-down { display:none; }
+  .ctp-grid:has(#ctp-drip:checked) .ctp-row-drip .ctp-arrow-down,
+  .ctp-grid:has(#ctp-micro:checked) .ctp-row-micro .ctp-arrow-down,
+  .ctp-grid:has(#ctp-pivot:checked) .ctp-row-pivot .ctp-arrow-down,
+  .ctp-grid:has(#ctp-sprinkler:checked) .ctp-row-sprinkler .ctp-arrow-down { display:none; }
 
-  #ctp-drip:checked ~ .ctp-grid .ctp-row-drip .ctp-arrow-up,
-  #ctp-micro:checked ~ .ctp-grid .ctp-row-micro .ctp-arrow-up,
-  #ctp-pivot:checked ~ .ctp-grid .ctp-row-pivot .ctp-arrow-up,
-  #ctp-sprinkler:checked ~ .ctp-grid .ctp-row-sprinkler .ctp-arrow-up { display:inline; }
+  .ctp-grid:has(#ctp-drip:checked) .ctp-row-drip .ctp-arrow-up,
+  .ctp-grid:has(#ctp-micro:checked) .ctp-row-micro .ctp-arrow-up,
+  .ctp-grid:has(#ctp-pivot:checked) .ctp-row-pivot .ctp-arrow-up,
+  .ctp-grid:has(#ctp-sprinkler:checked) .ctp-row-sprinkler .ctp-arrow-up { display:inline; }
 
   .roi-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .roi-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
@@ -193,10 +194,6 @@
     </div>
 
     <div class="bleed-full" style="margin:0 -72px 20px;">
-      <input type="radio" name="ctype" id="ctp-drip" class="ctp-radio" checked>
-      <input type="radio" name="ctype" id="ctp-micro" class="ctp-radio">
-      <input type="radio" name="ctype" id="ctp-pivot" class="ctp-radio">
-      <input type="radio" name="ctype" id="ctp-sprinkler" class="ctp-radio">
       <div class="ctp-grid three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
         <div style="position:relative;">
           <div class="ctp-photo ctp-photo-drip" role="img" aria-label="Drip irrigation system" style="position:absolute; inset:0; background-image:url('assets/drip-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 60%; background-color:#0A6B78;"></div>
@@ -213,6 +210,7 @@
           <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.72); margin:0 0 30px; max-width:520px; text-wrap:pretty;">The right technology depends on the crop, field layout, available water, operating requirements and long-term production objectives. Our role is to find the system that fits those conditions best, not the one that is easiest to specify.</p>
 
           <label for="ctp-drip" class="ctp-row ctp-row-drip" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <input type="radio" name="ctype" id="ctp-drip" class="ctp-radio" checked>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
               <span class="ctp-title ctp-title-drip" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Drip</span>
               <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
@@ -221,6 +219,7 @@
           </label>
 
           <label for="ctp-micro" class="ctp-row ctp-row-micro" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <input type="radio" name="ctype" id="ctp-micro" class="ctp-radio">
             <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
               <span class="ctp-title ctp-title-micro" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Micro sprinkler</span>
               <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
@@ -229,6 +228,7 @@
           </label>
 
           <label for="ctp-pivot" class="ctp-row ctp-row-pivot" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <input type="radio" name="ctype" id="ctp-pivot" class="ctp-radio">
             <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
               <span class="ctp-title ctp-title-pivot" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Centre pivot</span>
               <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>
@@ -237,6 +237,7 @@
           </label>
 
           <label for="ctp-sprinkler" class="ctp-row ctp-row-sprinkler" style="display:block; border-top:1px solid rgba(255,255,255,0.16); border-bottom:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
+            <input type="radio" name="ctype" id="ctp-sprinkler" class="ctp-radio">
             <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
               <span class="ctp-title ctp-title-sprinkler" style="font-family:'Ubuntu',sans-serif; font-size:26px; font-weight:500; letter-spacing:-0.014em;">Conventional sprinkler</span>
               <span style="font-size:17px; color:#F4A258; flex:none;"><span class="ctp-arrow-down">↓</span><span class="ctp-arrow-up">↑</span></span>

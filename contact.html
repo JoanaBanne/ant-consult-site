@@ -41,27 +41,28 @@
   .directions-link { color:#05515B; transition:color 140ms ease; }
   .directions-link:hover { color:#B96A22; }
 
-  .faq-radio { position:absolute; opacity:0; pointer-events:none; }
+  .faq-radio { position:absolute; top:0; left:0; opacity:0; pointer-events:none; }
+  .faq-label { position:relative; }
   .faq-panel { display:none; }
   .faq-sign-minus { display:none; }
-  #faq-0:checked ~ .faq-list .faq-item-0 .faq-panel,
-  #faq-1:checked ~ .faq-list .faq-item-1 .faq-panel,
-  #faq-2:checked ~ .faq-list .faq-item-2 .faq-panel,
-  #faq-3:checked ~ .faq-list .faq-item-3 .faq-panel,
-  #faq-4:checked ~ .faq-list .faq-item-4 .faq-panel,
-  #faq-5:checked ~ .faq-list .faq-item-5 .faq-panel { display:flex; }
-  #faq-0:checked ~ .faq-list .faq-item-0 .faq-sign-plus,
-  #faq-1:checked ~ .faq-list .faq-item-1 .faq-sign-plus,
-  #faq-2:checked ~ .faq-list .faq-item-2 .faq-sign-plus,
-  #faq-3:checked ~ .faq-list .faq-item-3 .faq-sign-plus,
-  #faq-4:checked ~ .faq-list .faq-item-4 .faq-sign-plus,
-  #faq-5:checked ~ .faq-list .faq-item-5 .faq-sign-plus { display:none; }
-  #faq-0:checked ~ .faq-list .faq-item-0 .faq-sign-minus,
-  #faq-1:checked ~ .faq-list .faq-item-1 .faq-sign-minus,
-  #faq-2:checked ~ .faq-list .faq-item-2 .faq-sign-minus,
-  #faq-3:checked ~ .faq-list .faq-item-3 .faq-sign-minus,
-  #faq-4:checked ~ .faq-list .faq-item-4 .faq-sign-minus,
-  #faq-5:checked ~ .faq-list .faq-item-5 .faq-sign-minus { display:inline; }
+  .faq-item-0:has(#faq-0:checked) .faq-panel,
+  .faq-item-1:has(#faq-1:checked) .faq-panel,
+  .faq-item-2:has(#faq-2:checked) .faq-panel,
+  .faq-item-3:has(#faq-3:checked) .faq-panel,
+  .faq-item-4:has(#faq-4:checked) .faq-panel,
+  .faq-item-5:has(#faq-5:checked) .faq-panel { display:flex; }
+  .faq-item-0:has(#faq-0:checked) .faq-sign-plus,
+  .faq-item-1:has(#faq-1:checked) .faq-sign-plus,
+  .faq-item-2:has(#faq-2:checked) .faq-sign-plus,
+  .faq-item-3:has(#faq-3:checked) .faq-sign-plus,
+  .faq-item-4:has(#faq-4:checked) .faq-sign-plus,
+  .faq-item-5:has(#faq-5:checked) .faq-sign-plus { display:none; }
+  .faq-item-0:has(#faq-0:checked) .faq-sign-minus,
+  .faq-item-1:has(#faq-1:checked) .faq-sign-minus,
+  .faq-item-2:has(#faq-2:checked) .faq-sign-minus,
+  .faq-item-3:has(#faq-3:checked) .faq-sign-minus,
+  .faq-item-4:has(#faq-4:checked) .faq-sign-minus,
+  .faq-item-5:has(#faq-5:checked) .faq-sign-minus { display:inline; }
 
   .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
@@ -300,15 +301,10 @@
         <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.08; font-weight:500; letter-spacing:-0.024em; color:#12312F; margin:0 0 20px; text-wrap:balance;">Questions we get asked first</h2>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">If yours is not here, ask it in the form. We would rather answer a question early than quote in the dark.</p>
       </div>
-      <input type="radio" name="faq" id="faq-0" class="faq-radio" checked>
-      <input type="radio" name="faq" id="faq-1" class="faq-radio">
-      <input type="radio" name="faq" id="faq-2" class="faq-radio">
-      <input type="radio" name="faq" id="faq-3" class="faq-radio">
-      <input type="radio" name="faq" id="faq-4" class="faq-radio">
-      <input type="radio" name="faq" id="faq-5" class="faq-radio">
       <div class="faq-list" style="display:flex; flex-direction:column; gap:14px;">
         <div class="faq-item-0" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-0" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-0" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-0" class="faq-radio" checked>
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">What will the system itself cost?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
@@ -317,7 +313,8 @@
           </div>
         </div>
         <div class="faq-item-1" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-1" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-1" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-1" class="faq-radio">
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">What do you charge?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
@@ -329,7 +326,8 @@
           </div>
         </div>
         <div class="faq-item-2" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-2" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-2" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-2" class="faq-radio">
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">Do you sell irrigation equipment?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
@@ -338,7 +336,8 @@
           </div>
         </div>
         <div class="faq-item-3" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-3" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-3" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-3" class="faq-radio">
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">How do I know the design will actually work?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
@@ -347,7 +346,8 @@
           </div>
         </div>
         <div class="faq-item-4" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-4" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-4" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-4" class="faq-radio">
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">How quickly can you start?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
@@ -356,7 +356,8 @@
           </div>
         </div>
         <div class="faq-item-5" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; overflow:hidden;">
-          <label for="faq-5" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+          <label for="faq-5" class="faq-label" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:24px 28px; cursor:pointer;">
+            <input type="radio" name="faq" id="faq-5" class="faq-radio">
             <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.32; font-weight:500; color:#12312F; letter-spacing:-0.013em; text-wrap:pretty;">What do you need from me to get started?</div>
             <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#FFFFFF; border:1px solid #DCE7E4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:600; line-height:1;"><span class="faq-sign-plus">+</span><span class="faq-sign-minus">−</span></span>
           </label>
