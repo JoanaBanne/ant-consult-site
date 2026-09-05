@@ -74,6 +74,10 @@
     p { font-size:15px !important; line-height:1.6 !important; }
     .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+    div:has(> .step-badge) { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; align-items:center !important; gap:16px !important; padding:20px !important; }
+    .step-badge { margin-bottom:0 !important; flex:none !important; }
+    div:has(> .step-badge) > div:nth-child(2) { margin-bottom:0 !important; flex:1 !important; min-width:0 !important; }
+    div:has(> .step-badge) > p, div:has(> .step-badge) > div:nth-child(3) { flex-basis:100% !important; width:100% !important; margin-top:12px !important; }
     .footer-legal-bar { flex-direction:column !important; align-items:center !important; text-align:center !important; gap:12px !important; font-size:12px !important; }
     .footer-legal-left { flex-direction:column !important; gap:8px !important; }
     .footer-legal-left span[style*="width:1px"] { display:none !important; }
@@ -122,21 +126,21 @@
 
     <div class="three-col-grid" style="margin-top:64px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
           <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
         </div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Better alignment</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">The right people, aligned early on what matters.</p>
       </div>
       <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
           <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
         </div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Fewer surprises</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Gaps are identified before they become expensive.</p>
       </div>
       <div class="outcome-card" style="background:#fff; border:1px solid #DCE7E4; border-radius:18px; padding:32px;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; margin-bottom:26px;">
           <img src="assets/ant-head-orange.svg" alt="" style="height:22px; width:auto; display:block;" loading="lazy" decoding="async">
         </div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:21px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.01em; margin-bottom:12px; text-wrap:balance;">Designed to perform</div>
@@ -173,17 +177,17 @@
     <h2 style="font-family:'Ubuntu',sans-serif; font-size:47px; line-height:1.12; font-weight:500; letter-spacing:-0.015em; color:#12312F; margin:0 0 56px; max-width:820px; text-wrap:balance;">Three questions drive every AIM review</h2>
     <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">01</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What works?</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Identify what is aligned with your operation and objectives.</p>
       </div>
       <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">02</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What does not work?</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pinpoint gaps, risks, and assumptions that could cause problems.</p>
       </div>
       <div style="background:#fff; border:1px solid rgba(5,81,91,0.10); border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">03</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; color:#B96A22; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:16px; text-wrap:balance;">What would make this better for your operation?</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Capture ideas and priorities that improve performance, efficiency and resilience.</p>
       </div>

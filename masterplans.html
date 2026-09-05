@@ -74,6 +74,10 @@
     p { font-size:15px !important; line-height:1.6 !important; }
     .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+    div:has(> .step-badge) { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; align-items:center !important; gap:16px !important; padding:20px !important; }
+    .step-badge { margin-bottom:0 !important; flex:none !important; }
+    div:has(> .step-badge) > div:nth-child(2) { margin-bottom:0 !important; flex:1 !important; min-width:0 !important; }
+    div:has(> .step-badge) > p, div:has(> .step-badge) > div:nth-child(3) { flex-basis:100% !important; width:100% !important; margin-top:12px !important; }
     .footer-legal-bar { flex-direction:column !important; align-items:center !important; text-align:center !important; gap:12px !important; font-size:12px !important; }
     .footer-legal-left { flex-direction:column !important; gap:8px !important; }
     .footer-legal-left span[style*="width:1px"] { display:none !important; }
@@ -157,17 +161,17 @@
 
     <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Site assessment and survey</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We carry out a topographic survey and site assessment to test the feasibility assumptions against the land itself and establish its exact constraints and opportunities. This is where strategy becomes a plan grounded in real site conditions.</p>
       </div>
       <div class="lift-card" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Phased development framework</div>
         <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">The masterplan sets the best order to build the infrastructure in, from the first phase to the last. Phasing is driven by financial logic, what has to be in place before the next thing can work, and your operational priorities. Each phase stands on its own while contributing to the finished system.</p>
       </div>
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Budget and timeline</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Every masterplan includes a capital expenditure budget and an implementation timeline for each phase. You know what each stage costs, when it needs to happen and what has to be true before you commit to the next one. That makes the project straightforward to budget for and to finance.</p>
       </div>

@@ -74,6 +74,10 @@
     p { font-size:15px !important; line-height:1.6 !important; }
     .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+    div:has(> .step-badge) { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; align-items:center !important; gap:16px !important; padding:20px !important; }
+    .step-badge { margin-bottom:0 !important; flex:none !important; }
+    div:has(> .step-badge) > div:nth-child(2) { margin-bottom:0 !important; flex:1 !important; min-width:0 !important; }
+    div:has(> .step-badge) > p, div:has(> .step-badge) > div:nth-child(3) { flex-basis:100% !important; width:100% !important; margin-top:12px !important; }
     .footer-legal-bar { flex-direction:column !important; align-items:center !important; text-align:center !important; gap:12px !important; font-size:12px !important; }
     .footer-legal-left { flex-direction:column !important; gap:8px !important; }
     .footer-legal-left span[style*="width:1px"] { display:none !important; }
@@ -157,22 +161,22 @@
 
     <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">System evaluation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">We review the system to establish where it is underperforming and why. Pump output, pipe condition, pressure distribution and flow rates are measured against what you are asking the system to do today, which shows us exactly which components and layouts are holding it back.</p>
       </div>
       <div class="lift-card" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Upgrade recommendations</div>
         <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">From what we find, we set out the upgrades that will do the most for hydraulic performance, water application and operating cost. Each one is ranked by impact and cost, so you can see where to start and what can wait.</p>
       </div>
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump assessment and optimisation</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pump performance changes over time as equipment wears and demand on the system grows. We measure output against what the system now needs and recommend the least costly fix that works, whether that is refurbishment, a different pump, or rebalancing the system around the capacity you already have.</p>
       </div>
       <div class="lift-card" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipe, pressure and coverage improvements</div>
         <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pressure problems come from accumulated changes to pipe layout, flow rates and demand that have pulled the hydraulics away from what the system was originally designed to do. We model the whole system to find the critical constraints, then recommend the cheapest route back to even pressure and even application across the scheme.</p>
@@ -180,7 +184,7 @@
         </div>
       </div>
       <div class="lift-card" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Construction-ready deliverables</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You receive construction-ready drawings, bills of quantities and specifications. Your contractors have everything they need to do the work without guessing, and you know the cost before a single pipe is replaced.</p>
       </div>

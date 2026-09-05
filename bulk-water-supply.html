@@ -74,6 +74,10 @@
     p { font-size:15px !important; line-height:1.6 !important; }
     .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+    div:has(> .step-badge) { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; align-items:center !important; gap:16px !important; padding:20px !important; }
+    .step-badge { margin-bottom:0 !important; flex:none !important; }
+    div:has(> .step-badge) > div:nth-child(2) { margin-bottom:0 !important; flex:1 !important; min-width:0 !important; }
+    div:has(> .step-badge) > p, div:has(> .step-badge) > div:nth-child(3) { flex-basis:100% !important; width:100% !important; margin-top:12px !important; }
     .footer-legal-bar { flex-direction:column !important; align-items:center !important; text-align:center !important; gap:12px !important; font-size:12px !important; }
     .footer-legal-left { flex-direction:column !important; gap:8px !important; }
     .footer-legal-left span[style*="width:1px"] { display:none !important; }
@@ -158,7 +162,7 @@
     <div class="three-col-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
 
       <div class="lift-card-soft" style="grid-column:span 2; background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">01</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pipelines</div>
         <div class="three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
           <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Pipeline design means selecting the right pipe material, diameter and pressure rating for the flow volumes, operating pressures and terrain along the specific route. There is no standard answer, because no two routes present the same conditions.</p>
@@ -167,25 +171,25 @@
       </div>
 
       <div class="lift-card-soft" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">02</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Pump stations</div>
         <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0; text-wrap:pretty;">This is where the energy cost of a bulk water system is either controlled or compounded. We size pump stations for the hydraulics of the full system, select equipment that stays efficient across the expected operating range, and design for straightforward maintenance and reliable long-term operation.</p>
       </div>
 
       <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">03</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Balancing dams and storage</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Storage buffers the gap between when water is available and when the scheme needs it. That lowers peak pump loads and gives you room to move when conditions change. We size storage to what the scheme requires, so you are not paying to build capacity that will never be used.</p>
       </div>
 
       <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">04</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Canals and open channels</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">Where the terrain and the volumes suit open channel conveyance, we design canal systems that carry water efficiently from source to distribution point, with the control and measurement structures built into the design rather than added afterwards.</p>
       </div>
 
       <div class="lift-card-soft" style="background:#FFFFFF; border:1px solid #DCE7E4; border-radius:18px; padding:32px; display:flex; flex-direction:column;">
-        <div style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
+        <div class="step-badge" style="width:42px; height:42px; border-radius:12px; background:#F1F6F4; color:#B96A22; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500; margin-bottom:26px;">05</div>
         <div style="font-family:'Ubuntu',sans-serif; font-size:26px; line-height:1.2; font-weight:500; color:#05515B; letter-spacing:-0.014em; margin-bottom:14px; text-wrap:balance;">Construction-ready deliverables</div>
         <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0; text-wrap:pretty;">You receive a complete construction package: hydraulic models, construction drawings, bills of quantities and technical specifications. Every element is documented: contractors can build accurately, and the people who will operate the scheme know how it is meant to run.</p>
       </div>
