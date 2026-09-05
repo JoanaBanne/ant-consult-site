@@ -68,6 +68,13 @@
   .newsletter-btn { background:#F4A258; color:#08343C; transition:all 0.3s ease; }
   .newsletter-btn:hover { background:transparent; color:#F4A258; box-shadow:inset 0 0 0 1px #F4A258; }
 
+  @media (min-width: 1024px) {
+    .ctp-grid { height:100vh !important; max-height:100vh !important; overflow:hidden !important; grid-template-rows:100% !important; }
+    .ctp-photo-col { height:100% !important; }
+    .ctp-panel { height:100% !important; min-height:0 !important; padding:60px !important; justify-content:flex-start !important; }
+    .ctp-accordion-scroll { overflow-y:auto; flex-grow:1; min-height:0; padding-right:10px; }
+  }
+
   @media (max-width: 768px) {
     .section-pad-lg { padding:36px 22px !important; }
     .intro-heading-grid { gap:16px !important; margin-bottom:24px !important; }
@@ -195,13 +202,13 @@
 
     <div class="bleed-full" style="margin:0 -72px 20px;">
       <div class="ctp-grid three-col-grid" style="display:grid; grid-template-columns:1fr 1fr; min-height:600px;">
-        <div style="position:relative;">
+        <div class="ctp-photo-col" style="position:relative;">
           <div class="ctp-photo ctp-photo-drip" role="img" aria-label="Drip irrigation system" style="position:absolute; inset:0; background-image:url('assets/drip-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 60%; background-color:#0A6B78;"></div>
           <div class="ctp-photo ctp-photo-micro" role="img" aria-label="Micro sprinkler irrigation system" style="position:absolute; inset:0; background-image:url('assets/micro-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 45%; background-color:#0A6B78;"></div>
           <div class="ctp-photo ctp-photo-pivot" role="img" aria-label="Centre pivot irrigation system" style="position:absolute; inset:0; background-image:url('assets/center-pivot-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 50%; background-color:#0A6B78;"></div>
           <div class="ctp-photo ctp-photo-sprinkler" role="img" aria-label="Sprinkler irrigation system" style="position:absolute; inset:0; background-image:url('assets/sprinkler-irrigation-system.jpg'); background-size:cover; background-repeat:no-repeat; background-position:center 55%; background-color:#0A6B78;"></div>
         </div>
-        <div style="background:#04353D; padding:64px 60px 60px; display:flex; flex-direction:column; justify-content:center;">
+        <div class="ctp-panel" style="background:#04353D; padding:64px 60px 60px; display:flex; flex-direction:column; justify-content:center;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:22px;">
             <span style="width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,0.13); color:#F4A258; display:flex; align-items:center; justify-content:center; font-family:'Ubuntu',sans-serif; font-size:15px; font-weight:500;">01</span>
             <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#F8C08C; font-weight:600; border:1px solid rgba(248,192,140,0.4); border-radius:999px; padding:8px 16px;">System types</span>
@@ -209,6 +216,7 @@
           <h3 style="font-family:'Ubuntu',sans-serif; font-size:40px; line-height:1.12; font-weight:500; letter-spacing:-0.02em; color:#FFFFFF; margin:0 0 14px; text-wrap:balance;">Four ways to put water on a crop</h3>
           <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.72); margin:0 0 30px; max-width:520px; text-wrap:pretty;">The right technology depends on the crop, field layout, available water, operating requirements and long-term production objectives. Our role is to find the system that fits those conditions best, not the one that is easiest to specify.</p>
 
+          <div class="ctp-accordion-scroll">
           <label for="ctp-drip" class="ctp-row ctp-row-drip" style="display:block; border-top:1px solid rgba(255,255,255,0.16); padding:22px 0; cursor:pointer;">
             <input type="radio" name="ctype" id="ctp-drip" class="ctp-radio" checked>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
@@ -244,6 +252,7 @@
             </div>
             <p class="ctp-desc ctp-desc-sprinkler" style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.78); margin:12px 0 0; max-width:480px; text-wrap:pretty;">Simple, robust and repairable with parts available anywhere. For pasture, field crops and operations that maintain their own equipment, that reliability is often worth more than a few points of efficiency on paper.</p>
           </label>
+          </div>
         </div>
       </div>
     </div>
