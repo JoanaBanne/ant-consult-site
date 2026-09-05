@@ -74,6 +74,9 @@
     p { font-size:15px !important; line-height:1.6 !important; }
     .page-hero h1 { font-size:30px !important; line-height:1.2 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+    .milestone-card { padding:20px !important; gap:16px !important; margin-top:24px !important; }
+    .milestone-label { padding-right:0 !important; border-right:none !important; padding-bottom:16px !important; border-bottom:1px solid rgba(255,255,255,0.14) !important; }
+    .milestone-week { font-size:32px !important; }
   }
 </style>
 </head>
@@ -277,9 +280,9 @@
       </div>
     </div>
 
-    <div class="three-col-grid" style="margin-top:32px; display:grid; grid-template-columns:auto 1fr; align-items:center; gap:40px; background:#0A4550; border:1px solid rgba(244,162,88,0.35); border-radius:18px; padding:34px 40px;">
-      <div style="display:flex; flex-direction:column; gap:6px; padding-right:40px; border-right:1px solid rgba(255,255,255,0.14);">
-        <span style="font-family:'Ubuntu',sans-serif; font-size:47px; font-weight:500; letter-spacing:-0.02em; color:#F4A258; line-height:1;">Week 2</span>
+    <div class="three-col-grid milestone-card" style="margin-top:32px; display:grid; grid-template-columns:auto 1fr; align-items:center; gap:40px; background:#0A4550; border:1px solid rgba(244,162,88,0.35); border-radius:18px; padding:34px 40px;">
+      <div class="milestone-label" style="display:flex; flex-direction:column; gap:6px; padding-right:40px; border-right:1px solid rgba(255,255,255,0.14);">
+        <span class="milestone-week" style="font-family:'Ubuntu',sans-serif; font-size:47px; font-weight:500; letter-spacing:-0.02em; color:#F4A258; line-height:1;">Week 2</span>
         <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:rgba(255,255,255,0.6);">Early design review</span>
       </div>
       <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.9); margin:0; text-wrap:pretty;">You receive a draft concept two weeks after kick-off, so you can tell us what works, what does not, and what needs to change before detailed design begins.</p>
