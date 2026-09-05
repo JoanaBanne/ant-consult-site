@@ -98,6 +98,10 @@
     .page-hero .blog-title { font-size:23px !important; line-height:1.3 !important; }
     .two-col-grid, .three-col-grid, .footer-cols-grid { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
     .subscribe-card { padding:28px 22px !important; }
+    .subscribe-card form { padding:8px 8px 8px 14px !important; gap:8px !important; }
+    .subscribe-card input { font-size:13px !important; }
+    .subscribe-card input::placeholder { font-size:13px; }
+    .subscribe-card .subscribe-btn { padding:10px 14px !important; font-size:12px !important; letter-spacing:0.02em !important; }
     .subscribe-eyebrow { margin-bottom:14px !important; }
     .subscribe-title { font-size:25px !important; line-height:1.2 !important; margin-bottom:12px !important; }
   }
@@ -207,7 +211,7 @@
       <div style="display:flex; flex-direction:column; gap:14px;">
         <form style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
           <input type="email" name="email" required placeholder="Enter your email address" style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:15px; color:#fff;">
-          <button type="submit" class="subscribe-btn" style="white-space:nowrap; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
+          <button type="submit" class="subscribe-btn" style="white-space:nowrap; flex:none; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
         </form>
         <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
       </div>
@@ -244,7 +248,7 @@
       <div>
         <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
         <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
-          <span class="hover-fade" style="cursor:pointer;">Services Cost Estimator</span><span class="hover-fade" style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span class="hover-fade" style="cursor:pointer;">Irrigation ROI Calculator</span><a href="../insights.html#blog" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Blog</a>
+          <a href="../insights.html#services-cost-estimator" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Services Cost Estimator</a><a href="../insights.html#pipe-lifecycle-cost-analysis" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Pipe Lifecycle Cost Analysis</a><a href="../insights.html#irrigation-roi-calculator" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Irrigation ROI Calculator</a><a href="../insights.html#blog" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Blog</a>
         </div>
       </div>
       <div>

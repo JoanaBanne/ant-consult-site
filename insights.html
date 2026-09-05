@@ -103,6 +103,11 @@
     .footer-legal-left span[style*="width:1px"] { display:none !important; }
     .featured-post > div:first-child { min-height:220px !important; height:220px !important; }
     .featured-post h3 { font-size:23px !important; line-height:1.3 !important; }
+    .subscribe-card { padding:36px 24px !important; }
+    .subscribe-card form { padding:8px 8px 8px 14px !important; gap:8px !important; }
+    .subscribe-card input { font-size:13px !important; }
+    .subscribe-card input::placeholder { font-size:13px; }
+    .subscribe-card .subscribe-btn { padding:10px 14px !important; font-size:12px !important; letter-spacing:0.02em !important; }
   }
 </style>
 </head>
@@ -189,7 +194,7 @@
           <div role="img" aria-label="Services Cost Estimator tool" style="height:150px; border-radius:14px; background:url('assets/drone-survey-irrigation-planning-tool.jpg') center 56%/cover no-repeat; border:1px solid #CBD9D5;"></div>
         </div>
 
-        <div class="tool-card-dark two-col-grid" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
+        <div id="pipe-lifecycle-cost-analysis" class="tool-card-dark two-col-grid" style="background:#05515B; border:1px solid #05515B; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#FFFFFF; letter-spacing:-0.014em; margin-bottom:10px;">Pipe Lifecycle Cost Analysis</div>
             <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.84); margin:0 0 24px; text-wrap:pretty;">Compare pipe diameters and classes on what they cost to own, not what they cost to buy. The cheapest pipe on the quote is rarely the cheapest pipe to pump through.</p>
@@ -201,7 +206,7 @@
           <div role="img" aria-label="Pipe Lifecycle Cost Analysis tool" style="height:150px; border-radius:14px; background:url('assets/irrigation-filtration-system-tool.jpg') center 50%/cover no-repeat; border:1px solid rgba(255,255,255,0.2);"></div>
         </div>
 
-        <div class="tool-card-light two-col-grid" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
+        <div id="irrigation-roi-calculator" class="tool-card-light two-col-grid" style="background:#F4F7F6; border:1px solid #E7EEEC; border-radius:18px; padding:32px; display:grid; grid-template-columns:1fr 190px; gap:32px; align-items:center; cursor:pointer;">
           <div>
             <div style="font-family:'Ubuntu',sans-serif; font-size:28px; line-height:1.2; font-weight:500; color:#12312F; letter-spacing:-0.014em; margin-bottom:10px;">Irrigation ROI Calculator</div>
             <p style="font-size:15px; line-height:1.7; color:#2A3A38; margin:0 0 24px; text-wrap:pretty;">Model capital cost, operating cost and return side by side, so you can see which system option actually pays and over what period.</p>
@@ -366,7 +371,7 @@
 
   <!-- SUBSCRIBE -->
   <div class="section-pad-lg" style="background:#FFFFFF; padding:0 72px 96px;">
-    <div class="two-col-grid" style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
+    <div class="two-col-grid subscribe-card" style="background:#05515B; border-radius:18px; padding:64px 56px 66px; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;">
       <div>
         <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px;">
           <span style="width:44px; height:1px; background:#F4A258;"></span>
@@ -378,7 +383,7 @@
       <div style="display:flex; flex-direction:column; gap:14px;">
         <form style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.34); border-radius:999px; padding:10px 10px 10px 24px; gap:12px;">
           <input type="email" name="email" required placeholder="Enter your email address" style="flex:1; min-width:0; background:none; border:none; outline:none; font-family:inherit; font-size:15px; color:#fff;">
-          <button type="submit" class="subscribe-btn" style="white-space:nowrap; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
+          <button type="submit" class="subscribe-btn" style="white-space:nowrap; flex:none; width:auto; padding:13px 28px; border-radius:999px; font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border:none; font-family:inherit; line-height:1; cursor:pointer;">Submit</button>
         </form>
         <div style="font-size:13px; color:rgba(255,255,255,0.6); padding-left:24px;">No sales email. Unsubscribe any time.</div>
       </div>
@@ -415,7 +420,7 @@
       <div>
         <div style="font-size:14px; font-weight:600; margin-bottom:18px;">Resources</div>
         <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(255,255,255,0.75);">
-          <span class="hover-fade" style="cursor:pointer;">Services Cost Estimator</span><span class="hover-fade" style="cursor:pointer;">Pipe Lifecycle Cost Analysis</span><span class="hover-fade" style="cursor:pointer;">Irrigation ROI Calculator</span><a href="insights.html#blog" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Blog</a>
+          <a href="insights.html#services-cost-estimator" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Services Cost Estimator</a><a href="insights.html#pipe-lifecycle-cost-analysis" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Pipe Lifecycle Cost Analysis</a><a href="insights.html#irrigation-roi-calculator" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Irrigation ROI Calculator</a><a href="insights.html#blog" class="hover-fade" style="cursor:pointer; color:inherit; text-decoration:none;">Blog</a>
         </div>
       </div>
       <div>
